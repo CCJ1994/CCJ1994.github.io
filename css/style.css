@@ -68,12 +68,9 @@ body{
   border-radius: 0px !important;
 }
 .logintitle{
-  transform: translate(40px,50px);
+  transform: translateX(10px);
 }
-#cover form{
-  width: 80%;
-  transform: translate(30px,125px);
-}
+
 
 /* home */
 #meHome{
