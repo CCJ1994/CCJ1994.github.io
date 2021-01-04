@@ -227,7 +227,7 @@ z-index: -1;
 .cusbar1{
   background-color: #34495e;
   width: 0%;
-  animation: bar1 2.2s linear forwards;
+  animation: bar1 1.8s linear forwards;
 }
 @keyframes bar1{
   to{
@@ -237,7 +237,7 @@ z-index: -1;
 .cusbar2{
   background-color: #34495e;
   width: 0%;
-  animation: bar2 2s linear forwards;
+  animation: bar2 1.6s linear forwards;
 }
 @keyframes bar2{
   to{
@@ -440,11 +440,3 @@ header a.active:after {
 
 
 
-/* footer{
-  height: 50vh;
-  filter: grayscale(95%);
-  background-image: url(../img/IMG_2353.JPG);
-  background-position:0px 450px;
-  background-size: cover;
-  background-attachment: fixed;
-} */
