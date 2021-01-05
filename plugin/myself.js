@@ -59,7 +59,7 @@
 
         let title = document.querySelector(`${idname[i]}`);
         let position =title.getBoundingClientRect().top;
-        let screenpos = window.innerHeight / 1.3;
+        let screenpos = window.innerHeight;
 
         title.classList.add('txttitle');
         if (position < screenpos) {
