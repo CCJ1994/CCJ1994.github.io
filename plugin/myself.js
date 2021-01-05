@@ -16,11 +16,13 @@
 
     $(window).scroll(() => {
       spy(); // scroll spy
-      fadeintext();// fadein about me
+      fadeindescr();// fadein about me
       animationbar();// bar animation
-      
+      fadeintxt();//title fade in
     });
 
+
+    
     spy();
 
     function spy() {
@@ -39,15 +41,35 @@
     }
 
 
-    function fadeintext() {
-      let text = document.querySelector('.descr');
-      let position = text.getBoundingClientRect().top;
+    
+    
+    function fadeindescr() {
+      let title = document.querySelector('.descr');
+      let position =title.getBoundingClientRect().top;
       let screenpos = window.innerHeight / 1.3;
       if (position < screenpos) {
-        text.classList.add('descrani');
+        title.classList.add('txttitleFade');
       }
     }
 
+    function fadeintxt() {
+      let idname =['#myworkTit','#contactmeTit','#portfolioTit','#experienceTit','#myskillTit'];
+      
+      for(let i=0;i<idname.length;i++){
+
+        let title = document.querySelector(`${idname[i]}`);
+        let position =title.getBoundingClientRect().top;
+        let screenpos = window.innerHeight / 1.3;
+
+        title.classList.add('txttitle');
+        if (position < screenpos) {
+          title.classList.add('txttitleFade');
+        }else{
+          title.classList.remove('txttitleFade');
+        }
+      }
+    }
+    
     function run(bar, n) {
       const numb = document.querySelector(bar);
       let counter = 0;

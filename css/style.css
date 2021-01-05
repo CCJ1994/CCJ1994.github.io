@@ -170,6 +170,15 @@ z-index: -1;
   opacity: 1;
   transform: translateY(0px);
 }
+.txttitle{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.8s all ease-in-out;
+}
+.txttitleFade{
+  opacity: 1;
+  transform: translateY(0px);
+}
 
 
 /* portfolio */
