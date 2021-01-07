@@ -1,9 +1,16 @@
     $("#login").click(function () {
       $("#cover").fadeIn();
     })
-    $("#back").click(function () {
+    $("#back,.loginbg").click(function () {
       $("#cover").fadeOut();
     })
+    
+    $('#menubtn').click(function(){      
+      $('.burger').toggleClass('toggle');      
+    })
+    
+    
+    
 
     // scroll to id
     $("#mainMenu a").click(function () {
@@ -59,7 +66,7 @@
 
         let title = document.querySelector(`${idname[i]}`);
         let position =title.getBoundingClientRect().top;
-        let screenpos = window.innerHeight;
+        let screenpos = window.innerHeight ;
 
         title.classList.add('txttitle');
         if (position < screenpos) {
@@ -78,7 +85,6 @@
           counter++;
           numb.textContent = counter + "%";
         }
-        
       }, n / 3.5);
     
     }

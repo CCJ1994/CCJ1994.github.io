@@ -18,12 +18,46 @@
 </head>
 
 <body>
+  <!-- login -->
+  <div id="cover" style="display:none;">
+    <div class="loginbg"></div>
+    <div id="coverr" class="overflow-hidden">
+      <div id="back" class="text-end mt-4 me-4 text-muted" style="cursor: pointer;">Back</div>
+      <div class="container d-flex flex-column align-items-center mt-5">
+        <div class="logintitle align-self-start ms-5">
+          <div class="subtitle">Welcome,</div>
+          <div class="subtitle">Update Info</div>
+        </div>
+        <form action="" method="post">
+          <div class="form-floating my-2 ">
+            <input type="text" class="form-control border-0" id="floatingInput" placeholder="account">
+            <label for="floatingInput">Account</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control border-0" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <div class="text-end">
+            <a class="text-muted" href=""><small>Forgot Password?</small></a>
+          </div>
+          <div class="text-center mt-3">
+            <button type="submit" style="background: transparent;color: #34495e;border: 0px;">Sign in <i
+                class="fas fa-sign-in-alt"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
   <!-- 選單區 -->
   <header id="meMenu" class="fixed-top nbr">
     <nav class="navbar navbar-expand-lg navbar-light container">
       <a class="navbar-brand" href="#meHome"><img src="./img/logo.svg" width="40px"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu">
-        <span class="navbar-toggler-icon"></span>
+      <button id="menubtn" class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#mainMenu">
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
       </button>
       <div class="collapse navbar-collapse" id="mainMenu">
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0 col justify-content-end ">
@@ -56,35 +90,7 @@
             <div style="width: 70px;">
               <button id="login" class="nav-link btn border-0"><i class="fas fa-user-circle fa-1x"></i></button>
             </div>
-            <!-- login -->
-            <div id="cover" style="display:none;">
-              <div id="coverr" class="overflow-hidden">
-                <div id="back" class="text-end mt-4 me-4 text-muted" style="cursor: pointer;">Back</div>
-                <div class="container d-flex flex-column align-items-center mt-5">
-                  <div class="logintitle align-self-start ms-5">
-                    <div class="subtitle">Welcome,</div>
-                    <div class="subtitle">Update Info</div>
-                  </div>
-                  <form action="" method="post">
-                    <div class="form-floating my-2 ">
-                      <input type="text" class="form-control border-0" id="floatingInput" placeholder="account">
-                      <label for="floatingInput">Account</label>
-                    </div>
-                    <div class="form-floating">
-                      <input type="password" class="form-control border-0" id="floatingPassword" placeholder="Password">
-                      <label for="floatingPassword">Password</label>
-                    </div>
-                    <div class="text-end">
-                      <a class="text-muted" href=""><small>Forgot Password?</small></a>
-                    </div>
-                    <div class="text-center mt-3">
-                      <button type="submit" style="background: transparent;color: #34495e;border: 0px;">Sign in <i
-                          class="fas fa-sign-in-alt"></i></button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
+            
           </li>
         </ul>
       </div>
@@ -92,9 +98,9 @@
   </header>
 
   <!-- Home -->
-  <section id="meHome" class="my-5 overflow-hidden">
-    <div class="container d-flex flex-wrap justify-content-center pt-5">
-      <div class="hleft text-left my-auto col-12 col-md-6 ">
+  <section id="meHome" class="mb-5 overflow-hidden" style="margin-top:74px;">
+    <div class="container d-flex flex-wrap justify-content-center">
+      <div class="hleft text-left my-auto col-12 col-md-6">
         <div>hello,</div>
         <div>I'm Chun-Ju Chang.</div>
         <p>WEB DESIGN | GRAPHIC DESIGN</p>
