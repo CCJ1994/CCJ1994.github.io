@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>AI網紅過稿系統</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Noto+Serif+TC&display=swap"
     rel="stylesheet">
@@ -76,19 +76,31 @@
   justify-content: center;
 }
   #iconLink{
-    animation: link 2.5s linear 2s  forwards;
+    animation: link 2.5s ease 2s  forwards;
   }
 
-  /* @keyframes link{
-    0%{  transform: translateY(-40px);  }
-    15%{  transform: translateY(30px);  }
-    30%{  transform: translateY(-20px);  }
-    45%{  transform: translateY(0px);  }
-    60%{  transform: translateY(-15px);  }
-    75%{  transform: translateY(5px);  }
-    90%{  transform: translateY(-5px);  }
-    100%{  transform: translateY(0px);  }
-  } */
+  @keyframes link{
+  0%,
+  20%,
+  53%,
+  80%,
+  100%{
+    animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+    transform: translate(0,0);
+  }
+  40%,
+  43%{
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate(0, -30px);
+  }
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate(0, -15px);
+  }
+  90% {
+    transform: translate(0, -4px);
+  }
+}
   .showon{
     opacity: 1;
   }

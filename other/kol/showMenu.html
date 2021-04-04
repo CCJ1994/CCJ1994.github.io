@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>AI網紅過稿系統</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Noto+Serif+TC&display=swap"
     rel="stylesheet">
@@ -23,10 +23,14 @@
       align-items: center;
     }
 
+    a:hover {
+      color: #52a7cc !important;
+    }
+
     #particles-js {
       position: fixed;
-      top:0;
-      bottom:0;
+      top: 0;
+      bottom: 0;
       height: 100vh;
       width: 100vw;
       z-index: -1;
@@ -88,7 +92,8 @@
       position: absolute;
       background-color: #FFDC68;
     }
-    #btnMsg{
+
+    #btnMsg {
       position: fixed;
       left: 50px;
       bottom: 20px;
@@ -124,70 +129,80 @@
       margin: auto;
       overflow: hidden;
     }
+
     @media (max-width: 576px) {
-  .msgInner{
-    height: 90vh;
-    left: 0;
-    right: 0;
-  }
-}
-    .msgHead{
+      .msgInner {
+        height: 90vh;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    .msgHead {
       position: relative;
       width: 100%;
       height: 50px;
       background-color: #52A7CC;
     }
-    #close{
+
+    #close {
       position: absolute;
-      top:25px;
-      right:25px;
-      width:25px;
+      top: 25px;
+      right: 25px;
+      width: 25px;
       height: 5px;
       background-color: #ffffff;
       cursor: pointer;
     }
-    #close:hover{
+
+    #close:hover {
       background-color: #808080;
     }
-    .content{
+
+    .content {
       padding-top: 10px;
       width: 100%;
       height: 380px;
       overflow-y: auto;
       position: relative;
     }
-    .send{
+
+    .send {
       width: 100%;
       height: 70px;
     }
-    .addBtn{
-      width:40px;
-      height:40px;
+
+    .addBtn {
+      width: 40px;
+      height: 40px;
       background: #415A80;
-      border:2px solid #415A80;
+      border: 2px solid #415A80;
       border-radius: 50%;
-      color:white;
+      color: white;
     }
-    .addBtn:hover{
-      border:2px solid #415A80;
+
+    .addBtn:hover {
+      border: 2px solid #415A80;
       background-color: white;
-      color:#415A80;
+      color: #415A80;
     }
-    .himText{
-      margin:10px 20px;
+
+    .himText {
+      margin: 10px 20px;
       padding: 5px 10px;
-      width:200px;
+      width: 200px;
       min-height: 30px;
       line-height: 30px;
       border: 2px solid #415A80;
       border-radius: 10px;
     }
-    .meText{
+
+    .meText {
       position: absolute;
       right: 0px;
-      margin:10px 20px;
+      margin: 10px 20px;
       padding: 5px 10px;
-      width:200px;
+      width: 200px;
       min-height: 30px;
       line-height: 30px;
       border: 2px solid #415A80;
@@ -199,7 +214,7 @@
 <body>
   <!-- 背景 -->
   <div id="particles-js"></div>
-  
+
   <!-- 選單列 -->
   <nav class=" navbar mx-3 mt-3 mb-2">
     <div class="container d-flex justify-content-between">
@@ -242,7 +257,7 @@
         </a>
       </div>
       <div class="col">
-        <a href="">
+        <a href="show2.html">
           <div class="card h-100">
             <div class="card-body">
               <div class="d-flex justify-content-between">
@@ -262,7 +277,7 @@
         </a>
       </div>
       <div class="col">
-        <a href="">
+        <a href="show5.html">
           <div class="card h-100">
             <div class="card-body">
               <div class="d-flex justify-content-between">
@@ -282,43 +297,44 @@
         </a>
       </div>
     </div>
-    
+
     <!-- 裝飾 -->
     <div style="position:absolute;right:0;bottom:-10px;z-index: -1;"><img src="./img/chart.svg" width="200"></div>
   </section>
   <!-- 留言板 -->
   <div id="btnMsg"><button class="btn btn-primary position-relative">留言板 <div class="inform"></div></button></div>
   <div class="msg">
-  <div class="msgOutter"></div>
-  <div class="msgInner">
-    <div class="msgHead">
-      <div id="close"></div>
+    <div class="msgOutter"></div>
+    <div class="msgInner">
+      <div class="msgHead">
+        <div id="close"></div>
+      </div>
+      <div class="content">
+        <div class="himText">請問一下</div>
+        <div class="meText">你好</div>
+      </div>
+      <div class="send p-2 d-flex justify-content-around align-items-center">
+        <form action="" method="post">
+          <textarea style="resize: none;width:250px;" class="form-control me-2 border-0" type="text" name="msg"
+            placeholder="我有話想說..."></textarea>
+        </form>
+        <button class="btn addBtn"><i class="fas fa-plus"></i></button>
+      </div>
     </div>
-    <div class="content">
-      <div class="himText">請問一下</div>
-      <div class="meText">你好</div>
-    </div>
-    <div class="send p-2 d-flex justify-content-around align-items-center">
-      <form action="" method="post">
-      <textarea style="resize: none;width:250px;" class="form-control me-2 border-0" type="text" name="msg" placeholder="我有話想說..."></textarea>
-    </form>
-      <button class="btn addBtn"><i class="fas fa-plus"></i></button>
-    </div>
-  </div>
   </div>
   <script>
-    $("#btnMsg").on("click",function(){
+    $("#btnMsg").on("click", function () {
       $(".msg").fadeIn();
       $("#btnMsg").fadeOut();
     })
-    $("#close,.msgOutter").on("click",function(){
+    $("#close,.msgOutter").on("click", function () {
       $("#btnMsg").fadeIn();
       $(".msg").fadeOut();
     })
   </script>
   <script src="./js/particles.min.js"></script>
   <script src="./js/app.js"></script>
-  
+
 </body>
 
 </html>

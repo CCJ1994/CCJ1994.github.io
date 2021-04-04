@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI網紅過稿系統</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Noto+Serif+TC&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="./css/slick-theme.css">
+  <link rel="stylesheet" href="./css/kolstyle.css">
+  <script src="https://kit.fontawesome.com/7f45dfd3e1.js" crossorigin="anonymous"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* position:relative; */
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      height: 100vh;
+      width: 100vw;
+      z-index: -1;
+    }
+
+    #stepwizard img {
+      border-radius: 50%;
+      box-shadow: -1px -1px 7px #ffffff73, 1px 1px 5px rgb(94 104 121 / 29%);
+
+    }
+
+    .title {
+      color: #415A80;
+    }
+
+    .statusBtn {
+      color: #415A80 !important;
+      text-align: center;
+      background-color: #ffffff;
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: -1px -1px 7px #ffffff73, 1px 1px 5px rgb(94 104 121 / 29%);
+      cursor: pointer;
+    }
+
+    .statusBtnActive {
+      border: 1px solid #52A7CC;
+    }
+
+    .tag {
+      border-radius: 5px;
+      padding: 5px;
+      color: white;
+      font-size:15px;
+    }
+
+    .pass {
+      background-color: #52A7CC;
+    }
+
+    .unpass {
+      background-color: #FFDC68;
+      color:#415A80;
+    }
+
+
+
+    .hashtag {
+      color: #415A80;
+      border: 2px solid #415A80;
+      border-radius: 10px;
+      margin: 5px;
+      padding: 2px 5px;
+    }
+
+    .hashtag:hover {
+      color: #ffffff;
+      background-color: #415A80;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 背景 -->
+  <div id="particles-js"></div>
+
+  <!-- 選單列 -->
+  <nav id="navMenu" class=" navbar mx-3 mt-3 mb-2">
+    <div class="container d-flex justify-content-between">
+      <div class="navbar-brand">
+        <img src="./img/iconchart.png" alt="" width="30">
+        <b class="mx-1">NIVEA DEO純萃淨味爽身系列</b>
+      </div>
+      <a href="showMenu.html">
+        <div class="homeBtn">
+          <svg id="homeIcon" viewBox="0 0 60 60">
+            <path
+              d="M46.51,27.73C46.51,27.73,46.51,27.73,46.51,27.73L32.27,13.49c-0.61-0.61-1.41-0.94-2.27-0.94
+	c-0.86,0-1.66,0.33-2.27,0.94L13.5,27.72c0,0-0.01,0.01-0.01,0.01c-1.25,1.25-1.24,3.29,0.01,4.54c0.57,0.57,1.33,0.9,2.13,0.94
+	c0.03,0,0.07,0,0.1,0h0.57v10.48c0,2.07,1.69,3.76,3.76,3.76h5.57c0.56,0,1.02-0.46,1.02-1.02v-8.21c0-0.95,0.77-1.72,1.72-1.72
+	h3.28c0.95,0,1.72,0.77,1.72,1.72v8.21c0,0.56,0.46,1.02,1.02,1.02h5.57c2.07,0,3.76-1.69,3.76-3.76V33.21h0.53
+	c0.86,0,1.66-0.33,2.27-0.94C47.76,31.02,47.76,28.98,46.51,27.73z M45.06,30.83c-0.22,0.22-0.51,0.34-0.83,0.34h-1.55
+	c-0.56,0-1.02,0.46-1.02,1.02v11.5c0,0.95-0.77,1.72-1.72,1.72H35.4v-7.19c0-2.07-1.69-3.76-3.76-3.76h-3.28
+	c-2.07,0-3.76,1.69-3.76,3.76v7.19h-4.55c-0.95,0-1.72-0.77-1.72-1.72v-11.5c0-0.56-0.46-1.02-1.02-1.02h-1.52
+	c-0.02,0-0.03,0-0.05,0c-0.3-0.01-0.59-0.13-0.8-0.34c-0.46-0.46-0.46-1.2,0-1.65c0,0,0,0,0,0l0,0l14.23-14.23
+	c0.22-0.22,0.51-0.34,0.83-0.34c0.31,0,0.6,0.12,0.83,0.34l14.23,14.23c0,0,0,0,0.01,0.01C45.52,29.63,45.52,30.37,45.06,30.83z" />
+          </svg>
+        </div>
+      </a>
+    </div>
+  </nav>
+  <!-- 主內容 -->
+  <section id="main" class="m-3 overflow-hidden">
+    <!-- 流程選單 -->
+    <section class="container mx-auto my-3 " id="stepwizard">
+      <div class="d-flex justify-content-center align-items-center">
+        <a href="show1.html">
+          <img src="./img/chooseicon2.svg" width="100">
+        </a>
+        <div class="line"></div>
+        <div>選 人</div>
+        <div class="line"></div>
+        <a href="show2.html">
+          <img src="./img/checkicon2.svg" width="100">
+        </a>
+        <div class="line"></div>
+        <div>過 稿</div>
+        <div class="line lineDash"></div>
+        <a href="show5.html">
+          <img src="./img/effecticon2.svg" width="100">
+        </a>
+        <div class="line lineDash"></div>
+        <div>成 效</div>
+      </div>
+    </section>
+    <section class="container mx-auto my-5">
+      <div class="d-flex my-3">
+        <a id="unpassBtn" class="mx-2 statusBtn statusBtnActive">過稿中(10)</a>
+        <a id="passBtn" class="mx-2 statusBtn">已確稿(5)</a>
+        <a id="onlineBtn" class="mx-2 statusBtn">已上線(5)</a>
+      </div>
+      <div id="unpassPost" class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4 my-3">
+        <div class="col">
+          <div class="card h-100 position-relative">
+            <div class="card-body">
+              <a href="show3.html">
+                <div class="d-flex mb-2">
+                  <div>
+                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  </div>
+                  <div>
+                    <h5 class="card-title">王小明</h5>
+                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
+                    <div class="tag unpass me-1">未審</div>
+                    <div class="tag unpass me-1">未確稿</div>
+                  </div>
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
+                    <div class="tag unpass">未確稿</div>
+                  </div>
+                </div>
+              </a>
+              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal">預覽貼文</sapn>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 position-relative">
+            <div class="card-body">
+              <a href="show3.html">
+                <div class="d-flex mb-2">
+                  <div>
+                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  </div>
+                  <div>
+                    <h5 class="card-title">王小明</h5>
+                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
+                    <div class="tag unpass me-1">未審</div>
+                    <div class="tag pass me-1">確 稿</div>
+                  </div>
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
+                    <div class="tag pass">確 稿</div>
+                  </div>
+                </div>
+              </a>
+              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal">預覽貼文</sapn>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 position-relative">
+            <div class="card-body">
+              <a href="show3.html">
+                <div class="d-flex mb-2">
+                  <div>
+                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  </div>
+                  <div>
+                    <h5 class="card-title">王小明</h5>
+                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
+                    <div class="tag unpass me-1">未審</div>
+                    <div class="tag pass me-1">確 稿</div>
+                  </div>
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
+                    <div class="tag pass">確 稿</div>
+                  </div>
+                </div>
+              </a>
+              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal">預覽貼文</sapn>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 position-relative">
+            <div class="card-body">
+              <a href="show3.html">
+                <div class="d-flex mb-2">
+                  <div>
+                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  </div>
+                  <div>
+                    <h5 class="card-title">王小明</h5>
+                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
+                    <div class="tag unpass me-1">未審</div>
+                    <div class="tag pass me-1">確 稿</div>
+                  </div>
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
+                    <div class="tag pass">確 稿</div>
+                  </div>
+                </div>
+              </a>
+              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal">預覽貼文</sapn>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 position-relative">
+            <div class="card-body">
+              <a href="show3.html">
+                <div class="d-flex mb-2">
+                  <div>
+                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  </div>
+                  <div>
+                    <h5 class="card-title">王小明</h5>
+                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
+                    <div class="tag unpass me-1">未審</div>
+                    <div class="tag pass me-1">確 稿</div>
+                  </div>
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
+                    <div class="tag unpass">未確稿</div>
+                  </div>
+                </div>
+              </a>
+              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal">預覽貼文</sapn>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 position-relative">
+            <div class="card-body">
+              <a href="show3.html">
+                <div class="d-flex mb-2">
+                  <div>
+                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  </div>
+                  <div>
+                    <h5 class="card-title">王小明</h5>
+                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
+                    <div class="tag unpass me-1">未審</div>
+                    <div class="tag pass me-1">確 稿</div>
+                  </div>
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
+                    <div class="tag pass">確 稿</div>
+                  </div>
+                </div>
+              </a>
+              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal">預覽貼文</sapn>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 position-relative">
+            <div class="card-body">
+              <a href="show3.html">
+                <div class="d-flex mb-2">
+                  <div>
+                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  </div>
+                  <div>
+                    <h5 class="card-title">王小明</h5>
+                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
+                    <div class="tag unpass me-1">未審</div>
+                    <div class="tag pass me-1">確 稿</div>
+                  </div>
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
+                    <div class="tag pass">確 稿</div>
+                  </div>
+                </div>
+              </a>
+              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal">預覽貼文</sapn>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="passPost" class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4 my-3" style="display:none;">
+        <div class="col">
+          <div class="card h-100 position-relative">
+            <div class="card-body">
+              <a href="show3.html">
+                <div class="d-flex mb-2">
+                  <div>
+                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  </div>
+                  <div>
+                    <h5 class="card-title">王小明</h5>
+                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
+                    <div class="tag pass me-1">審過</div>
+                    <div class="tag pass me-1">確稿</div>
+                  </div>
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
+                    <div class="tag pass">確稿</div>
+                  </div>
+                </div>
+              </a>
+              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal">預覽貼文</sapn>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 position-relative">
+            <div class="card-body">
+              <a href="show3.html">
+                <div class="d-flex mb-2">
+                  <div>
+                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  </div>
+                  <div>
+                    <h5 class="card-title">王小明</h5>
+                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
+                    <div class="tag pass me-1">審過</div>
+                    <div class="tag pass me-1">確稿</div>
+                  </div>
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
+                    <div class="tag pass">確稿</div>
+                  </div>
+                </div>
+              </a>
+              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal">預覽貼文</sapn>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 position-relative">
+            <div class="card-body">
+              <a href="show3.html">
+                <div class="d-flex mb-2">
+                  <div>
+                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  </div>
+                  <div>
+                    <h5 class="card-title">王小明</h5>
+                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
+                    <div class="tag pass me-1">審過</div>
+                    <div class="tag pass me-1">確稿</div>
+                  </div>
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
+                    <div class="tag pass">確稿</div>
+                  </div>
+                </div>
+              </a>
+              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal">預覽貼文</sapn>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="onlinePost" class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4 my-3" style="display:none;">
+        <div class="col">
+          <div class="card h-100 position-relative">
+            <div class="card-body">
+              <a href="show3.html">
+                <div class="d-flex mb-2">
+                  <div>
+                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  </div>
+                  <div>
+                    <h5 class="card-title">王小明</h5>
+                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
+                    <div class="tag pass me-1">審過</div>
+                    <div class="tag pass me-1">確稿</div>
+                  </div>
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
+                    <div class="tag pass">確稿</div>
+                  </div>
+                </div>
+              </a>
+              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal">預覽貼文</sapn>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 position-relative">
+            <div class="card-body">
+              <a href="show3.html">
+                <div class="d-flex mb-2">
+                  <div>
+                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  </div>
+                  <div>
+                    <h5 class="card-title">王小明</h5>
+                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
+                    <div class="tag pass me-1">審過</div>
+                    <div class="tag pass me-1">確稿</div>
+                  </div>
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
+                    <div class="tag pass">確稿</div>
+                  </div>
+                </div>
+              </a>
+              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal">預覽貼文</sapn>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 position-relative">
+            <div class="card-body">
+              <a href="show3.html">
+                <div class="d-flex mb-2">
+                  <div>
+                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  </div>
+                  <div>
+                    <h5 class="card-title">王小明</h5>
+                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
+                    <div class="tag pass me-1">審過</div>
+                    <div class="tag pass me-1">確稿</div>
+                  </div>
+                  <div class="me-2 d-flex align-items-center">
+                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
+                    <div class="tag pass">確稿</div>
+                  </div>
+                </div>
+              </a>
+              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal">預覽貼文</sapn>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <!-- 頭像彈出視窗 -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImg" src="" width="100%">
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#navMenu" class="" id="topBtn">
+    <i class="fas fa-arrow-circle-up fa-2x"></i>
+  </a>
+  <script src="./js/particles.min.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script>
+    $(".statusBtn").click(function () {
+      $(".statusBtn").removeClass("statusBtnActive");
+      $(this).addClass("statusBtnActive");
+    })
+    $("#unpassBtn").click(function(){
+      $("#unpassPost").show();
+      $("#passPost,#onlinePost").hide();
+    })
+    $("#passBtn").click(function(){
+      $("#passPost").show();
+      $("#unpassPost,#onlinePost").hide();
+    })
+    $("#onlinwBtn").click(function(){
+      $("#onlinwPost").show();
+      $("#passPost,#unpassPost").hide();
+    })
+
+  </script>
+</body>
+
+</html>

@@ -5,9 +5,7 @@ a {
   text-decoration: none;
   color: black !important;
 }
-a:hover {
-  color: #52a7cc !important;
-}
+
 
 nav {
   width: 95vw;
@@ -40,8 +38,8 @@ img.circle{
 }
 
 #topBtn{
-  position: absolute;
-    bottom: 80px;
+  position: fixed;
+    bottom: 60px;
     right: 20px;
     z-index: 99;
     color:#D7E2E9 !important;
@@ -69,4 +67,74 @@ img.circle{
   90% {
     transform: translate(0, -4px);
   }
+}
+.slick-prev::before,
+.slick-next::before {
+  color: #415A80;
+}
+.btn-primary {
+  font-family: "Noto Sans TC";
+  border-radius: 10px;
+  border: 2px solid #415A80;
+  background-color: #415A80;
+}
+.btn-primary:hover {
+  border: 2px solid #415A80;
+  background-color: #ffffff;
+  color: #415A80;
+}
+
+.btn-primary:focus {
+  background-color: #415A80;
+  color: #ffffff;
+
+}
+
+
+.homeBtn {
+  width: 30px;
+  height: 30px;
+  background: #415A80;
+  border: 2px solid #415A80;
+  border-radius: 50%;
+  color: white;
+}
+
+.homeBtn:hover {
+  border: 2px solid #415A80;
+  background-color: white;
+  color: #415A80;
+}
+
+#homeIcon {
+  fill: #ffffff;
+}
+
+#homeIcon:hover {
+  fill: #415A80;
+}
+
+.line {
+  width: 50px;
+  border: 1px solid #415A80;
+}
+
+.lineDash {
+  width: 50px;
+  border: 1px dashed #415A80;
+}
+.btn:focus{
+  outline: none !important;
+}
+
+.preview{
+  padding: 5px;
+  border: 1px solid #BADC58;
+  border-radius: 5px;
+  color: #BADC58;
+  z-index: 2;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  cursor: pointer;
 }
