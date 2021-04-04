@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Noto+Serif+TC&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/kolstyle.css">
+  <script src="https://kit.fontawesome.com/7f45dfd3e1.js" crossorigin="anonymous"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #particles-js {
+      position: absolute;
+      height: 100vh;
+      width: 100vw;
+      z-index: -1;
+    }
+
+    .title {
+      color: #415A80;
+    }
+
+    .btn-primary {
+      font-family: "Noto Sans TC";
+      border-radius: 10px;
+      border: 2px solid #415A80;
+      background-color: #415A80;
+    }
+
+    .btn-primary:hover {
+      border: 2px solid #415A80;
+      background-color: #ffffff;
+      color: #415A80;
+    }
+
+    .btn-primary:focus {
+      background-color: #415A80;
+      color: #ffffff;
+
+    }
+
+
+    .homeBtn {
+      width: 40px;
+      height: 40px;
+      background: #415A80;
+      border: 2px solid #415A80;
+      border-radius: 50%;
+      color: white;
+    }
+
+    .homeBtn:hover {
+      border: 2px solid #415A80;
+      background-color: white;
+      color: #415A80;
+    }
+
+    #homeIcon {
+      fill: #ffffff;
+    }
+
+    #homeIcon:hover {
+      fill: #415A80;
+    }
+
+    .line {
+      width: 50px;
+      border: 1px solid #415A80;
+    }
+
+    .lineDash {
+      width: 50px;
+      border: 1px dashed #415A80;
+    }
+
+    .card {
+      box-shadow: -1px -1px 7px #ffffff73, 1px 1px 5px rgb(94 104 121 / 29%);
+      border: 0;
+      overflow: hidden;
+    }
+
+    .card-header {
+      background-color: #ffffff;
+      border: 0;
+      display: flex;
+      justify-content:flex-end;
+    }
+
+    .decideBar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+    }
+    .decideBar div input[type="checkbox"]{
+      display: none;
+    }
+    .checkedBtn,.uncheckBtn{
+      text-align: center;
+      line-height: 30px;
+      width:50px;
+      height: 30px;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: #DEE0E0;
+      color: #ffffff;
+      margin: 5px;
+      box-shadow: -1px -1px 2px #ffffff73, 1px 1px 2px rgb(94 104 121 / 29%);
+    }
+    .decideBar div input[type="checkbox"]:checked + label .checkedBtn{
+      background-color: #415A80;
+    }
+    .decideBar div input[type="checkbox"]:checked + label .uncheckBtn{
+      background-color: #415A80;
+    }
+    .hashtag{
+      color: #415A80;
+      border:2px solid #415A80;
+      border-radius: 10px;
+      margin: 5px;
+      padding: 2px 10px;
+    }
+    .hashtag:hover{
+      color: #ffffff;
+      background-color: #415A80;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 背景 -->
+  <div id="particles-js"></div>
+
+  <!-- 選單列 -->
+  <nav class=" navbar mx-3 mt-3 mb-2">
+    <div class="container d-flex justify-content-between">
+      <div class="navbar-brand">
+        <img src="./img/iconchart.png" alt="" width="30">
+        <b class="mx-3">NIVEA DEO純萃淨味爽身系列</b>
+      </div>
+      <a href="showMenu.html">
+        <div class="homeBtn">
+          <svg id="homeIcon" viewBox="0 0 60 60">
+            <path
+              d="M46.51,27.73C46.51,27.73,46.51,27.73,46.51,27.73L32.27,13.49c-0.61-0.61-1.41-0.94-2.27-0.94
+	c-0.86,0-1.66,0.33-2.27,0.94L13.5,27.72c0,0-0.01,0.01-0.01,0.01c-1.25,1.25-1.24,3.29,0.01,4.54c0.57,0.57,1.33,0.9,2.13,0.94
+	c0.03,0,0.07,0,0.1,0h0.57v10.48c0,2.07,1.69,3.76,3.76,3.76h5.57c0.56,0,1.02-0.46,1.02-1.02v-8.21c0-0.95,0.77-1.72,1.72-1.72
+	h3.28c0.95,0,1.72,0.77,1.72,1.72v8.21c0,0.56,0.46,1.02,1.02,1.02h5.57c2.07,0,3.76-1.69,3.76-3.76V33.21h0.53
+	c0.86,0,1.66-0.33,2.27-0.94C47.76,31.02,47.76,28.98,46.51,27.73z M45.06,30.83c-0.22,0.22-0.51,0.34-0.83,0.34h-1.55
+	c-0.56,0-1.02,0.46-1.02,1.02v11.5c0,0.95-0.77,1.72-1.72,1.72H35.4v-7.19c0-2.07-1.69-3.76-3.76-3.76h-3.28
+	c-2.07,0-3.76,1.69-3.76,3.76v7.19h-4.55c-0.95,0-1.72-0.77-1.72-1.72v-11.5c0-0.56-0.46-1.02-1.02-1.02h-1.52
+	c-0.02,0-0.03,0-0.05,0c-0.3-0.01-0.59-0.13-0.8-0.34c-0.46-0.46-0.46-1.2,0-1.65c0,0,0,0,0,0l0,0l14.23-14.23
+	c0.22-0.22,0.51-0.34,0.83-0.34c0.31,0,0.6,0.12,0.83,0.34l14.23,14.23c0,0,0,0,0.01,0.01C45.52,29.63,45.52,30.37,45.06,30.83z" />
+          </svg>
+        </div>
+      </a>
+    </div>
+  </nav>
+  <!-- 主內容 -->
+  <section id="main" class="m-3 overflow-hidden">
+    <!-- 流程選單 -->
+    <section class="container mx-auto my-3">
+      <div class="d-flex justify-content-center align-items-center">
+        <a href="">
+          <img src="./img/chooseicon2.svg" width="100">
+        </a>
+        <div class="line"></div>
+        <div>選 人</div>
+        <div class="line lineDash"></div>
+        <a href="">
+          <img src="./img/checkicon2.svg" width="100">
+        </a>
+        <div class="line lineDash"></div>
+        <div>過 稿</div>
+        <div class="line lineDash"></div>
+        <a href="">
+          <img src="./img/effecticon2.svg" width="100">
+        </a>
+        <div class="line lineDash"></div>
+        <div>成 效</div>
+      </div>
+    </section>
+    <section class="container mx-auto my-3">
+      <div>
+        <div class="nav nav-tabs" role="tablist">
+          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#allChoose" type="button"
+            role="tab">全部(10)</button>
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#needChoose" type="button"
+            role="tab">已選(4)</button>
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#noneedChoose" type="button"
+            role="tab">捨棄(4)</button>
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#noChoose" type="button"
+            role="tab">未選(2)</button>
+        </div>
+      </div>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="allChoose" role="tabpanel">
+          <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4 m-3">
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-header">
+                  <div id="person1" class="decideBar">
+                    <div><input type="checkbox" name="choose" value="1" id="choose1"><label for="choose1"><div class="checkedBtn"><i class="fas fa-check"></i></div></label></div>
+                    <div><input type="checkbox" name="unchoose" value="0" id="unchoose1"><label for="unchoose1"><div class="uncheckBtn"><i class="fas fa-times"></i></div></label></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-wrap">
+                    <div class="hashtag">健身</div>
+                    <div class="hashtag">美食</div>
+                    <div class="hashtag">生活</div>
+                    <div class="hashtag">潮流</div>
+                  </div>
+                  <div class="d-flex mt-2 align-items-center">
+                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    
+                    <div class="">
+                    <h5 class="card-title">王小明ＸＸＸＸＸ</h5>
+                    <div class="d-flex text-center">
+                      <div class="me-2">
+                        <div>貼文</div>
+                        <div>2999</div>
+                      </div>
+                      <div class="me-2">
+                        <div>追蹤</div>
+                        <div>29k</div>
+                      </div>
+                      <div class="me-2">
+                        <div>互動</div>
+                        <div>9%</div>
+                      </div>
+                      <div class="me-2">
+                        <div>平均愛心</div>
+                        <div>2k</div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  <p class="card-text">備註：無。</p>
+                  <div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-header">
+                  <div id="person2" class="decideBar">
+                    <div><input type="checkbox" name="choose" value="1" id="choose2"><label for="choose2"><div class="checkedBtn"><i class="fas fa-check"></i></div></label></div>
+                    <div><input type="checkbox" name="unchoose" value="0" id="unchoose2"><label for="unchoose2"><div class="uncheckBtn"><i class="fas fa-times"></i></div></label></div>
+                  </div>
+                </div>
+                <img src="" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a short card.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-header">
+                  <div id="person3" class="decideBar">
+                    <div><input type="checkbox" name="choose" value="1" id="choose3"><label for="choose3"><div class="checkedBtn"><i class="fas fa-check"></i></div></label></div>
+                    <div><input type="checkbox" name="unchoose" value="0" id="unchoose3"><label for="unchoose3"><div class="uncheckBtn"><i class="fas fa-times"></i></div></label></div>
+                  </div>
+                </div>
+                <img src="" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                    additional content.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-header"></div>
+                <img src="" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="needChoose" role="tabpanel">...</div>
+        <div class="tab-pane fade" id="noneedChoose" role="tabpanel">...</div>
+        <div class="tab-pane fade" id="noChoose" role="tabpanel">...</div>
+      </div>
+    </section>
+    <!-- 裝飾 -->
+    <div style="position:absolute;right:0;bottom:-10px;z-index: -1;"><img src="./img/chart.svg" width="200"></div>
+  </section>
+  <!-- 頭像彈出視窗 -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="./img/man.jpg" width="100%">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/particles.min.js"></script>
+  <script src="./js/app.js"></script>
+  <script>
+    for (let i = 1; i <= 3; i++) {
+      let person = "#person";
+      $(`${person + i} div input`).click(function () {
+        if ($(this).prop('checked')) {
+          $(`${person + i} div input:checkbox`).prop('checked', false);
+          $(this).prop('checked', true);
+        }
+      });
+    }
+
+  </script>
+</body>
+
+</html>
