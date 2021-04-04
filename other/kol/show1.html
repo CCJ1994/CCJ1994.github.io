@@ -23,15 +23,22 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      /* position:relative; */
     }
 
     #particles-js {
-      position: absolute;
+      position: fixed;
+      top:0;
+      bottom:0;
       height: 100vh;
       width: 100vw;
       z-index: -1;
     }
+    #stepwizard img{
+      border-radius:50%;
+      box-shadow: -1px -1px 7px #ffffff73, 1px 1px 5px rgb(94 104 121 / 29%);
 
+    }
     .title {
       color: #415A80;
     }
@@ -153,6 +160,12 @@
     .slick-next::before {
       color: #415A80;
     }
+    .status{
+      background-color: #A5D4DC;
+      color:#ffffff;
+      padding:5px 10px;
+      border-radius:5px;
+    }
     footer{
       background-color: #A5D4DC;
     }
@@ -164,7 +177,7 @@
   <div id="particles-js"></div>
 
   <!-- 選單列 -->
-  <nav class=" navbar mx-3 mt-3 mb-2">
+  <nav id="navMenu" class=" navbar mx-3 mt-3 mb-2">
     <div class="container d-flex justify-content-between">
       <div class="navbar-brand">
         <img src="./img/iconchart.png" alt="" width="30">
@@ -191,7 +204,7 @@
   <!-- 主內容 -->
   <section id="main" class="m-3 overflow-hidden">
     <!-- 流程選單 -->
-    <section class="container mx-auto my-3">
+    <section class="container mx-auto my-3 " id="stepwizard">
       <div class="d-flex justify-content-center align-items-center">
         <a href="">
           <img src="./img/chooseicon2.svg" width="100">
@@ -413,14 +426,15 @@
             <div id="kol4" class="col">
               <div class="card h-100">
                 <div class="card-header">
-                  <div id="person4" class="decideBar">
+                  <div class="status">過稿中</div>
+                  <!-- <div id="person4" class="decideBar">
                     <div><input type="checkbox" name="choose" value="1" id="choose4"><label for="choose4">
                         <div class="checkedBtn"><i class="fas fa-check"></i></div>
                       </label></div>
                     <div><input type="checkbox" name="unchoose" value="0" id="unchoose4"><label for="unchoose4">
                         <div class="uncheckBtn"><i class="fas fa-times"></i></div>
                       </label></div>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="card-body">
                   <div class="d-flex flex-wrap">
@@ -491,10 +505,14 @@
       </div>
     </div>
   </div>
-  <footer class="fixed-bottom text-center">
+  <footer class="fixed-bottom text-center text-light p-2">
     <b>已選4</b> 
     <b>捨棄4</b> 
     <b>未選2</b> 
+    <button class="btn btn-primary">提交名單</button>
+    <a href="#navMenu" class="" id="topBtn">
+      <i class="fas fa-arrow-circle-up fa-2x"></i>
+    </a>
   </footer>
   <script src="./js/particles.min.js"></script>
   <script src="./js/app.js"></script>
@@ -510,7 +528,7 @@
         }
         let choose = $("#choose" + i);
         if ($(choose).is(":checked")) {
-          $(this).parents(".card").css("border", "5px solid #415A80")
+          $(this).parents(".card").css("border", "2px solid #415A80")
         } else {
           $(this).parents(".card").css("border", "")
         }
