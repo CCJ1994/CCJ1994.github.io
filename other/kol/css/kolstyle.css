@@ -123,9 +123,6 @@ img.circle{
   width: 50px;
   border: 1px dashed #415A80;
 }
-.btn:focus{
-  outline: none !important;
-}
 
 .preview{
   padding: 5px;
