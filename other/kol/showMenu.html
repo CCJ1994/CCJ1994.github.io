@@ -21,6 +21,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      position: relative;
     }
 
     a:hover {
@@ -212,6 +213,8 @@
 </head>
 
 <body>
+  <!-- 裝飾 -->
+  <div style="position:absolute;right:10px;bottom:0px;z-index: -1;"><img src="./img/chart.svg" width="200"></div>
   <!-- 背景 -->
   <div id="particles-js"></div>
 
@@ -237,7 +240,7 @@
     </div>
     <div class="row row-cols-1 row-cols-md-3 g-5 mx-2 my-3">
       <div class="col">
-        <a href="show1.html">
+        <a href="show2.html">
           <div class="card h-100">
             <div class="card-body">
               <div class="d-flex justify-content-between">
@@ -298,8 +301,7 @@
       </div>
     </div>
 
-    <!-- 裝飾 -->
-    <div style="position:absolute;right:0;bottom:-10px;z-index: -1;"><img src="./img/chart.svg" width="200"></div>
+    
   </section>
   <!-- 留言板 -->
   <div id="btnMsg"><button class="btn btn-primary position-relative">留言板 <div class="inform"></div></button></div>
