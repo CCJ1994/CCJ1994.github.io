@@ -102,11 +102,12 @@ z-index: 1;
   color: #415A80;
 }
 
-#homeIcon {
+#homeIcon,#backIcon {
   fill: #ffffff;
 }
 
-#homeIcon:hover {
+
+#homeIcon:hover,#backIcon:hover {
   fill: #415A80;
 }
 
