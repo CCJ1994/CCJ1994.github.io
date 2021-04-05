@@ -67,10 +67,7 @@ z-index: 1;
     transform: translate(0, -4px);
   }
 }
-.slick-prev::before,
-.slick-next::before {
-  color: #415A80;
-}
+
 .btn-primary {
   font-family: "Noto Sans TC";
   border-radius: 10px;

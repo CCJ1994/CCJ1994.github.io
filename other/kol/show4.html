@@ -48,12 +48,59 @@
 
     .show {
       color: #415A80;
-
     }
-
     .accordion {
       box-shadow: -1px -1px 7px #ffffff73, 1px 1px 5px rgb(94 104 121 / 29%);
     }
+    .title {
+      color: #415A80;
+    }
+    .photoPart{
+      width: 330px;
+      height:400px;
+  box-shadow: -1px -1px 7px #ffffff73, 1px 1px 5px rgb(94 104 121 / 29%);
+
+    }
+    .textPart{
+      background-color: white;
+      width: 330px;
+      height:400px;
+  box-shadow: -1px -1px 7px #ffffff73, 1px 1px 5px rgb(94 104 121 / 29%);
+    }
+    .wordPart{
+      height: 250px;
+        overflow-y: auto;
+      }
+    @media (max-width: 576px) {
+      .textPart {
+        height: 250px;
+      }
+      .wordPart{
+      height: 100px;
+        overflow-y: auto;
+      }
+    }
+    .slick-dots li button:before{
+      top:-30px;
+    }
+    .slick-dots li.slick-active button:before{
+      color: white;
+    }
+    .slick-prev{
+      left: 10px;
+      z-index: 2;
+    }
+    .slick-next{
+      right: 10px;
+      z-index: 2;
+    }
+    img.user{
+  margin: 8px;
+  border-radius: 50%;
+  object-fit: cover;
+  height: 40px;
+  width: 40px;
+}
   </style>
 </head>
 
@@ -91,13 +138,13 @@
     <!-- 流程選單 -->
     <section class="container mx-auto my-3 " id="stepwizard">
       <div class="d-flex justify-content-center align-items-center">
-        <a href="show1.html">
+        <a href="show2.html">
           <img src="./img/chooseicon2.svg" width="100">
         </a>
         <div class="line"></div>
         <div>選 人</div>
         <div class="line"></div>
-        <a href="show2.html">
+        <a href="show3.html">
           <img src="./img/checkicon2.svg" width="100">
         </a>
         <div class="line"></div>
@@ -111,7 +158,7 @@
       </div>
     </section>
     <section class="container mx-auto my-5">
-      <div class="accordion  mb-5" id="writing">
+      <div class="accordion" id="writing">
         <div class="accordion-item border-0">
           <h2 class="accordion-header" id="writingBtn">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWriting">
@@ -121,12 +168,57 @@
           <div id="collapseWriting" class="accordion-collapse collapse show" aria-labelledby="writingBtn"
             data-bs-parent="#writing">
             <div class="accordion-body">
+            </div>
+          </div>
+        </div>
+      </div>  
+    </section>
+    <section class="my-5 mx-5">
+      <div class="container border-top border-bottom">
+        <h4 class="text-center title mt-4">預覽Instagram</h4>
+        <div class="container d-flex flex-wrap justify-content-center my-4" id="igPart">
+          <div class="photoPart flex-shrink-0">
+            <div class="slider mx-auto">
+              <div class="slide-1 mx-1"><img style="object-fit: cover;width:330px;height:400px;" src="./img/2.jpeg"></div>
+              <div class="slide-2 mx-1"><img style="object-fit: cover;width:330px;height:400px;" src="./img/1.jpeg"></div>
+              <div class="slide-3 mx-1"><img style="object-fit: cover;width:330px;height:400px;" src="./img/3.jpeg"></div>
+              <div class="slide-4 mx-1"><img style="object-fit: cover;width:330px;height:400px;" src="./img/4.jpg"></div>
+            </div>
+          </div>
+          <div class="textPart p-2 flex-shrink-0">
+            <div class="position-relative">
+              <img src="./img/man.jpg" class="user">
+                <b class="me-2">王大明</b>
+              <span class="mx-2" style="color: #52A7CC;">追蹤</span>
+              <span class="position-absolute" style="right:20px;top:10px;"><i class="fas fa-ellipsis-h"></i></span>
+            </div>
+            <div class="d-flex">
+              <div>
+              <img src="./img/man.jpg" class="user">
+              </div>
+              <div class="wordPart">
+                <b>王大明</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam sit iusto eaque vero fuga aliquid perspiciatis voluptatibus itaque numquam sapiente veritatis fugit, nam unde repudiandae id voluptatum, atque quos laborum?
+              </div>
+            </div>
+            <div>
+              <hr class="my-1">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <img src="./img/likeicon.png" width="25">
+                  <img src="./img/commenticon.png" width="25">
+                  <img src="./img/senticon.png" width="25">
+                </div>
+                <div><img src="./img/saveicon.png" width="25"></div>
+              </div>
+              <div class="my-3"><b>999個說讚</b></div>
 
             </div>
           </div>
         </div>
       </div>
-      <div class="accordion  mb-5" id="photo">
+    </section>
+    <section class="container mx-auto my-5">
+      <div class="accordion" id="photo">
         <div class="accordion-item border-0">
           <h2 class="accordion-header" id="photoBtn">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhoto">
@@ -141,7 +233,9 @@
           </div>
         </div>
       </div>
-      <div class="accordion  mb-5" id="message">
+    </section>
+    <section class="container mx-auto my-5">
+      <div class="accordion" id="message">
         <div class="accordion-item border-0">
           <h2 class="accordion-header" id="messageBtn">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMessage">
@@ -180,7 +274,14 @@
     <script src="./js/app.js"></script>
     <script src="./js/slick.min.js"></script>
     <script>
-
+      $('.slider').slick({
+      centerMode: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      arrows: true,
+      variableWidth: true
+    });
     </script>
 </body>
 
