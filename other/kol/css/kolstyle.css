@@ -133,3 +133,17 @@ z-index: 1;
   top: 15px;
   cursor: pointer;
 }
+.accordion-button{
+background-color: #ffffff;
+border:0;
+}
+accordion-button:not(.collapsed),.accordion-button{
+background-color: #ffffff !important;
+border:0;
+color: #415A80 !important;
+
+}
+.accordion-button:focus{
+  color: #415A80;
+  border-color: transparent !important;
+}

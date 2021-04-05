@@ -21,80 +21,103 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      position:relative;
+      /* position:relative; */
     }
 
     #particles-js {
       position: fixed;
-      top: 0;
-      bottom: 0;
+      top:0;
+      bottom:0;
       height: 100vh;
       width: 100vw;
       z-index: -1;
     }
-
-    #stepwizard img {
-      border-radius: 50%;
+    #stepwizard img{
+      border-radius:50%;
       box-shadow: -1px -1px 7px #ffffff73, 1px 1px 5px rgb(94 104 121 / 29%);
 
     }
-
     .title {
       color: #415A80;
     }
 
-    .statusBtn {
-      color: #415A80 !important;
-      text-align: center;
-      background-color: #ffffff;
-      border-radius: 5px;
-      padding: 10px;
+    
+
+    .card {
       box-shadow: -1px -1px 7px #ffffff73, 1px 1px 5px rgb(94 104 121 / 29%);
+      border: 0;
+      overflow: hidden;
+      min-width: 290px;
+    }
+
+    .card-header {
+      background-color: #ffffff;
+      border: 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .decideBar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+    }
+
+    .decideBar div input[type="checkbox"] {
+      display: none;
+    }
+
+    .checkedBtn,
+    .uncheckBtn {
+      text-align: center;
+      line-height: 30px;
+      width: 50px;
+      height: 30px;
       cursor: pointer;
-    }
-
-    .statusBtnActive {
-      border: 1px solid #52A7CC;
-    }
-
-    .tag {
       border-radius: 5px;
-      padding: 5px;
-      color: white;
-      font-size: 15px;
+      background-color: #DEE0E0;
+      color: #ffffff;
+      margin: 5px;
+      box-shadow: -1px -1px 2px #ffffff73, 1px 1px 2px rgb(94 104 121 / 29%);
     }
 
-    .pass {
-      background-color: #52A7CC;
+    .decideBar div input[type="checkbox"]:checked+label .checkedBtn {
+      background-color: #415A80;
     }
 
-    .unpass {
-      background-color: #FFDC68;
+    .decideBar div input[type="checkbox"]:checked+label .uncheckBtn {
+      background-color: #415A80;
+    }
+
+    .hashtag {
       color: #415A80;
+      border: 2px solid #415A80;
+      border-radius: 10px;
+      margin: 5px;
+      padding: 2px 10px;
+    }
+
+    .hashtag:hover {
+      color: #ffffff;
+      background-color: #415A80;
+    }
+    .status{
+      background-color: #A5D4DC;
+      color:#ffffff;
+      padding:5px 10px;
+      border-radius:5px;
+    }
+    footer{
+      background-color: #A5D4DC;
     }
   </style>
 </head>
 
 <body>
-  <!-- 頭像彈出視窗 -->
-  <div class="modal fade" id="previewModal" tabindex="-1">
-    <div class="modal-dialog ">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <img id="modalImg" src="" width="100%">
-        </div>
-      </div>
-    </div>
-  </div>
-  
   <!-- 背景 -->
   <div id="particles-js"></div>
-  <a href="#navMenu" class="" id="topBtn">
-    <i class="fas fa-arrow-circle-up fa-2x"></i>
-  </a>
+
   <!-- 選單列 -->
   <nav id="navMenu" class=" navbar mx-3 mt-3 mb-2">
     <div class="container d-flex justify-content-between">
@@ -125,16 +148,16 @@
     <!-- 流程選單 -->
     <section class="container mx-auto my-3 " id="stepwizard">
       <div class="d-flex justify-content-center align-items-center">
-        <a href="show1.html">
+        <a href="show2.html">
           <img src="./img/chooseicon2.svg" width="100">
         </a>
         <div class="line"></div>
         <div>選 人</div>
-        <div class="line"></div>
-        <a href="show2.html">
+        <div class="line lineDash"></div>
+        <a href="show3.html">
           <img src="./img/checkicon2.svg" width="100">
         </a>
-        <div class="line"></div>
+        <div class="line lineDash"></div>
         <div>過 稿</div>
         <div class="line lineDash"></div>
         <a href="show5.html">
@@ -144,465 +167,335 @@
         <div>成 效</div>
       </div>
     </section>
-    <section class="container mx-auto my-5">
-      <div class="d-flex my-3">
-        <a id="unpassBtn" class="mx-2 statusBtn statusBtnActive">過稿中(10)</a>
-        <a id="passBtn" class="mx-2 statusBtn">已確稿(5)</a>
-        <a id="onlineBtn" class="mx-2 statusBtn">已上線(5)</a>
-      </div>
-      <div id="unpassPost" class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4 my-3">
-        <div class="col">
-          <div class="card h-100 position-relative">
-            <div class="card-body">
-              <a href="show3.html">
-                <div class="d-flex mb-2">
-                  <div>
-                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal"
-                      data-bs-target="#previewModal">
-                  </div>
-                  <div>
-                    <h5 class="card-title">王小明</h5>
-                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center">
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
-                    <div class="tag unpass me-1">未審</div>
-                    <div class="tag unpass me-1">未確稿</div>
-                  </div>
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
-                    <div class="tag unpass">未確稿</div>
-                  </div>
-                </div>
-              </a>
-              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#previewModal">預覽貼文</sapn>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 position-relative">
-            <div class="card-body">
-              <a href="show3.html">
-                <div class="d-flex mb-2">
-                  <div>
-                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal"
-                      data-bs-target="#previewModal">
-                  </div>
-                  <div>
-                    <h5 class="card-title">王小明</h5>
-                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center">
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
-                    <div class="tag unpass me-1">未審</div>
-                    <div class="tag pass me-1">確 稿</div>
-                  </div>
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
-                    <div class="tag pass">確 稿</div>
-                  </div>
-                </div>
-              </a>
-              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#previewModal">預覽貼文</sapn>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 position-relative">
-            <div class="card-body">
-              <a href="show3.html">
-                <div class="d-flex mb-2">
-                  <div>
-                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal"
-                      data-bs-target="#previewModal">
-                  </div>
-                  <div>
-                    <h5 class="card-title">王小明</h5>
-                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center">
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
-                    <div class="tag unpass me-1">未審</div>
-                    <div class="tag pass me-1">確 稿</div>
-                  </div>
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
-                    <div class="tag pass">確 稿</div>
-                  </div>
-                </div>
-              </a>
-              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#previewModal">預覽貼文</sapn>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 position-relative">
-            <div class="card-body">
-              <a href="show3.html">
-                <div class="d-flex mb-2">
-                  <div>
-                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal"
-                      data-bs-target="#previewModal">
-                  </div>
-                  <div>
-                    <h5 class="card-title">王小明</h5>
-                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center">
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
-                    <div class="tag unpass me-1">未審</div>
-                    <div class="tag pass me-1">確 稿</div>
-                  </div>
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
-                    <div class="tag pass">確 稿</div>
-                  </div>
-                </div>
-              </a>
-              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#previewModal">預覽貼文</sapn>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 position-relative">
-            <div class="card-body">
-              <a href="show3.html">
-                <div class="d-flex mb-2">
-                  <div>
-                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal"
-                      data-bs-target="#previewModal">
-                  </div>
-                  <div>
-                    <h5 class="card-title">王小明</h5>
-                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center">
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
-                    <div class="tag unpass me-1">未審</div>
-                    <div class="tag pass me-1">確 稿</div>
-                  </div>
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
-                    <div class="tag unpass">未確稿</div>
-                  </div>
-                </div>
-              </a>
-              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#previewModal">預覽貼文</sapn>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 position-relative">
-            <div class="card-body">
-              <a href="show3.html">
-                <div class="d-flex mb-2">
-                  <div>
-                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal"
-                      data-bs-target="#previewModal">
-                  </div>
-                  <div>
-                    <h5 class="card-title">王小明</h5>
-                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center">
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
-                    <div class="tag unpass me-1">未審</div>
-                    <div class="tag pass me-1">確 稿</div>
-                  </div>
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
-                    <div class="tag pass">確 稿</div>
-                  </div>
-                </div>
-              </a>
-              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#previewModal">預覽貼文</sapn>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 position-relative">
-            <div class="card-body">
-              <a href="show3.html">
-                <div class="d-flex mb-2">
-                  <div>
-                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal"
-                      data-bs-target="#previewModal">
-                  </div>
-                  <div>
-                    <h5 class="card-title">王小明</h5>
-                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center">
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
-                    <div class="tag unpass me-1">未審</div>
-                    <div class="tag pass me-1">確 稿</div>
-                  </div>
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
-                    <div class="tag pass">確 稿</div>
-                  </div>
-                </div>
-              </a>
-              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#previewModal">預覽貼文</sapn>
-            </div>
-          </div>
+    <section class="container mx-auto my-3">
+      <div>
+        <div class="nav nav-tabs" role="tablist">
+          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#allChoose" type="button"
+            role="tab">全部(10)</button>
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#needChoose" type="button"
+            role="tab">已選(4)</button>
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#noneedChoose" type="button"
+            role="tab">捨棄(4)</button>
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#noChoose" type="button"
+            role="tab">未選(2)</button>
         </div>
       </div>
-      <div id="passPost" class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4 my-3" style="display:none;">
-        <div class="col">
-          <div class="card h-100 position-relative">
-            <div class="card-body">
-              <a href="show3.html">
-                <div class="d-flex mb-2">
-                  <div>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="allChoose" role="tabpanel">
+          <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4 m-3">
+            <div id="kol1" class="col">
+              <div class="card h-100">
+                <div class="card-header">
+                  <div id="person1" class="decideBar">
+                    <div><input type="checkbox" name="choose" value="1" id="choose1"><label for="choose1">
+                        <div class="checkedBtn"><i class="fas fa-check"></i></div>
+                      </label></div>
+                    <div><input type="checkbox" name="unchoose" value="0" id="unchoose1"><label for="unchoose1">
+                        <div class="uncheckBtn"><i class="fas fa-times"></i></div>
+                      </label></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-wrap">
+                    <div class="hashtag">健身</div>
+                    <div class="hashtag">美食</div>
+                    <div class="hashtag">生活</div>
+                    <div class="hashtag">潮流</div>
+                  </div>
+                  <div class="d-flex mt-2 align-items-center">
                     <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal"
-                      data-bs-target="#previewModal">
+                      data-bs-target="#exampleModal">
+                    <div class="">
+                      <h5 class="card-title">王小明ＸＸＸＸＸ</h5>
+                      <div class="d-flex text-center">
+                        <div class="me-2">
+                          <div>貼文</div>
+                          <div>2999</div>
+                        </div>
+                        <div class="me-2">
+                          <div>追蹤</div>
+                          <div>29k</div>
+                        </div>
+                        <div class="me-2">
+                          <div>互動</div>
+                          <div>9%</div>
+                        </div>
+                        <div class="me-2">
+                          <div>平均愛心</div>
+                          <div>2k</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h5 class="card-title">王小明</h5>
-                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
+                  <p class="card-text">備註：無。</p>
+                  <div class="container">
+                    <div class="slider mx-auto">
+                      <div class="slide-1 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;" src="./img/1.jpeg"
+                          data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
+                      <div class="slide-2 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;" src="./img/2.jpeg"
+                          data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
+                      <div class="slide-3 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;" src="./img/3.jpeg"
+                          data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
+                      <div class="slide-4 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;" src="./img/4.jpg"
+                          data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
                     </div>
                   </div>
                 </div>
-                <div class="d-flex align-items-center">
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
-                    <div class="tag pass me-1">審過</div>
-                    <div class="tag pass me-1">確稿</div>
-                  </div>
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
-                    <div class="tag pass">確稿</div>
+              </div>
+            </div>
+            <div id="kol2" class="col">
+              <div class="card h-100">
+                <div class="card-header">
+                  <div id="person2" class="decideBar">
+                    <div><input type="checkbox" name="choose" value="1" id="choose2"><label for="choose2">
+                        <div class="checkedBtn"><i class="fas fa-check"></i></div>
+                      </label></div>
+                    <div><input type="checkbox" name="unchoose" value="0" id="unchoose2"><label for="unchoose2">
+                        <div class="uncheckBtn"><i class="fas fa-times"></i></div>
+                      </label></div>
                   </div>
                 </div>
-              </a>
-              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#previewModal">預覽貼文</sapn>
+                <div class="card-body">
+                  <div class="d-flex flex-wrap">
+                    <div class="hashtag">健身</div>
+                    <div class="hashtag">美食</div>
+                    <div class="hashtag">生活</div>
+                    <div class="hashtag">潮流</div>
+                  </div>
+                  <div class="d-flex mt-2 align-items-center">
+                    <img src="./img/women.png" class="circle" alt="" data-bs-toggle="modal"
+                      data-bs-target="#exampleModal">
+
+                    <div class="">
+                      <h5 class="card-title">黃小美ＸＸＸＸＸ</h5>
+                      <div class="d-flex text-center">
+                        <div class="me-2">
+                          <div>貼文</div>
+                          <div>2999</div>
+                        </div>
+                        <div class="me-2">
+                          <div>追蹤</div>
+                          <div>29k</div>
+                        </div>
+                        <div class="me-2">
+                          <div>互動</div>
+                          <div>9%</div>
+                        </div>
+                        <div class="me-2">
+                          <div>平均愛心</div>
+                          <div>2k</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="card-text">備註：無。</p>
+                  <div class="container">
+                    <div class="slider mx-auto">
+                      <div class="slide-1 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;" src="./img/2.jpeg"
+                          data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
+                      <div class="slide-2 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;" src="./img/1.jpeg"
+                          data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
+                      <div class="slide-3 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;" src="./img/3.jpeg"
+                          data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
+                      <div class="slide-4 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;" src="./img/4.jpg"
+                          data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="kol3" class="col">
+              <div class="card h-100">
+                <div class="card-header">
+                  <div id="person3" class="decideBar">
+                    <div><input type="checkbox" name="choose" value="1" id="choose3"><label for="choose3">
+                        <div class="checkedBtn"><i class="fas fa-check"></i></div>
+                      </label></div>
+                    <div><input type="checkbox" name="unchoose" value="0" id="unchoose3"><label for="unchoose3">
+                        <div class="uncheckBtn"><i class="fas fa-times"></i></div>
+                      </label></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-wrap">
+                    <div class="hashtag">健身</div>
+                    <div class="hashtag">美食</div>
+                    <div class="hashtag">生活</div>
+                    <div class="hashtag">潮流</div>
+                  </div>
+                  <div class="d-flex mt-2 align-items-center">
+                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal"
+                      data-bs-target="#exampleModal">
+                    <div class="">
+                      <h5 class="card-title">秋小花ＸＸＸＸＸ</h5>
+                      <div class="d-flex text-center">
+                        <div class="me-2">
+                          <div>貼文</div>
+                          <div>2999</div>
+                        </div>
+                        <div class="me-2">
+                          <div>追蹤</div>
+                          <div>29k</div>
+                        </div>
+                        <div class="me-2">
+                          <div>互動</div>
+                          <div>9%</div>
+                        </div>
+                        <div class="me-2">
+                          <div>平均愛心</div>
+                          <div>2k</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="card-text">備註：無。</p>
+                  <div class="container">
+                    <div class="slider mx-auto">
+                      <div class="slide-1 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;" src="./img/3.jpeg"
+                          data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
+                      <div class="slide-2 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;" src="./img/1.jpeg"
+                          data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
+                      <div class="slide-3 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;" src="./img/2.jpeg"
+                          data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
+                      <div class="slide-4 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;" src="./img/4.jpg"
+                          data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="kol4" class="col">
+              <div class="card h-100">
+                <div class="card-header">
+                  <div class="status">過稿中</div>
+                  <!-- <div id="person4" class="decideBar">
+                    <div><input type="checkbox" name="choose" value="1" id="choose4"><label for="choose4">
+                        <div class="checkedBtn"><i class="fas fa-check"></i></div>
+                      </label></div>
+                    <div><input type="checkbox" name="unchoose" value="0" id="unchoose4"><label for="unchoose4">
+                        <div class="uncheckBtn"><i class="fas fa-times"></i></div>
+                      </label></div>
+                  </div> -->
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-wrap">
+                    <div class="hashtag">健身</div>
+                    <div class="hashtag">美食</div>
+                    <div class="hashtag">生活</div>
+                    <div class="hashtag">潮流</div>
+                  </div>
+                  <div class="d-flex mt-2 align-items-center">
+                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal"
+                      data-bs-target="#exampleModal">
+                    <div class="">
+                      <h5 class="card-title">王月ＸＸＸＸＸ</h5>
+                      <div class="d-flex text-center">
+                        <div class="me-2">
+                          <div>貼文</div>
+                          <div>2999</div>
+                        </div>
+                        <div class="me-2">
+                          <div>追蹤</div>
+                          <div>29k</div>
+                        </div>
+                        <div class="me-2">
+                          <div>互動</div>
+                          <div>9%</div>
+                        </div>
+                        <div class="me-2">
+                          <div>平均愛心</div>
+                          <div>2k</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="card-text">備註：無。</p>
+                  <div class="container">
+                    <div class="slider mx-auto">
+                      <div class="slide-1 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;" src="./img/4.jpg"
+                          data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
+                      <div class="slide-2 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;" src="./img/2.jpeg"
+                          data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
+                      <div class="slide-3 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;" src="./img/3.jpeg"
+                          data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
+                      <div class="slide-4 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;" src="./img/1.jpeg"
+                          data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card h-100 position-relative">
-            <div class="card-body">
-              <a href="show3.html">
-                <div class="d-flex mb-2">
-                  <div>
-                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal"
-                      data-bs-target="#previewModal">
-                  </div>
-                  <div>
-                    <h5 class="card-title">王小明</h5>
-                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center">
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
-                    <div class="tag pass me-1">審過</div>
-                    <div class="tag pass me-1">確稿</div>
-                  </div>
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
-                    <div class="tag pass">確稿</div>
-                  </div>
-                </div>
-              </a>
-              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#previewModal">預覽貼文</sapn>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 position-relative">
-            <div class="card-body">
-              <a href="show3.html">
-                <div class="d-flex mb-2">
-                  <div>
-                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal"
-                      data-bs-target="#previewModal">
-                  </div>
-                  <div>
-                    <h5 class="card-title">王小明</h5>
-                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center">
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
-                    <div class="tag pass me-1">審過</div>
-                    <div class="tag pass me-1">確稿</div>
-                  </div>
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
-                    <div class="tag pass">確稿</div>
-                  </div>
-                </div>
-              </a>
-              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#previewModal">預覽貼文</sapn>
-            </div>
-          </div>
-        </div>
-      </div> 
-      <div id="onlinePost" class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4 my-3" style="display:none;">
-        <div class="col">
-          <div class="card h-100 position-relative">
-            <div class="card-body">
-              <a href="show3.html">
-                <div class="d-flex mb-2">
-                  <div>
-                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal"
-                      data-bs-target="#previewModal">
-                  </div>
-                  <div>
-                    <h5 class="card-title">王小明</h5>
-                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center">
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
-                    <div class="tag pass me-1">審過</div>
-                    <div class="tag pass me-1">確稿</div>
-                  </div>
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
-                    <div class="tag pass">確稿</div>
-                  </div>
-                </div>
-              </a>
-              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#previewModal">預覽貼文</sapn>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 position-relative">
-            <div class="card-body">
-              <a href="show3.html">
-                <div class="d-flex mb-2">
-                  <div>
-                    <img src="./img/man.jpg" class="circle" alt="" data-bs-toggle="modal"
-                      data-bs-target="#previewModal">
-                  </div>
-                  <div>
-                    <h5 class="card-title">王小明</h5>
-                    <div class="card-text"><i class="fas fa-exclamation"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="fas fa-bullhorn"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                    <div class="card-text"><i class="far fa-comment-dots"></i><span class="mx-1">xxxxxxxxxxxxxxx</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center">
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-file-alt"></i><span class="mx-1">文案</span>
-                    <div class="tag pass me-1">審過</div>
-                    <div class="tag pass me-1">確稿</div>
-                  </div>
-                  <div class="me-2 d-flex align-items-center">
-                    <i class="far fa-image"></i> <span class="mx-1">照片</span>
-                    <div class="tag pass">確稿</div>
-                  </div>
-                </div>
-              </a>
-              <sapn class="preview mx-1" data-bs-toggle="modal" data-bs-target="#previewModal">預覽貼文</sapn>
-            </div>
-          </div>
-        </div>
+        <div class="tab-pane fade" id="needChoose" role="tabpanel">...</div>
+        <div class="tab-pane fade" id="noneedChoose" role="tabpanel">...</div>
+        <div class="tab-pane fade" id="noChoose" role="tabpanel">...</div>
       </div>
     </section>
-    
-    
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/jquery-3.6.0.min.js"></script>
-    <script src="./js/particles.min.js"></script>
-    <script src="./js/app.js"></script>
-    <script src="./js/slick.min.js"></script>
-    <script>
-      $(".statusBtn").click(function () {
-        $(".statusBtn").removeClass("statusBtnActive");
-        $(this).addClass("statusBtnActive");
-      })
-      $("#unpassBtn").click(function () {
-        $("#unpassPost").show();
-        $("#passPost,#onlinePost").hide();
-      })
-      $("#passBtn").click(function () {
-        $("#passPost").show();
-        $("#unpassPost,#onlinePost").hide();
-      })
-      $("#onlineBtn").click(function () {
-        $("#onlinePost").show();
-        $("#passPost,#unpassPost").hide();
-      })
-
-    </script>
+  </section>
+  <!-- 頭像彈出視窗 -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImg" src="" width="100%">
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="fixed-bottom text-center text-light p-2">
+    <b>已選4</b> 
+    <b>捨棄4</b> 
+    <b>未選2</b> 
+    <button class="btn btn-primary">提交名單</button>
+    <a href="#navMenu" class="" id="topBtn">
+      <i class="fas fa-arrow-circle-up fa-2x"></i>
+    </a>
+  </footer>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/particles.min.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script>
+    let kolamount=$(".card").length;
+    for (let i = 1; i <= kolamount; i++) {
+      let person = "#person";
+      $(`${person + i} div input`).click(function () {
+        if ($(this).prop('checked')) {
+          $(`${person + i} div input:checkbox`).prop('checked', false);
+          $(this).prop('checked', true);
+        }
+        let choose = $("#choose" + i);
+        if ($(choose).is(":checked")) {
+          $(this).parents(".card").css("border", "2px solid #415A80")
+        } else {
+          $(this).parents(".card").css("border", "")
+        }
+        let unchoose = $("#unchoose" + i);
+        if ($(unchoose).is(":checked")) {
+          $(this).parents(".card").css("opacity", "0.3")
+        } else {
+          $(this).parents(".card").css("opacity", "1")
+        }
+      });
+    }
+    $('.slider').slick({
+      centerMode: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      dots: true,
+      arrows: true,
+      variableWidth: true
+    });
+    $("img").click(function () {
+      let thisSrc = $(this).attr("src");
+      $("#modalImg").attr("src", thisSrc);
+    })
+  </script>
 </body>
 
 </html>
