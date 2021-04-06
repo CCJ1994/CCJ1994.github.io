@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="./css/slick-theme.css">
   <link rel="stylesheet" href="./css/kolstyle.css">
   <script src="https://kit.fontawesome.com/7f45dfd3e1.js" crossorigin="anonymous"></script>
-
   <style>
     body {
       display: flex;
@@ -120,10 +119,10 @@
             <div class="card-body">
               <h5 class="card-title">愛心數</h5>
               <div class="d-flex justify-content-center align-items-end">
-                <span class="me-1 ">平均</span><h1 class="card-text">5k</h1>
+                <span class="me-1 ">平均</span><h1 class="card-text" id="demo1">0</h1>
               </div>
               <div class="d-flex justify-content-center align-items-end">
-                <span class="me-1">總共</span><h1 class="card-text">95k</h1>
+                <span class="me-1">總共</span><h1 class="card-text" id="demo2">0</h1>
               </div>
             </div>
           </div>
@@ -133,10 +132,10 @@
             <div class="card-body">
               <h5 class="card-title">留言數</h5>
               <div class="d-flex justify-content-center align-items-end">
-                <span class="me-1 ">平均</span><h1 class="card-text">5k</h1>
+                <span class="me-1 ">平均</span><h1 class="card-text" id="demo3">0</h1>
               </div>
               <div class="d-flex justify-content-center align-items-end">
-                <span class="me-1">總共</span><h1 class="card-text">95k</h1>
+                <span class="me-1">總共</span><h1 class="card-text" id="demo4">0</h1>
               </div>
             </div>
           </div>
@@ -146,10 +145,10 @@
             <div class="card-body">
               <h5 class="card-title">互動數</h5>
               <div class="d-flex justify-content-center align-items-end">
-                <span class="me-1 ">平均</span><h1 class="card-text">5k</h1>
+                <span class="me-1 ">平均</span><h1 class="card-text" id="demo5">0</h1>
               </div>
               <div class="d-flex justify-content-center align-items-end">
-                <span class="me-1">總共</span><h1 class="card-text">95k</h1>
+                <span class="me-1">總共</span><h1 class="card-text" id="demo6">0</h1>
               </div>
             </div>
           </div>
@@ -159,7 +158,7 @@
             <div class="card-body">
               <h5 class="card-title">照片數</h5>
               <div class="d-flex justify-content-center align-items-end">
-                <span class="me-1">總共</span><h1 class="card-text">95k</h1>
+                <span class="me-1">總共</span><h1 class="card-text" id="demo7">0</h1>
               </div>
             </div>
           </div>
@@ -167,13 +166,13 @@
       </div>
     </section>
 
-    
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/particles.min.js"></script>
     <script src="./js/app.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/chart.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.8.2/countUp.min.js'></script>
     <script>
     var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
@@ -210,6 +209,21 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+let demo1 = new CountUp('demo1',0, 888,);
+  demo1.start();
+let demo2 = new CountUp('demo2',0, 2000,);
+  demo2.start();
+let demo3 = new CountUp('demo3',0, 332,);
+  demo3.start();
+let demo4 = new CountUp('demo4',0, 4445,);
+  demo4.start();
+let demo5 = new CountUp('demo5',0, 33,);
+  demo5.start();
+let demo6 = new CountUp('demo6',0, 2802,);
+  demo6.start();
+let demo7 = new CountUp('demo7',0, 234,);
+  demo7.start();
+
     </script>
 </body>
 
