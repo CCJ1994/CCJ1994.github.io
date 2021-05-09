@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/fimstyle.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f45dfd3e1.js" crossorigin="anonymous"></script>
+
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <div class="full">
+    <div class="outter p-5">
+      <div class="formPart regPart">
+        <form action="#">
+          <div id="backBtn">back</div>
+          <div id="regtitle" class="title2">註冊帳戶</div>
+          <div class="my-3">
+            <input class="form-control form-control-sm" type="text" placeholder="登入帳號">
+          </div>
+          <div class="my-3">
+            <input class="form-control form-control-sm" type="password" placeholder="登入密碼">
+          </div>
+          <div class="my-3">
+            <input class="form-control form-control-sm" type="password" placeholder="再次輸入密碼">
+          </div>
+          <div class="my-3">
+            <input class="form-control form-control-sm" type="text" placeholder="您的姓名">
+          </div>
+          <div class="my-3">
+            <input class="form-control form-control-sm" type="email" placeholder="電子信箱">
+          </div>
+          <div class="my-3">
+            <input class="form-control form-control-sm" type="tel" placeholder="聯絡電話">
+          </div>
+          <div class="mt-4 text-center"><button id="regNext" class="btn btn-outline-orange">下一步</button></div>
+          <div style="display: none;" id="companyInfo">
+          <div class="text-start mt-5  mx-3">
+            <h4>公司資訊</h4>
+          </div>
+          <div class="my-3">
+            <input class="form-control form-control-sm" type="tel" placeholder="公司統編">
+          </div>
+          <div class="my-3">
+            <input class="form-control form-control-sm" type="text" placeholder="公司名稱">
+          </div>
+          <div class="my-3">
+            <input class="form-control form-control-sm" type="text" placeholder="公司地址">
+          </div>
+          <div class="my-3">
+            <input class="form-control form-control-sm" type="text" placeholder="公司網站">
+          </div>
+          <div class="my-3">
+            <textarea name="" class="form-control form-control-sm" rows="2" placeholder="公司簡介"></textarea>
+          </div>
+          <div class="my-3">
+            <select class="form-select form-select-sm text-muted">
+              <option selected>產業特性</option>
+              <option value="1">販售產品</option>
+              <option value="2">提供服務</option>
+              <option value="3">行銷代理</option>
+            </select>
+          </div>
+          <div class="my-3">
+            <select class="form-select form-select-sm text-muted">
+              <option selected>產業分類</option>
+              <option value="1">包裝食品</option>
+              <option value="2">百貨通路</option>
+              <option value="3">美妝保養</option>
+              <option value="4">營養保健</option>
+            </select>
+          </div>
+          <div class="mt-3 text-center"><input type="submit" class="btn btn-outline-orange" value="立即註冊"></div>
+        </div>
+        </form>
+      </div>
+      <div class="formPart loginPart">
+        <form action="#">
+          <div class="logo"><img src="./img/justAD_logo_長方.png" height="40" alt=""></div>
+          <div class="title">就是發網紅</div>
+          <div class="form-floating my-4">
+            <input type="text" class="form-control border-0" id="floatingacc" placeholder="請輸入您的帳號">
+            <label for="floatingacc"><i class="fas fa-user-circle"></i> 帳號</label>
+          </div>
+          <div class="form-floating my-4">
+            <input type="password" class="form-control border-0" id="floatingpw" placeholder="請輸入您的密碼">
+            <label for="floatingpw"><i class="fas fa-lock"></i> 密碼</label>
+          </div>
+          <div class="mb-4 text-center"><a href=""><button class="btn btn-outline-orange">立即登入</button></a></div>
+          <div class="text-center">
+            <a id="goreg">還沒註冊 ｜</a>
+            <a href="./forgetpw.html">忘記密碼？</a>
+          </div>
+        </form>
+      </div>
+      <div class="overlayPart">
+        <div class="overlay">
+          <div class="overlay-panel leftPart">
+            <div class="title3">歡迎回來</div>
+            <p class="text-light"><small>立即登入，建立或進行專案吧！</small></p>
+            <button id="loginBtn" class="btn btn-orange">登入</button>
+          </div>
+          <div class="overlay-panel rightPart">
+            <div class="title3">歡迎加入</div>
+            <p class="text-light"><small>立即註冊，讓我們為您的專案發聲吧！</small></p>
+            <button id="regBtn" class="btn btn-orange">註冊</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $("#regNext").click(()=>{
+      $(".formPart").css("overflow-y","auto");
+      $("#companyInfo").show();
+      let val=$("#companyInfo").offset().top - $("#regtitle").innerHeight();
+      $("#regNext").hide();
+      $(".formPart").animate(
+        { scrollTop: val }, 800, "swing"
+      );
+
+    })
+    $("#regBtn").click(() => {
+      $(".outter").addClass("right-panel-active");
+    });
+
+    $("#loginBtn").click(() => {
+      $(".outter").removeClass("right-panel-active");
+      $(".formPart").css("overflow","auto");
+      $("#companyInfo").hide();
+      $("#regNext").show();
+    });
+    function loginresize(){
+      if(window.innerWidth<700){
+      console.log(1);
+      $(".outter").css("width","350px");
+      $(".overlayPart").hide();
+      $("#goreg,#backBtn").show();
+    }else{
+      $(".outter").css("width","700px");
+      $(".overlayPart").show();
+      $("#goreg,#backBtn").hide();
+    }
+    $("#goreg").click(()=>{
+      console.log(2);
+      $(".loginPart").css("z-index","0");
+      $(".regPart").css("opacity","1");
+    })
+    $("#backBtn").click(()=>{
+      $(".loginPart").css("z-index","2");
+      $(".regPart").css("opacity","0");
+    })
+    }
+
+    loginresize();
+    $(window).resize(function(){
+    loginresize();
+
+    })
+    
+  </script>
+</body>
+
+</html>
