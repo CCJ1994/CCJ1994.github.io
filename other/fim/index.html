@@ -46,9 +46,6 @@
                   <hr class="dropdown-divider">
                 </li>
                 <li><a class="dropdown-item" href="./addproject.html">新增專案</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
                 <li><a class="dropdown-item" href="#">未提交專案（14）</a></li>
                 <li><a class="dropdown-item" href="#">待付款專案（6）</a></li>
                 <li><a class="dropdown-item" href="#">進行中專案（0）</a></li>
@@ -113,6 +110,24 @@
       </div>
     </div>
   </section>
+  <div id="msgBtn"></div>
+  <div class="msg">
+    <!-- 彈出視窗背景 -->
+    <div class="msgOutter"></div>
+    <div class="msgInner">
+      <div class="msgHead">
+        <div class="mx-3 text-light">留言板</div>
+        <div class="mx-3"><img id="close" src="./img/close_24dp.svg" width="25"></div>
+      </div>
+      <div class="content d-flex flex-column">
+        <div id="scrollBottom"></div>
+      </div>
+      <div class="send p-2 d-flex justify-content-around align-items-center">
+        <input type="text" class="form-control border-0" placeholder="寫留言..">
+        <div><img src="./img/return_24dp.svg" width="30"></div>
+      </div>
+    </div>
+  </div>
   <footer class="bg-dark text-center p-2">
     <div class="container">
       <div class="d-flex justify-content-md-center justify-content-sm-start m-2 flex-wrap">
@@ -133,7 +148,18 @@
   <script src="./js/bootstrap.bundle.min.js"></script>
 
   <script>
+    $("#msgBtn").on("click", function() {
+    $(".content").animate({
+      scrollTop: $(document).height() + 5000
+    }, "slow");
+    $(".msg").fadeIn();
+    $("#msgBtn").fadeOut();
+  });
 
+  $("#close,.msgOutter").on("click", function() {
+    $("#msgBtn").fadeIn();
+    $(".msg").fadeOut();
+  });
   </script>
 </body>
 
