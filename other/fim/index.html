@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/fimstyle.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f45dfd3e1.js" crossorigin="anonymous"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body class="infobg">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="./img/justAD_logo_正方.png" width="30">
+          <div class="brandName ms-2 position-relative">
+            <div style="z-index: 1;">就是發網紅</div>
+            <img width="20" style="position: absolute;bottom: 5px;right: -10px; z-index: -1;" src="./img/titleicon.svg">
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 col justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">我的帳戶</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                我的專案
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./myproject.html">所有專案</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="./addproject.html">新增專案</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">未提交專案（14）</a></li>
+                <li><a class="dropdown-item" href="#">待付款專案（6）</a></li>
+                <li><a class="dropdown-item" href="#">進行中專案（0）</a></li>
+                <li><a class="dropdown-item" href="#">暫停中專案（1）</a></li>
+                <li><a class="dropdown-item" href="#">已結案專案（0）</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">系統留言板</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center" href="./login.html">登出<img src="./img/logout_24dp.svg"
+                  width="17"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section id="main" class="container">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <div class="title4 mx-3 my-1">
+        歡迎，486小姐
+      </div>
+      <div class="text-end my-1"><button class="btn btn-orange mx-3">編輯資料</button></div>
+    </div>
+    <div id="infomation" class="d-flex flex-wrap justify-content-center">
+      <div class="col-lg-4 col-md-12 col info my-3 p-4 me-lg-5">
+          <h5>個人資料</h5>
+          <div class="my-3">您的姓名 <span class="ms-3">486小姐</span></div>
+          <div class="my-3">電子信箱 <span class="ms-3">024store@gmail.com</span></div>
+          <div class="my-3">聯絡電話 <span class="ms-3">0223111698</span></div>
+      </div>
+      <div class="col-lg-7 col-md-12 info my-3 p-4">
+          <h5>公司資料</h5>
+          <div class="my-3">公司統編<span class="ms-3">66633033</span></div>
+          <div class="my-3">公司名稱<span class="ms-3">神智科技有限公司</span></div>
+          <div class="my-3">公司地址<span class="ms-3">臺北市中正區忠孝西路</span></div>
+          <div class="my-3">公司網站<span class="ms-3">https://www.asus.com/tw/</span></div>
+          <div class="my-3">公司簡介<span class="ms-3">華碩電腦股份有限公司創立於1989年，為全球最大的
+              主機板製造商，並躋身全球前三大消費性筆記型電腦
+              品牌。</span></div>
+          <div class="form-floating my-3">
+            <select class="form-select" id="selectSpec">
+              <option value="1">販售商品</option>
+              <option value="2">提供服務</option>
+              <option value="3">行銷代理</option>
+            </select>
+            <label for="selectSpec">產業特性</label>
+          </div>
+          <div class="form-floating my-4">
+            <select class="form-select" id="selectType">
+              <option value="1">交通用品</option>
+              <option value="2">百貨通路</option>
+              <option value="3">包裝食品</option>
+              <option value="4">美妝保養</option>
+            </select>
+            <label for="selectType">產業分類</label>
+          </div>
+
+
+      </div>
+    </div>
+  </section>
+  <footer class="bg-dark text-center p-2">
+    <div class="container">
+      <div class="d-flex justify-content-md-center justify-content-sm-start m-2 flex-wrap">
+        <div class="m-1"><small><a href="tel:02-2311-1698"><img src="./img/phone_24dp.svg">02-2311-1698</a></small>
+        </div>
+        <div class="m-1"><small><a href="mailto:justad.ad@just-adtech.com"><img
+                src="./img/mail_24dp.svg">justad.ad@just-adtech.com</a></small></div>
+        <div class="m-1"><small>服務時間 週一至週五 9:30-18:00</small></div>
+        <div class="m-1"><small><img src="./img/location_24dp.svg">台北市中正區忠孝西路一段66號34樓</small></div>
+      </div>
+      <small>Copyright 2021 © Just Advertising All rights reserved.</small>
+    </div>
+  </footer>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+
+  <script>
+
+  </script>
+</body>
+
+</html>

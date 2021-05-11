@@ -11,10 +11,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/7f45dfd3e1.js" crossorigin="anonymous"></script>
-
-  <script src="./js/bootstrap.min.js"></script>
-  <script src="./js/jquery-3.6.0.min.js"></script>
-  <script src="./js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -86,16 +82,19 @@
       <div class="formPart loginPart">
         <form action="#">
           <div class="logo"><img src="./img/justAD_logo_長方.png" height="40" alt=""></div>
-          <div class="title">就是發網紅</div>
+          <div class="title">
+            就是發網紅
+            <img id="titleicon" src="./img/titleicon.svg">
+          </div>
           <div class="form-floating my-4">
             <input type="text" class="form-control border-0" id="floatingacc" placeholder="請輸入您的帳號">
-            <label for="floatingacc"><i class="fas fa-user-circle"></i> 帳號</label>
+            <label for="floatingacc"><i class="fas fa-user-circle"></i>帳號</label>
           </div>
           <div class="form-floating my-4">
             <input type="password" class="form-control border-0" id="floatingpw" placeholder="請輸入您的密碼">
             <label for="floatingpw"><i class="fas fa-lock"></i> 密碼</label>
           </div>
-          <div class="mb-4 text-center"><a href=""><button class="btn btn-outline-orange">立即登入</button></a></div>
+          <div class="mb-4 text-center"><a href="index.html" class="btn btn-outline-orange">立即登入</a></div>
           <div class="text-center">
             <a id="goreg">還沒註冊 ｜</a>
             <a href="./forgetpw.html">忘記密碼？</a>
@@ -118,7 +117,9 @@
       </div>
     </div>
   </div>
-
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
   <script>
     $("#regNext").click(()=>{
       $(".formPart").css("overflow-y","auto");

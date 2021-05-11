@@ -4,6 +4,35 @@
 body{
   font-family: 'Noto Sans TC', sans-serif;
 }
+
+nav{
+  box-shadow: -1px -1px 7px #ffffff73, 1px 1px 5px rgb(94 104 121 / 29%);
+  background-color: #fff;
+}
+#mainMenu{
+  background-color: #fff;
+}
+#mainMenu .active{
+  color: #2F4858 !important;
+}
+/* #mainMenu .active::after{
+content:"";
+display: block;
+height: 3px;
+background-color: #f26419;
+margin: 3px 0;
+} */
+
+#main{
+  margin: 90px auto 20px;
+  min-height: 80vh;
+}
+.brandName{
+  color: #2F4858;
+  font-weight: 700;
+  font-size: 25px;
+  z-index: 1;
+}
 a,#goreg{
   text-decoration: none;
   color: #2F4858;
@@ -11,8 +40,15 @@ a,#goreg{
 a:hover,#goreg:hover,#backBtn:hover{
   color: #33658A;
 }
-.btn:focus {
-  box-shadow: none;
+h1{
+  color: #2F4858;
+  font-weight: 700;
+}
+h2,h3,h4,h5,h6{
+  color: #2F4858;
+}
+.btn:focus,.navbar-toggler {
+  box-shadow: none !important;
 }
 #goreg,#backBtn{
   cursor: pointer;
@@ -23,62 +59,19 @@ a:hover,#goreg:hover,#backBtn:hover{
   top:20px;
   left: 20px;
 }
-.full{
-    width: 100vw;
-    height: 100vh;
-    /* background-image: url("../img/wilhelm-gunkel-frJ4mqE5DNY-unsplash.jpg");
-    background-size: cover; */
-    background-color: #CDDCDC;
-    background-image: radial-gradient(#dfe9f3 , white );
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-
-.title{
-  font-size: 40px;
-  font-weight: 700;
-  color: #2F4858;
-  position: relative;
-  z-index: 1;
-}
-.title2{
-  font-size: 35px;
-  font-weight: 700;
-  color: #2F4858;
-  position: relative;
-  /* margin: 70px 0 20px 0; */
-}
-.title3{
-  font-size: 35px;
-  font-weight: 700;
-  color: #fff;
-  position: relative;
-  /* margin:20px 0; */
-}
-.title::before{
-  content:"";
-  height: 25px;
-  width:25px;
-  background-color: #f26419;
-  position: absolute;
-  border-radius: 50%;
-  right:15px;
-  bottom: 5px;
-  z-index: -1;
-}
 .btn{
   width: 150px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 .btn-orange{
   color: #fff;
   background-color: #f26419;
 }
 .btn-orange:hover{
-  color: #fff;
+  color: #f26419;
+  background-color: #fff;
+  border: 1px solid #f26419;
 }
 .btn-outline-orange{
   color: #f26419;
@@ -99,8 +92,6 @@ i{
   background-color: transparent;
 }
 
-
-
 p {
   font-size: 14px;
   font-weight: 100;
@@ -117,7 +108,53 @@ p {
   outline: none !important;
 }
 
+/* login page */
+.full{
+  width: 100vw;
+  height: 100vh;
+  /* background-image: url("../img/wilhelm-gunkel-frJ4mqE5DNY-unsplash.jpg");
+  background-size: cover; */
+  background-color: #CDDCDC;
+  background-image: radial-gradient(#dfe9f3 , white );
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.title{
+font-size: 40px;
+font-weight: 700;
+color: #2F4858;
+position: relative;
+z-index: 1;
+}
+.title2{
+font-size: 35px;
+font-weight: 700;
+color: #2F4858;
+position: relative;
+/* margin: 70px 0 20px 0; */
+}
+.title3{
+font-size: 35px;
+font-weight: 700;
+color: #fff;
+position: relative;
+/* margin:20px 0; */
+}
+.title4{
+  font-size: 25px;
+  font-weight: 700;
+  color: #2F4858;
+  }
+#titleicon{
+position: absolute;
+width: 30px;
+bottom: 5px;
+right: 10px;
+z-index: -1;
+}
 .outter {
   background-color: #fff;
   border-radius: 10px;
@@ -128,7 +165,6 @@ p {
   height: 500px;
   width: 700px;
 }
-
 .formPart {
   position: absolute;
   top: 0;
@@ -140,7 +176,6 @@ p {
   text-align: center;
   
 }
-
 .loginPart {
   left: 0;
   width: 350px;
@@ -191,7 +226,6 @@ p {
   transition: transform 0.4s ease-in-out;
   z-index: 100;
 }
-
 .outter.right-panel-active .overlayPart {
   transform: translateX(-100%);
 }
@@ -243,7 +277,36 @@ p {
   right: 0;
   transform: translateX(0);
 }
-
 .outter.right-panel-active .rightPart {
   transform: translateX(20%);
+}
+/* infomation */
+.infobg{
+  background-color: #E5F1F6;
+}
+.info{
+  box-shadow: inset 2px 2px 2px #c7d2d6, inset -2px -2px 2px #e6e6e6;
+  border-radius: 5px;
+  background-color: #fff;
+}
+/* #infomation>div:first-child{
+  min-width: 400px;
+}
+#infomation>div:last-child{
+  min-width: 650px;
+} */
+
+/* footer */
+
+footer,footer a{
+  background-color: #2F4858;
+  font-size: 12px;
+  color: #fff !important;
+}
+.bg-dark{
+  background-color: #2F4858 !important;
+}
+footer img{
+  margin: 0 1px;
+  width: 15px;
 }

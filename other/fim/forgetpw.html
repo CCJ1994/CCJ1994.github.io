@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,18 +9,60 @@
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/fimstyle.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/7f45dfd3e1.js" crossorigin="anonymous"></script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f45dfd3e1.js" crossorigin="anonymous"></script>
   <script src="./js/bootstrap.min.js"></script>
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script src="./js/bootstrap.bundle.min.js"></script>
+  <style>
+    .container {
+      height: 100vh;
+    }
+
+    .container>div:first-child {
+      width: 400px;
+      margin: auto;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: inset 1px 1px 4px #f2f2f2, inset -1px -1px 4px #f2f2f2, inset -1px -1px 4px #f2f2f2, inset 1px 1px 4px #f2f2f2;
+    }
+
+
+  </style>
 </head>
+
 <body>
-  <section class="container">
-    <div class="text-center my-5"><h1>Oops! 忘記密碼了</h1>
-      <p>請輸入你的信箱</p>
+  <section class="container d-flex align-items-center">
+    <div >
+      <div id="findintro">
+        <h1 class="text-center">Oops! 忘記密碼了</h1>
+        <p class="mx-3">請輸入聯絡電話和電子信箱，將會傳送您的密碼到電子信箱</p>
+        <form action="">
+          <div class="mx-3 my-3">
+            <label for="inputEmail" class="form-label">電子信箱</label>
+            <input type="email" class="form-control" id="inputEmail">
+            <div id="emailHelp" class="form-text">請輸入註冊時使用的電子信箱</div>
+          </div>
+          <div class="mx-3 my-3">
+            <label for="inputTel" class="form-label">聯絡電話</label>
+            <input type="tel" class="form-control" id="inputTel">
+            <div id="telHelp" class="form-text">請輸入註冊時使用的個人聯絡電話</div>
+          </div>
+          <div class="mt-5 text-center"><input id="findBtn" type="button" class="btn btn-orange" value="找回密碼"></div>
+        </form>
+      </div>
+      <div id="logindesc" style="display: none;">
+        <p class="text-center">請稍後檢查您的電子信箱,並
+          <a href="./login.html">重新登入</a>
+        </p>
+      </div>
     </div>
   </section>
+  <script>
+    $("#findBtn").click(()=>{
+      $("#findintro").hide();
+      $("#logindesc").show();
+    })
+  </script>
 </body>
 </html>
