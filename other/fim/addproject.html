@@ -46,11 +46,11 @@
                   <hr class="dropdown-divider">
                 </li>
                 <li><a class="dropdown-item" href="./addproject.html">新增專案</a></li>
-                <li><a class="dropdown-item" href="#">未提交專案（14）</a></li>
-                <li><a class="dropdown-item" href="#">待付款專案（6）</a></li>
-                <li><a class="dropdown-item" href="#">進行中專案（0）</a></li>
-                <li><a class="dropdown-item" href="#">暫停中專案（1）</a></li>
-                <li><a class="dropdown-item" href="#">已結案專案（0）</a></li>
+                <li><a class="dropdown-item" href="./notsubmit.html">未提交專案（14）</a></li>
+                <li><a class="dropdown-item" href="./notpay.html">待付款專案（6）</a></li>
+                <li><a class="dropdown-item" href="./runproject.html">進行中專案（0）</a></li>
+                <li><a class="dropdown-item" href="./stopproject.html">暫停中專案（1）</a></li>
+                <li><a class="dropdown-item" href="./finishproject.html">已結案專案（0）</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -66,8 +66,55 @@
     </nav>
   </header>
   <section id="main" class="container">
-    <div class="text-center"><h1>查詢專案進度</h1></div>
+    <div class="container">
+      <div class="my-3"><h5>設定基本資料 (1/6)</h1></div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 17%;height:5px;"></div>
+      </div>
+    </div>
+    <div class="container my-4 d-flex flex-wrap">
+      <div class="m-3 col-md-5 col-sm-12">
+        <label class="inputTit" for="projectname">請為您的專案命名</h6>
+        <div><input class="adinput" id="projectname" type="text" placeholder="專案名稱"></div>
+      </div>
+      <div class="m-3 col-md-5 col-sm-12">
+        <label class="inputTit">曝光平台</h6>
+          <div class="d-flex">
+            <div class="choose d-flex justify-content-end"><div>Instagram</div><div><img src="./img/igicon.svg" width="30"></div></div>
+            <div class="unchoose d-flex justify-content-end"><div>Facebook</div><div><img src="./img/fbicon.svg" width="30"></div></div>
+          </div>
+      </div>
+      <div class="m-3 col-md-5 col-sm-12">
+        <label class="inputTit">業務屬性1</h6>
+          <div class="d-flex">
+            <div class="choose text-end"><span>販售產品</span></div>
+            <div class="unchoose text-end"><span>提供服務</span></div>
+          </div>
+      </div>
+      <div class="m-3 col-md-5 col-sm-12">
+        <label class="inputTit" for="projectname">業務屬性2</h6>
+      </div>
+      
+    </div>
   </section>
+  <div id="msgBtn"></div>
+  <div class="msg">
+    <!-- 彈出視窗背景 -->
+    <div class="msgOutter"></div>
+    <div class="msgInner">
+      <div class="msgHead">
+        <div class="mx-3 text-light">留言板</div>
+        <div class="mx-3"><img id="close" src="./img/close_24dp.svg" width="25"></div>
+      </div>
+      <div class="content d-flex flex-column">
+        <div id="scrollBottom"></div>
+      </div>
+      <div class="send p-2 d-flex justify-content-around align-items-center">
+        <input type="text" class="form-control border-0" placeholder="寫留言..">
+        <div><img src="./img/return_24dp.svg" width="30"></div>
+      </div>
+    </div>
+  </div>
   <footer class="bg-dark text-center p-2">
     <div class="container">
       <div class="d-flex justify-content-md-center justify-content-sm-start m-2 flex-wrap">
@@ -88,7 +135,18 @@
   <script src="./js/bootstrap.bundle.min.js"></script>
 
   <script>
+    $("#msgBtn").on("click", function() {
+    $(".content").animate({
+      scrollTop: $(document).height() + 5000
+    }, "slow");
+    $(".msg").fadeIn();
+    $("#msgBtn").fadeOut();
+  });
 
+  $("#close,.msgOutter").on("click", function() {
+    $("#msgBtn").fadeIn();
+    $(".msg").fadeOut();
+  });
   </script>
 </body>
 

@@ -48,7 +48,71 @@ h1{
 h2,h3,h4,h5,h6{
   color: #2F4858;
 }
-
+.progress{
+  background-color: #E5F1F6;
+  height: 5px;
+}
+.inputTit{
+  color: #2F4858;
+  /* margin: 35px; */
+}
+.adinput{
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  height: 50px;
+  min-width:250px;
+  border-radius: 10px;
+  padding:20px;
+  color: #2F4858;
+}
+.adinput:focus{
+outline: none !important;
+}
+.choose{
+  margin: 10px 10px 10px 0;
+  padding:10px 10px 10px 15px;
+  /* width: 150px; */
+  height: 50px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #33658A;
+  border:1px solid #2F4858;
+  position: relative;
+}
+.choose::after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color:#F26419;
+  left: 4px;
+  top: 4px;
+  box-shadow:1px 1px 4px rgb(0 0 0 / 25%), 1px 1px 4px rgb(0 0 0 / 22%)
+}
+.choose img,.unchoose img{
+  margin: 0 0 0 5px;
+}
+.unchoose{
+  margin: 10px 10px 10px 0;
+  padding:10px 10px 10px 15px;
+  height: 50px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #ccc;
+  border:1px solid #E5F1F6;
+  position: relative;
+}
+.unchoose::after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color:#fff;
+  left: 4px;
+  top: 4px;
+}
 /* button class */
 .btn:focus,.navbar-toggler {
   box-shadow: none !important;
