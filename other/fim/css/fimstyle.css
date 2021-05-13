@@ -219,6 +219,15 @@ outline: none !important;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25),
   0 1px 1px rgba(0, 0, 0, 0.22);
 }
+.btn-outline-next{
+  padding: 10px;
+  border-radius: 15px;
+  border:1px solid #f26419;
+  background-color: #fff;
+  color: #f26419;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25),
+  0 1px 1px rgba(0, 0, 0, 0.22);
+}
 
 /* msessage board */
 #msgBtn{
