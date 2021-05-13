@@ -66,96 +66,157 @@
     </nav>
   </header>
   <section id="main" class="container col-lg-8 col-md-12">
-    <div class="container ">
+    <div class="container">
       <div class="my-3">
-        <h5>設定基本資料 (1/6)</h1>
+        <h5>設定推廣項目 (2/6)</h1>
       </div>
       <div class="progress">
         <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar"
-          style="width: 17%;height:5px;"></div>
+          style="width: 34%;height:5px;"></div>
       </div>
     </div>
     <div class="container my-4 d-flex flex-wrap">
-      <div class="m-3 col-md-5 col-sm-12">
-        <label class="inputTit" for="projectname">請為您的專案命名</label>
-          <div><input class="adinput form-control" id="projectname" type="text" placeholder="專案名稱"></div>
-      </div>
-      <div class="m-3 col-md-5 col-sm-12">
-        <div class="inputTit">曝光平台</div>
-        <div class="decide d-flex">
-          <div>
-            <input type="radio" name="platform" value="1" id="ig">
-            <label for="ig">
-              <div class="radioBtn">Instagram<img src="./img/igicon.svg" width="30"></div>
-            </label>
-          </div>
-          <div>
-            <input type="radio" name="platform" value="0" id="fb">
-            <label for="fb">
-              <div class="radioBtn">Facebook<img src="./img/fbicon.svg" width="30"></div>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="m-3 col-md-5 col-sm-12 decide">
-        <div class="inputTit">業務屬性1</div>
-        <div class="decide d-flex">
-          <div>
-            <input type="radio" name="service" value="1" id="product">
-            <label for="product">
-              <div class="radioBtn">販售產品</div>
-            </label>
-          </div>
-          <div>
-            <input type="radio" name="service" value="0" id="service">
-            <label for="service">
-              <div class="radioBtn">提供服務</div>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="m-3 col-md-5 col-sm-12">
-        <label class="inputTit" for="projectitem">業務屬性2</label>
-        <div>
-          <select class="adselect form-select" name="item" id="projectitem">
-            <option value="1">交通用品</option>
-            <option value="2">包裝食品</option>
-            <option value="3">母嬰產品</option>
-          </select>
-        </div>
-      </div>
-      <div class="mx-4 mb-3 col-sm-12 note"><img src="./img/note.svg" width="15"><small>業務屬性會影響可能合作對象，如屬性與實際推廣產品不符，將導致案件無法成立，故請務必確實填寫</small></div>
-      <div class="m-3 col-md-5 col-sm-12">
-        <label class="inputTit" for="startdate">貼文上線<b>開始</b>日期</label>
-          <div><input class="adinput form-control" id="startdate" type="date" placeholder="年/月/日"></div>
-      </div>
-      <div class="m-3 col-md-5 col-sm-12">
-        <label class="inputTit" for="enddate">貼文上線<b>結束</b>日期</label>
-          <div><input class="adinput form-control" id="enddate" type="date" placeholder="年/月/日"></div>
-      </div>
-      <div class="mx-3 col-sm-12 note"><img src="./img/note.svg" width="15"><small>案件皆有一定招募、連繫、過稿流程，為確保服務品質，最快上線日期為開案後17天</small></div>
       <div class="m-3 col-12">
-        <div class="inputTit"><img src="./img/findkol.svg" width="18"> 網紅粉絲數與合作人數需求</div>
-        <div class="d-flex flex-wrap">
-          <div class="col-md-5 col-lg-3 col-sm-12 me-5">
-            <label class="mt-3 inputTit" for="num1">1千-5千粉</label>
-            <div><input class="adinput form-control" id="num1" type="number" min="0" placeholder="需求人數"></div>
+        <label class="inputTit" for="itemamount">宣傳商品數量</label>
+          <select class="adselect form-select" name="item" id="itemamount">
+            <option value="1">1項</option>
+            <option value="2">2項</option>
+            <option value="3">3項</option>
+          </select>
+      </div>
+      <div class="d-flex flex-wrap">
+        <div class="m-3 col-md-5 col-sm-12">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">品項 1 
+                <span class="ms-3 adcheck">
+                  <input id="free1" class="" type="checkbox">
+                  <label for="free1"><span class="checkBtn"></span>讓網紅自由發揮</label>
+                </span>
+              </h5>
+              <hr>
+              <div><input class="adinput form-control" type="text" placeholder="商品名稱"></div>
+              <div><textarea name="" class="adtextarea form-control" placeholder="商品描述(選填)" rows="4"></textarea></div>
+              <div><input class="adinput form-control" type="text" placeholder="介紹網頁網址(選填)"></div>
+            </div>
           </div>
-          <div class="col-md-5 col-lg-3 col-sm-12 me-5">
-            <label class="mt-3 inputTit" for="num2">5千-1萬粉</label>
-            <div><input class="adinput form-control" id="num2" type="number" min="0" placeholder="需求人數"></div>
+        </div>
+        <div class="m-3 col-md-5 col-sm-12">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">品項 2 
+                <span class="ms-3 adcheck">
+                  <input id="free2" class="" type="checkbox">
+                  <label for="free2"><span class="checkBtn"></span>讓網紅自由發揮</label>
+                </span>
+              </h5>
+              <hr>
+              <div><input class="adinput form-control" type="text" placeholder="商品名稱"></div>
+              <div><textarea name="" class="adtextarea form-control" placeholder="商品描述(選填)" rows="4"></textarea></div>
+              <div><input class="adinput form-control" type="text" placeholder="介紹網頁網址(選填)"></div>
+            </div>
           </div>
-          <div class="col-md-5 col-lg-3 col-sm-12 me-5">
-            <label class="mt-3 inputTit" for="num3">1萬-3萬粉</label>
-            <div><input class="adinput form-control" id="num3" type="number" min="0" placeholder="需求人數"></div>
+        </div>
+        <div class="m-3 col-md-5 col-sm-12">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">品項 3 
+                <span class="ms-3 adcheck">
+                  <input id="free3" class="" type="checkbox">
+                  <label for="free3"><span class="checkBtn"></span>讓網紅自由發揮</label>
+                </span>
+              </h5>
+              <hr>
+              <div><input class="adinput form-control" type="text" placeholder="商品名稱"></div>
+              <div><textarea name="" class="adtextarea form-control" placeholder="商品描述(選填)" rows="4"></textarea></div>
+              <div><input class="adinput form-control" type="text" placeholder="介紹網頁網址(選填)"></div>
+            </div>
           </div>
-          <div class="col-md-5 col-lg-3 col-sm-12 me-5">
-            <label class="mt-3 inputTit" for="num4">3萬-5萬粉</label>
-            <div><input class="adinput form-control" id="num4" type="number" min="0" placeholder="需求人數"></div>
+        </div>
+      </div>
+      <div class="m-3 col-md-5 col-sm-12">
+        <div class="inputTit">網紅如何取得？</div>
+        <div class="decide d-flex">
+          <div>
+            <input type="radio" name="getitem" value="1" id="instore">
+            <label for="instore">
+              <div class="radioBtn">到店購買</div>
+            </label>
           </div>
-          <div class="col-md-5 col-lg-3 col-sm-12 me-5">
-            <label class="mt-3 inputTit" for="num5">5萬-8萬粉</label>
-            <div><input class="adinput form-control" id="num5" type="number" min="0" placeholder="需求人數"></div>
+          <div>
+            <input type="radio" name="getitem" value="2" id="online">
+            <label for="online">
+              <div class="radioBtn">線上購買</div>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="getitem" value="3" id="delivery">
+            <label for="delivery">
+              <div class="radioBtn">寄給網紅</div>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="m-3 col-md-5 col-sm-12">
+        <div class="inputTit">是否指定店點？</div>
+        <div class="decide d-flex">
+          <div>
+            <input type="radio" name="store" value="1" id="yes">
+            <label for="yes">
+              <div class="radioBtn">YES</div>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="store" value="0" id="no">
+            <label for="no">
+              <div class="radioBtn">NO</div>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="m-3 col-sm-12">
+        <div class="inputTit">哪些縣市有店點?</div>
+        <div class="decidemulti d-flex">
+          <div>
+            <input type="checkbox" name="location" value="1" id="twn">
+            <label for="twn">
+              <div class="multiBtn">全台</div>
+            </label>
+          </div>
+          <div>
+            <input type="checkbox" name="location" value="2" id="tpe">
+            <label for="tpe">
+              <div class="multiBtn">台北</div>
+            </label>
+          </div>
+          <div>
+            <input type="checkbox" name="location" value="3" id="ntp">
+            <label for="ntp">
+              <div class="multiBtn">新北</div>
+            </label>
+          </div>
+          <div>
+            <input type="checkbox" name="location" value="4" id="tyn">
+            <label for="tyn">
+              <div class="multiBtn">桃園</div>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="m-3 col-md-5 col-sm-12">
+        <div class="inputTit">網紅是否需自費購買?</div>
+        <div class="decide d-flex">
+          <div>
+            <input type="radio" name="pay" value="1" id="pyes">
+            <label for="pyes">
+              <div class="radioBtn">YES</div>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="pay" value="0" id="pno">
+            <label for="pno">
+              <div class="radioBtn">NO</div>
+            </label>
           </div>
         </div>
       </div>
@@ -165,7 +226,6 @@
     <div class="m-2 text-end"><span class="title">31,500</span><small>元</div>
     <div class="m-2 text-end inputTit">(不包含交通費、產品運費及購買產品費用)</div>
     <div class="m-2 text-end inputTit"><a href="./step2.html"><button class="btn-next">下一步</button></a></div>
-    
   </section>
   <div id="msgBtn"></div>
   <div class="msg">
