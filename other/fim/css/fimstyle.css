@@ -63,7 +63,7 @@ h2,h3,h4,h5,h6{
   border-radius: 10px;
   color: #2F4858;
 }
-.adinput:focus,.adselect:focus,.adinput:hover,.adselect:hover,.adtextarea:hover{
+.adinput:focus,.adselect:focus,.accordion-button:focus,.adinput:hover,.adselect:hover,.adtextarea:hover{
 box-shadow: 0 0 1px 1px #33658A;
 outline: none !important;
 }
@@ -75,12 +75,12 @@ outline: none !important;
   margin: 0 0 0 5px;
 }
 .radioBtn{
-  font-size: 12px;
+  /* font-size: 16px; */
   display: flex;
   align-items: center;
   cursor: pointer;
   margin: 10px 10px 10px 0;
-  padding:10px 10px 10px 15px;
+  padding:10px 15px 10px 15px;
   height: 40px;
   border-radius: 8px;
   color: #fff;
@@ -554,6 +554,50 @@ z-index: -1;
 }
 .dropdown-toggle::after{
   border-top:.3em solid #F26419 ;
+}
+
+
+/* step3 page */
+.accordion-button{
+  box-shadow:  1px 1px 2px #c7d2d6,  -1px -1px 2px #e6e6e6;
+}
+.accordion-flush .accordion-item .accordion-button {
+  border-radius: 10px 10px 0 0;
+  box-shadow:  1px 1px 2px #c7d2d6,  -1px -1px 2px #e6e6e6;
+
+}
+.accordion-button:not(.collapsed) {
+  color: #2F4858;
+  background-color: transparent;
+}
+#descexample .accordion-body {
+  box-shadow:inset  1px 1px 2px #c7d2d6,inset  -1px -1px 2px #e6e6e6;
+  border-radius: 0px 0px 10px 10px;
+
+}
+#descexample img,#postitem img{
+  width: 100px;
+}
+#descexample .card{
+  display: flex;
+  align-items: center;
+}
+#postcontent .card-header>div:first-child{
+  width: 70px;
+  height: 70px;
+  background-color: #86bbd8;
+  border-radius: 50%;
+}
+#postcontent .card{
+  border: 0;
+  box-shadow:inset  1px 1px 2px #c7d2d6,inset  -1px -1px 2px #e6e6e6;
+}
+#postcontent .card-header{
+  box-shadow:  1px 1px 2px #c7d2d6,  -1px -1px 2px #e6e6e6;
+  background-color: #fff;
+}
+#postcontent .card-body{
+  padding: 100px;
 }
 /* footer */
 footer{

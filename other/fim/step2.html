@@ -84,7 +84,7 @@
             <option value="3">3項</option>
           </select>
       </div>
-      <div class="d-flex flex-wrap">
+      <div id="anitem" class="d-flex flex-wrap">
         <div class="m-3 col-md-5 col-sm-12">
           <div class="card h-100">
             <div class="card-body">
@@ -134,7 +134,7 @@
           </div>
         </div>
       </div>
-      <div class="my-3 me-md-3 col-md-5 col-sm-12">
+      <div class="my-3 col-md-7 col-sm-12">
         <div class="inputTit">網紅如何取得？</div>
         <div class="decide d-flex">
           <div>
@@ -157,7 +157,7 @@
           </div>
         </div>
       </div>
-      <div class="my-3 ms-md-5 col-md-5 col-sm-12">
+      <div class="my-3 col-md-3 col-sm-12">
         <div class="inputTit">是否指定店點？</div>
         <div class="decide d-flex">
           <div>
@@ -176,11 +176,17 @@
       </div>
       <div class="my-3 col-12">
         <div class="inputTit">哪些縣市有店點?</div>
-        <div class="decidemulti d-flex">
+        <div class="decidemulti d-flex flex-wrap">
           <div>
-            <input type="checkbox" name="location" value="1" id="twn">
+            <input type="checkbox" name="location" value="0" id="twn">
             <label for="twn">
               <div class="multiBtn">全台</div>
+            </label>
+          </div>
+          <div>
+            <input type="checkbox" name="location" value="1" id="kee">
+            <label for="kee">
+              <div class="multiBtn">基隆</div>
             </label>
           </div>
           <div>
@@ -219,6 +225,66 @@
               <div class="multiBtn">台中</div>
             </label>
           </div>
+          <div>
+            <input type="checkbox" name="location" value="8" id="ch">
+            <label for="ch">
+              <div class="multiBtn">彰化</div>
+            </label>
+          </div>
+          <div>
+            <input type="checkbox" name="location" value="9" id="na">
+            <label for="na">
+              <div class="multiBtn">南投</div>
+            </label>
+          </div>
+          <div>
+            <input type="checkbox" name="location" value="10" id="yu">
+            <label for="yu">
+              <div class="multiBtn">雲林</div>
+            </label>
+          </div>
+          <div>
+            <input type="checkbox" name="location" value="11" id="cha">
+            <label for="cha">
+              <div class="multiBtn">嘉義</div>
+            </label>
+          </div>
+          <div>
+            <input type="checkbox" name="location" value="12" id="tan">
+            <label for="tan">
+              <div class="multiBtn">台南</div>
+            </label>
+          </div>
+          <div>
+            <input type="checkbox" name="location" value="13" id="kao">
+            <label for="kao">
+              <div class="multiBtn">高雄</div>
+            </label>
+          </div>
+          <div>
+            <input type="checkbox" name="location" value="14" id="pin">
+            <label for="pin">
+              <div class="multiBtn">屏東</div>
+            </label>
+          </div>
+          <div>
+            <input type="checkbox" name="location" value="15" id="yil">
+            <label for="yil">
+              <div class="multiBtn">宜蘭</div>
+            </label>
+          </div>
+          <div>
+            <input type="checkbox" name="location" value="16" id="hu">
+            <label for="hu">
+              <div class="multiBtn">花蓮</div>
+            </label>
+          </div>
+          <div>
+            <input type="checkbox" name="location" value="17" id="tun">
+            <label for="tun">
+              <div class="multiBtn">台東</div>
+            </label>
+          </div>
         </div>
       </div>
       <div class="my-3 col-md-5 col-sm-12">
@@ -246,7 +312,7 @@
     </div>
     <div class="d-flex justify-content-between">
       <div class="m-2 inputTit"><a href="./addproject.html"><button class="btn-outline-next">上一步</button></a></div>
-      <div class="m-2 inputTit"><a href="./step2.html"><button class="btn-next">下一步</button></a></div>
+      <div class="m-2 inputTit"><a href="./step3.html"><button class="btn-next">下一步</button></a></div>
     </div>
   </section>
   <div id="msgBtn"></div>
