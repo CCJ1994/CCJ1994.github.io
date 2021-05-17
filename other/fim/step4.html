@@ -76,7 +76,7 @@
       </div>
     </div>
     <div class="container my-4 d-flex flex-wrap">
-      <div>
+      <div class="col-12">
         <div class="inputTit">
           禁止事項<img class="ms-1" src="./img/attention.svg" width="17">
         </div>
@@ -96,7 +96,7 @@
           <div class="my-2"><textarea name="" class="adtextarea form-control" placeholder="禁止其他事項(選填)" rows="4"></textarea></div>
         </div>
       </div>
-      <div>
+      <div class="col-12">
         <div class="inputTit">貼文宣傳資訊</div>
         <div class="my-2">
           <span class="me-3 adcheck">
@@ -110,17 +110,93 @@
         </div>
         <div id="postcontent" class="card">
           <div class="card-header d-flex align-items-center">
-            <div class="me-2"></div>
+            <div class="me-4"></div>
             <div>
               <div class="me-3 adcheck">
                 <input id="location" class="" type="checkbox">
                 <label for="location"><span class="checkBtn"></span>需打卡</label>
               </div>
               <div><input class="adinput form-control" type="text" placeholder="打卡地點？"></div>
-
             </div>
           </div>
           <div class="card-body d-flex justify-content-center"><img src="./img/photo.svg" width="50"></div>
+          <div class="footer p-4 border-top">
+            <div class="">
+              <div class="me-3  adcheck">
+                <input id="addr" class="" type="checkbox">
+                <label for="addr"><span class="checkBtn"></span>需提及地址</label>
+              </div>
+              <div class="col">
+                <input class="adinput form-control" type="text" placeholder=" 地址資訊為？">
+              </div>
+            </div>
+            <div class="">
+              <div class="me-3 adcheck">
+                <input id="worktime" class="" type="checkbox">
+                <label for="worktime"><span class="checkBtn"></span>需提及營業時間</label>
+              </div>
+              <div class="col">
+                <input class="adinput form-control" type="text" placeholder="營業時間為？">
+              </div>
+            </div>
+            <div class="">
+              <div class="me-3 adcheck">
+                <input id="contact" class="" type="checkbox">
+                <label for="contact"><span class="checkBtn"></span>需提及聯絡資訊</label>
+              </div>
+              <div class="col">
+                <input class="adinput form-control" type="text" placeholder="聯絡資訊為？">
+              </div>
+            </div>
+            <div class="">
+              <div class="me-3 adcheck">
+                <input id="discount" class="" type="checkbox">
+                <label for="discount"><span class="checkBtn"></span>需提及檔期活動優惠</label>
+              </div>
+              <div class="col">
+                <input class="adinput form-control" type="text" placeholder="本活動時間及優惠內容為?">
+              </div>
+            </div>
+            <div class="mt-3 d-flex flex-wrap">
+              <div class="my-2 col-12">
+                <div class="inputTit d-flex"><img class="me-1" src="./img/alternate_email24dp.svg" width="18">標記帳號(選填)</div>
+                <div class="row row-cols-md-3 row-cols-1 g-3">
+                  <div class="col">
+                    <input class="adinput form-control" type="text" placeholder="@帳號名稱?">
+                  </div>
+                  <div class="col">
+                    <input class="adinput form-control" type="text" placeholder="@帳號名稱?">
+                  </div>
+                  <div class="col">
+                    <input class="adinput form-control" type="text" placeholder="@帳號名稱?">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap">
+              <div class="my-2 col-12">
+                <div class="inputTit d-flex"><img class="me-1" src="./img/tag_dp.svg" width="15">標記TAG(選填)</div>
+                <div class="row row-cols-md-3 row-cols-1 g-3">
+                  <div class="col">
+                    <input class="adinput form-control" type="text" placeholder="#標記文字?">
+                  </div>
+                  <div class="col">
+                    <input class="adinput form-control" type="text" placeholder="#標記文字?">
+                  </div>
+                  <div class="col">
+                    <input class="adinput form-control" type="text" placeholder="#標記文字?">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap align-items-center">
+                <div class="me-3 inputTit d-flex"><img class="me-1" src="./img/link_black_24dp.svg" width="18">導連網址(選填)</div>
+                <div class="col">
+                  <input class="adinput form-control" type="text" placeholder="網址?">
+                </div>
+                  
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -82,17 +82,18 @@ outline: none !important;
   margin: 10px 10px 10px 0;
   padding:10px 15px 10px 15px;
   height: 40px;
-  border-radius: 8px;
+  border-radius: 6px;
   color: #fff;
   background-color: #ccc;
   border:1px solid #E5F1F6;
   position: relative;
+  
 }
 .radioBtn::after{
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background-color:#fff;
   left: 4px;
@@ -212,7 +213,7 @@ outline: none !important;
 }
 .btn-next{
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 17px;
   border:0;
   background-color: #f26419;
   color: #fff;
@@ -555,7 +556,12 @@ z-index: -1;
 .dropdown-toggle::after{
   border-top:.3em solid #F26419 ;
 }
-
+/* #nextBtn{
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 2;
+} */
 
 /* step3 page */
 .accordion-button{
@@ -583,19 +589,35 @@ z-index: -1;
   align-items: center;
 }
 #postcontent .card-header>div:first-child{
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   background-color: #86bbd8;
   border-radius: 50%;
+}
+#postcontent>div:first-child{
+position: relative;
+}
+#postcontent>div:first-child::before{
+  position: absolute;
+  content: "";
+  background-image: url("../img/more_horiz_black_24dp.svg");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  width: 50px;
+  height: 50px;
+  right: -15px;
+  top: 0px;
+
 }
 #postcontent .card{
   border: 0;
   box-shadow:inset  1px 1px 2px #c7d2d6,inset  -1px -1px 2px #e6e6e6;
 }
 #postcontent .card-header{
-  box-shadow:  1px 1px 2px #c7d2d6,  -1px -1px 2px #e6e6e6;
   background-color: #fff;
 }
+
+
 #postcontent .card-body{
   padding: 100px;
 }

@@ -65,7 +65,7 @@
       </div>
     </nav>
   </header>
-  <section id="main" class="container col-lg-8 col-md-12">
+  <section id="main" class="container col-lg-8 col-md-12 overflow-hidden">
     <div class="container ">
       <div class="my-3">
         <h5>設定基本資料 (1/6)</h1>
@@ -75,16 +75,17 @@
           style="width: 17%;height:5px;"></div>
       </div>
     </div>
-    <div class="container my-4 d-flex flex-wrap">
-      <div id="step1" class="my-3 col-sm-12">
+    <form action="">
+    <div class="container my-3 d-flex flex-wrap">
+      <div class="my-2 col-sm-12">
         <label class="inputTit" for="projectname">請為您的專案命名</label>
           <div><input class="adinput form-control" id="projectname" type="text" placeholder="專案名稱"></div>
       </div>
     </div>
-    <div  class="container my-4 d-flex flex-wrap">  
-      <div id="step2" style="display: none;" class="my-3 col-sm-12">
-        <div class="inputTit">曝光平台</div>
-        <div class="decide d-flex">
+    <div  class="container my-3 d-flex flex-wrap">  
+      <div class="my-2 col-sm-12 d-flex flex-wrap">
+        <div class="inputTit me-4">曝光平台</div>
+        <div class="decide d-flex flex-wrap">
           <div>
             <input type="radio" name="platform" value="1" id="ig">
             <label for="ig">
@@ -100,10 +101,10 @@
         </div>
       </div>
     </div>
-    <div id="step3" style="display: none !important;" class="container my-4 d-flex flex-wrap">  
-      <div class="my-3 col-sm-12 decide">
-        <div class="inputTit">業務屬性1</div>
-        <div class="decide d-flex">
+    <div class="container my-3 d-flex flex-wrap">  
+      <div class="my-2 col-sm-12 decide d-flex flex-wrap">
+        <div class="inputTit me-4">業務屬性1</div>
+        <div class="decide d-flex flex-wrap">
           <div>
             <input type="radio" name="service" value="1" id="product">
             <label for="product">
@@ -130,8 +131,8 @@
       </div>
       <div class="mb-3 col-sm-12 note"><img src="./img/note.svg" width="15"><small>業務屬性會影響可能合作對象，如屬性與實際推廣產品不符，將導致案件無法成立，故請務必確實填寫</small></div>
     </div>
-    <div id="step4" style="display: none !important;" class="container my-4 d-flex flex-wrap">
-      <div class="my-3 col-sm-12">
+    <div class="container my-3 d-flex flex-wrap">
+      <div class="my-2 col-sm-12">
         <label class="inputTit" for="startdate">貼文上線<b>開始</b>日期</label>
           <div><input class="adinput form-control" id="startdate" type="date" placeholder="年/月/日"></div>
       </div>
@@ -141,8 +142,8 @@
       </div>
       <div class="mb-3 col-sm-12 note"><img src="./img/note.svg" width="15"><small>案件皆有一定招募、連繫、過稿流程，為確保服務品質，最快上線日期為開案後17天</small></div>
     </div>
-    <div id="step5" style="display: none !important;" class="container my-4 d-flex flex-wrap">
-      <div class="my-3 col-12">
+    <div class="container my-3 d-flex flex-wrap">
+      <div class="my-2 col-12">
         <div class="inputTit"><img src="./img/findkol.svg" width="18"> 網紅粉絲數與合作人數需求</div>
         <div class="d-flex flex-wrap">
           <div class="col-md-5 col-lg-3 col-sm-12 me-5">
@@ -168,15 +169,14 @@
         </div>
       </div>
     </div>
-
-    <div id="step6" style="display: none !important;">
+  </form>
+    <div>
       <hr class="m-2" style="background:#2F4858;">
       <div class="m-2 text-end inputTit">預估報價總額</div>
       <div class="m-2 text-end"><span class="title">31,500</span><small>元</div>
       <div class="m-2 text-end inputTit">(不包含交通費、產品運費及購買產品費用)</div>
-      <div class="m-2 text-end inputTit"><a href="./step2.html"><button class="btn-next">下一步</button></a></div>
+      <div class="m-2 text-end inputTit"><a href="./step2.html"><button id="nextBtn" class="btn-next">下一步</button></a></div>
     </div>
-    <h3 id="nextword" class="text-center">Next...</h3>
   </section>
   <div id="msgBtn"></div>
   <div class="msg">
@@ -228,51 +228,7 @@
       $("#msgBtn").fadeIn();
       $(".msg").fadeOut();
     });
-    $("#step1 input").keydown(()=>{
-      $("#step2").show();
-      let who = $("#step2");
-      let val = $(who).offset().top - $("#step1").innerHeight();
-      $("html").animate(
-        { scrollTop: val }, 500, "swing"
-      );
-    })
-    $("#step2 input").click(()=>{
-      $("#step3").show();
-      let who = $("#step3");
-      let val = $(who).offset().top - $("#step2").innerHeight();
-      $("html").animate(
-        { scrollTop: val }, 500, "swing"
-      );
-    })
-    $("#step3 select").click(()=>{
-      $("#step4").show();
-      let who = $("#step4");
-      let val = $(who).offset().top - $("#step3").innerHeight();
-      $("html").animate(
-        { scrollTop: val }, 500, "swing"
-      );
-    })
-    $("#step4 input").click(()=>{
-      if($("#step4 input").val()!=""){
-        $("#step5").show();
-        let who = $("#step5");
-      let val = $(who).offset().top - $("#step4").innerHeight();
-      $("html").animate(
-        { scrollTop: val }, 500, "swing"
-      );
-      }
-    })
-    $("#step5 input").click(()=>{
-      if($("#step5 input").val()!=""){
-        $("#step6").show();
-        let who = $("#step6");
-      let val = $(who).offset().top - $("#step5").innerHeight();
-      $("html").animate(
-        { scrollTop: val }, 500, "swing"
-      );
-        $("#nextword").hide();
-      }
-    })
+    
   </script>
 </body>
 

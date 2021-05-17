@@ -14,7 +14,11 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-
+<style>
+  #anitem .card{
+min-width: 300px;
+  }
+</style>
 </head>
 
 <body>
@@ -84,12 +88,12 @@
             <option value="3">3項</option>
           </select>
       </div>
-      <div id="anitem" class="d-flex flex-wrap">
-        <div class="m-3 col-md-5 col-sm-12">
+      <div id="anitem" class="row row-cols-md-2 row-cols-1 g-4">
+        <div class="col">
           <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">品項 1 
-                <span class="ms-3 adcheck">
+                <span class=" adcheck">
                   <input id="free1" class="" type="checkbox">
                   <label for="free1"><span class="checkBtn"></span>讓網紅自由發揮</label>
                 </span>
@@ -101,11 +105,11 @@
             </div>
           </div>
         </div>
-        <div class="m-3 col-md-5 col-sm-12">
+        <div class="col">
           <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">品項 2 
-                <span class="ms-3 adcheck">
+                <span class=" adcheck">
                   <input id="free2" class="" type="checkbox">
                   <label for="free2"><span class="checkBtn"></span>讓網紅自由發揮</label>
                 </span>
@@ -117,11 +121,11 @@
             </div>
           </div>
         </div>
-        <div class="m-3 col-md-5 col-sm-12">
+        <div class="col">
           <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">品項 3 
-                <span class="ms-3 adcheck">
+                <span class=" adcheck">
                   <input id="free3" class="" type="checkbox">
                   <label for="free3"><span class="checkBtn"></span>讓網紅自由發揮</label>
                 </span>
