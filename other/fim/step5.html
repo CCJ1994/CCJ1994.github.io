@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="./css/slick-theme.css">
+  <link rel="stylesheet" href="./css/fimstyle.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f45dfd3e1.js" crossorigin="anonymous"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="./img/justAD_logo_正方.png" width="30">
+          <div class="brandName ms-2 position-relative">
+            <div style="z-index: 1;">就是發網紅</div>
+            <img width="20" style="position: absolute;bottom: 5px;right: -10px; z-index: -1;" src="./img/titleicon.svg">
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 col justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">我的帳戶</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                我的專案
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./myproject.html">所有專案</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="./addproject.html">新增專案</a></li>
+                <li><a class="dropdown-item" href="./notsubmit.html">未提交專案（14）</a></li>
+                <li><a class="dropdown-item" href="./notpay.html">待付款專案（6）</a></li>
+                <li><a class="dropdown-item" href="./runproject.html">進行中專案（0）</a></li>
+                <li><a class="dropdown-item" href="./stopproject.html">暫停中專案（1）</a></li>
+                <li><a class="dropdown-item" href="./finishproject.html">已結案專案（0）</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./message.html">系統留言板</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center" href="./login.html">登出<img src="./img/logout_24dp.svg"
+                  width="17"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section id="main" class="container col-lg-8 col-md-12">
+    <div class="container">
+      <div class="my-3">
+        <h5>邀請網紅 (5/6)</h1>
+      </div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar"
+          style="width: 85%;height:5px;"></div>
+      </div>
+    </div>
+    <div class="container my-4 position-relative">
+      <div><button type="button" id="peopleinfoBtn">人選需求<i class="inputTit fas fa-question-circle"></i></button></div>
+      <div id="toastContent" class="p-1">
+        <div class="toast fade show" role="alert" data-bs-autohide="false">
+          <div class="toast-header">
+            <strong class="me-auto">
+              <h4 class="inputTit">本案的網紅需求人數</h4>
+            </strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            <h6>1 千 - 5 千粉: 2 位 <span style="color: #86BBD8;">(人選足夠)</span></h6>
+            <h6>1 萬 - 3 萬粉: 2 位 <span style="color: #DB3A34;">(人選不足，還差4位)</span></h6>
+          </div>
+        </div>
+      </div>
+      <div class="inputTit mt-3">為確保媒合成功率，建議勾選需求數兩倍以上的人數</div>
+      <div class="mb-3 note">
+        <img src="./img/note.svg" width="15">
+        <small>選取網紅可能因個人檔期、接案意願等原因無法合作，故選取網紅僅為優先合作對象，不代表確定合作</small>
+      </div>
+      <div class="my-2 d-flex flex-wrap align-items-center">
+        <div class="inputTit me-4">粉絲數</div>
+        <div class="sort d-flex flex-wrap">
+          <div>
+            <input type="radio" name="fansamount" value="1" id="num1">
+            <label for="num1">
+              <div class="sortBtn">1千 - 5千</div>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="fansamount" value="2" id="num2">
+            <label for="num2">
+              <div class="sortBtn">1萬 - 3萬</div>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="my-2  d-flex flex-wrap align-items-center">
+        <div class="inputTit me-4">網紅類型</div>
+        <div class="sort d-flex flex-wrap">
+          <div>
+            <input type="radio" name="koltype" value="0" id="all">
+            <label for="all">
+              <div class="sortBtn">不篩選</div>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="koltype" value="1" id="life">
+            <label for="life">
+              <div class="sortBtn">生活</div>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="koltype" value="2" id="travel">
+            <label for="travel">
+              <div class="sortBtn">旅遊</div>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="koltype" value="3" id="fashion">
+            <label for="fashion">
+              <div class="sortBtn">時尚</div>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="koltype" value="4" id="food">
+            <label for="food">
+              <div class="sortBtn">美食</div>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="koltype" value="5" id="sport">
+            <label for="sport">
+              <div class="sortBtn">運動</div>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="koltype" value="6" id="kid">
+            <label for="kid">
+              <div class="sortBtn">親子</div>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="koltype" value="7" id="pet">
+            <label for="pet">
+              <div class="sortBtn">寵物</div>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="koltype" value="8" id="elec">
+            <label for="elec">
+              <div class="sortBtn">3C</div>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="koltype" value="9" id="campain">
+            <label for="campain">
+              <div class="sortBtn">活動</div>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="koltype" value="10" id="makeup">
+            <label for="makeup">
+              <div class="sortBtn">美妝</div>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="koltype" value="11" id="act">
+            <label for="act">
+              <div class="sortBtn">藝文</div>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="koltype" value="12" id="game">
+            <label for="game">
+              <div class="sortBtn">遊戲</div>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="my-2 d-flex flex-wrap align-items-center">
+        <div class="inputTit me-4">已選用</div>
+        <div class="sort d-flex flex-wrap">
+          <div>
+            <input type="radio" name="choose" value="0" id="nocho">
+            <label for="nocho">
+              <div class="sortBtn">不篩選</div>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="choose" value="1" id="choall">
+            <label for="choall">
+              <div class="sortBtn">全部<span class="ms-2 badge rounded-pill bg-dark">11</span></div>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="choose" value="2" id="cho1">
+            <label for="cho1">
+              <div class="sortBtn">1千 - 5千<span class="ms-2 badge rounded-pill bg-dark">10</span></div>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="choose" value="2" id="cho2">
+            <label for="cho2">
+              <div class="sortBtn">3萬 - 5萬<span class="ms-2 badge rounded-pill bg-dark">1</span></div>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="my-3">
+        <span class="me-3 adcheck">
+          <input id="aichoose" class="" type="checkbox">
+          <label for="aichoose"><span class="checkBtn"></span>由AI挑選適合網紅</label>
+        </span>
+        <span style="color: #DB3A34;">如較難抉擇,可由AI系統幫您挑選剩餘人選</span>
+        <div class="note">
+          <img src="./img/note.svg" width="15">
+          <small>AI系統會透過大數據及關鍵字挑選出適合您產品的網紅，並以商案成效優秀的網紅做優先合作對象</small>
+        </div>
+      </div>
+      <div id="kollist" class="my-3 row row-cols-md-2 cols-sm-1 g-4">
+        <div class="col">
+          <div class="card">
+            <div class="card-header d-flex align-items-center">
+              <div class="me-2"><img src="./img/exw0.jpg" alt=""></div>
+              <div class="col">
+                <div class="d-flex justify-content-between mb-2">
+                  <div class="">KOL-1245467</div>
+                  <div class="adcheck">
+                    <input id="kol2" class="" type="checkbox">
+                    <label for="kol2"><span class="checkBtn"></span>選用</label>
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <span class="tag">親子</span>
+                  <span class="tag">運動</span>
+                  <span class="tag">生活</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex text-center justify-content-around">
+                <div class="mb-3">
+                  <div>貼文</div>
+                  <div>645</div>
+                </div>
+                <div>
+                  <div>粉絲</div>
+                  <div>6455345</div>
+                </div>
+                <div>
+                  <div>互動</div>
+                  <div>13%</div>
+                </div>
+                <div>
+                  <div>平均愛心</div>
+                  <div>435</div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="slider ">
+                  <div class="slide-1 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;"
+                      src="./img/exw1.jpeg" data-toggle="modal" data-target="#exampleModal"></div>
+                  <div class="slide-2 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;"
+                      src="./img/exw2.jpg" data-toggle="modal" data-target="#exampleModal"></div>
+                  <div class="slide-3 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;"
+                      src="./img/exw3.jpg" data-toggle="modal" data-target="#exampleModal"></div>
+                  <div class="slide-4 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;"
+                      src="./img/exw4.jpg" data-toggle="modal" data-target="#exampleModal"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-header d-flex align-items-center">
+              <div class="me-2"><img src="./img/d4008c7f4b9c70d1cfffa36c2ebb6152.jpeg" alt=""></div>
+              <div class="col">
+                <div class="d-flex justify-content-between mb-2">
+                  <div class="">KOL-1245467</div>
+                  <div class="adcheck">
+                    <input id="kol1" class="" type="checkbox">
+                    <label for="kol1"><span class="checkBtn"></span>選用</label>
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <span class="tag">親子</span>
+                  <span class="tag">運動</span>
+                  <span class="tag">生活</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex text-center justify-content-around">
+                <div class="mb-3">
+                  <div>貼文</div>
+                  <div>645</div>
+                </div>
+                <div>
+                  <div>粉絲</div>
+                  <div>6455345</div>
+                </div>
+                <div>
+                  <div>互動</div>
+                  <div>13%</div>
+                </div>
+                <div>
+                  <div>平均愛心</div>
+                  <div>435</div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="slider ">
+                  <div class="slide-1 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;"
+                      src="./img/ex1.jpeg" data-toggle="modal" data-target="#exampleModal"></div>
+                  <div class="slide-2 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;"
+                      src="./img/ex2.jpg" data-toggle="modal" data-target="#exampleModal"></div>
+                  <div class="slide-3 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;"
+                      src="./img/ex3.jpg" data-toggle="modal" data-target="#exampleModal"></div>
+                  <div class="slide-4 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;"
+                      src="./img/ex4.jpg" data-toggle="modal" data-target="#exampleModal"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-header d-flex align-items-center">
+              <div class="me-2"><img src="./img/exw0.jpg" alt=""></div>
+              <div class="col">
+                <div class="d-flex justify-content-between mb-2">
+                  <div class="">KOL-1245467</div>
+                  <div class="adcheck">
+                    <input id="kol3" class="" type="checkbox">
+                    <label for="kol3"><span class="checkBtn"></span>選用</label>
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <span class="tag">親子</span>
+                  <span class="tag">運動</span>
+                  <span class="tag">生活</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex text-center justify-content-around">
+                <div class="mb-3">
+                  <div>貼文</div>
+                  <div>645</div>
+                </div>
+                <div>
+                  <div>粉絲</div>
+                  <div>6455345</div>
+                </div>
+                <div>
+                  <div>互動</div>
+                  <div>13%</div>
+                </div>
+                <div>
+                  <div>平均愛心</div>
+                  <div>435</div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="slider ">
+                  <div class="slide-1 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;"
+                      src="./img/exw1.jpeg" data-toggle="modal" data-target="#exampleModal"></div>
+                  <div class="slide-2 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;"
+                      src="./img/exw2.jpg" data-toggle="modal" data-target="#exampleModal"></div>
+                  <div class="slide-3 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;"
+                      src="./img/exw3.jpg" data-toggle="modal" data-target="#exampleModal"></div>
+                  <div class="slide-4 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;"
+                      src="./img/exw4.jpg" data-toggle="modal" data-target="#exampleModal"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-header d-flex align-items-center">
+              <div class="me-2"><img src="./img/d4008c7f4b9c70d1cfffa36c2ebb6152.jpeg" alt=""></div>
+              <div class="col">
+                <div class="d-flex justify-content-between mb-2">
+                  <div class="">KOL-1245467</div>
+                  <div class="adcheck">
+                    <input id="kol4" class="" type="checkbox">
+                    <label for="kol4"><span class="checkBtn"></span>選用</label>
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <span class="tag">親子</span>
+                  <span class="tag">運動</span>
+                  <span class="tag">生活</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex text-center justify-content-around">
+                <div class="mb-3">
+                  <div>貼文</div>
+                  <div>645</div>
+                </div>
+                <div>
+                  <div>粉絲</div>
+                  <div>6455345</div>
+                </div>
+                <div>
+                  <div>互動</div>
+                  <div>13%</div>
+                </div>
+                <div>
+                  <div>平均愛心</div>
+                  <div>435</div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="slider ">
+                  <div class="slide-1 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;"
+                      src="./img/ex1.jpeg" data-toggle="modal" data-target="#exampleModal"></div>
+                  <div class="slide-2 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;"
+                      src="./img/ex2.jpg" data-toggle="modal" data-target="#exampleModal"></div>
+                  <div class="slide-3 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;"
+                      src="./img/ex3.jpg" data-toggle="modal" data-target="#exampleModal"></div>
+                  <div class="slide-4 mx-1"><img style="object-fit: cover;width: 200px;height: 200px;"
+                      src="./img/ex4.jpg" data-toggle="modal" data-target="#exampleModal"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <div class="m-2 inputTit"><a href="./step4.html"><button class="btn-outline-next">上一步</button></a></div>
+        <div class="m-2 inputTit"><a href="./step6.html"><button class="btn-next">下一步</button></a></div>
+      </div>
+
+  </section>
+  <div class="modal fade" id="exampleModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-dismiss="modal" ></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImg" src="" width="100%">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="msgBtn"></div>
+  <div class="msg">
+    <!-- 彈出視窗背景 -->
+    <div class="msgOutter"></div>
+    <div class="msgInner">
+      <div class="msgHead">
+        <div class="mx-3 text-light">留言板</div>
+        <div class="mx-3"><img id="close" src="./img/close_24dp.svg" width="25"></div>
+      </div>
+      <div class="content d-flex flex-column">
+        <div id="scrollBottom"></div>
+      </div>
+      <div class="send p-2 d-flex justify-content-around align-items-center">
+        <input type="text" class="form-control border-0" placeholder="寫留言..">
+        <div><img src="./img/return_24dp.svg" width="30"></div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-dark text-center p-2">
+    <div class="container">
+      <div class="d-flex justify-content-md-center justify-content-sm-start m-2 flex-wrap">
+        <div class="m-1"><small><a href="tel:02-2311-1698"><img src="./img/phone_24dp.svg">02-2311-1698</a></small>
+        </div>
+        <div class="m-1"><small><a href="mailto:justad.ad@just-adtech.com"><img
+                src="./img/mail_24dp.svg">justad.ad@just-adtech.com</a></small></div>
+        <div class="m-1"><small>服務時間 週一至週五 9:30-18:00</small></div>
+        <div class="m-1"><small><img src="./img/location_24dp.svg">台北市中正區忠孝西路一段66號34樓</small></div>
+      </div>
+      <small>Copyright 2021 © Just Advertising All rights reserved.</small>
+    </div>
+  </footer>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+
+  <script>
+    $("#msgBtn").on("click", function () {
+      $(".content").animate({
+        scrollTop: $(document).height() + 5000
+      }, "slow");
+      $(".msg").fadeIn();
+      $("#msgBtn").fadeOut();
+    });
+
+    $("#close,.msgOutter").on("click", function () {
+      $("#msgBtn").fadeIn();
+      $(".msg").fadeOut();
+    });
+    var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+    var toastList = toastElList.map(function (toastEl) {
+      return new bootstrap.Toast(toastEl)
+    })
+    $("#peopleinfoBtn").click(() => {
+      $('.toast').toast('show');
+    })
+    $('.slider').slick({
+      centerMode: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      dots: true,
+      arrows: true,
+      variableWidth: true
+    });
+    $(".card-body img").click(function () {
+      let thisSrc = $(this).attr("src");
+      $("#modalImg").attr("src", thisSrc);
+    })
+    $("#kollist input[type='checkbox']").click(function(){
+      if($("#kollist input[type='checkbox']").is(":checked")){
+        $(this).parents(".card").css("border", "2px solid #415A80")
+
+      }else{
+        $(this).parents(".card").css("border", "1px solid rgba(0,0,0,.125)")
+      }
+    })
+  </script>
+</body>
+
+</html>

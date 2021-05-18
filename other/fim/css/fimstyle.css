@@ -355,7 +355,7 @@ p {
 }
 
 
-.btn:active,.btn-next:active {
+.btn:active,.btn-next:active,#peopleinfoBtn:active{
   transform: scale(0.95);
 }
 .btn:focus {
@@ -621,6 +621,76 @@ position: relative;
 #postcontent .card-body{
   padding: 100px;
 }
+/* step5 page */
+#peopleinfoBtn{
+  color: #2F4858;
+  border: 1px solid #2F4858;
+  background:#fff;
+  padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 1px 8px rgb(0 0 0 / 25%), 0 1px 1px rgb(0 0 0 / 22%);
+}
+#toastContent{
+  position: fixed;
+  top: 80px;
+  right: 10px;
+  z-index: 5;
+  width: 300px !important;
+}
+
+.sort div input[type="radio"] {
+  display: none;
+}
+.radioBtn img{
+  margin: 0 0 0 5px;
+}
+.sortBtn{
+  /* font-size: 16px; */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px 10px 10px 0;
+  padding:10px 15px 10px 15px;
+  height: 40px;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #ccc;
+  border:2px solid #E5F1F6;
+  position: relative;
+  
+}
+
+
+.sort div input[type="radio"]:checked+label .sortBtn {
+  background-color: #fff;
+  color: #33658A;
+  border:2px solid #2F4858;
+  
+}
+#kollist .card-header{
+  background-color: #fff;
+  border: 0;
+}
+#kollist .card-header img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+#kollist .card-body img{
+ cursor: pointer;
+}
+.tag{
+  background-color: #86BBD8;
+  color: #fff;
+  padding:1px 8px;
+  margin: 2px;
+  border-radius: 10px;
+}
+.slick-prev::before,
+    .slick-next::before {
+      color: #415A80;
+    }
 /* footer */
 footer{
   width: 100vw;
