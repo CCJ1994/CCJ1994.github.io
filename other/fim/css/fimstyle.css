@@ -711,6 +711,15 @@ position: relative;
     .slick-next::before {
       color: #415A80;
     }
+
+ /* step6 page    */
+ #kol img{
+   margin:0 10px;
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+   object-fit: cover;
+ }
 /* footer */
 footer{
   width: 100vw;
