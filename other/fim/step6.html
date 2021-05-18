@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="./css/slick-theme.css">
+  <link rel="stylesheet" href="./css/fimstyle.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f45dfd3e1.js" crossorigin="anonymous"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="./img/justAD_logo_正方.png" width="30">
+          <div class="brandName ms-2 position-relative">
+            <div style="z-index: 1;">就是發網紅</div>
+            <img width="20" style="position: absolute;bottom: 5px;right: -10px; z-index: -1;" src="./img/titleicon.svg">
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 col justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">我的帳戶</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                我的專案
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./myproject.html">所有專案</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="./addproject.html">新增專案</a></li>
+                <li><a class="dropdown-item" href="./notsubmit.html">未提交專案（14）</a></li>
+                <li><a class="dropdown-item" href="./notpay.html">待付款專案（6）</a></li>
+                <li><a class="dropdown-item" href="./runproject.html">進行中專案（0）</a></li>
+                <li><a class="dropdown-item" href="./stopproject.html">暫停中專案（1）</a></li>
+                <li><a class="dropdown-item" href="./finishproject.html">已結案專案（0）</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./message.html">系統留言板</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center" href="./login.html">登出<img src="./img/logout_24dp.svg"
+                  width="17"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section id="main" class="container col-lg-8 col-md-12">
+    <div class="container">
+      <div class="my-3">
+        <h5>確認需求 (6/6)</h1>
+      </div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar"
+          style="width:95%;height:5px;"></div>
+      </div>
+    </div>
+    <div class="container my-4 position-relative">
+      <div class="mt-3 col-12">
+        <div class="accordion accordion-flush" id="projectContent">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-toggle="collapse"
+                data-target="#flush-collapseOne">
+                確認發案內容
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse show" data-parent="#projectContent">
+              <div class="accordion-body d-flex flex-wrap">
+                <div class="col-md-6 col-12">
+                  <div class="container">
+                    <div class="inputTit mb-2 d-flex justify-content-between align-items-center">
+                      <span class="">1.設定基本資料</span><a href="./step1.html"><button class="btn-edit">修改</button></a>
+                    </div>
+                    <div class="card px-2">
+                      <div class="d-flex my-2">
+                        <div class="col-4 inputTit">專案名稱</div>
+                        <div class="col-8 text-end"><b>未命名專案</b></div>
+                      </div>
+                      <div class="d-flex my-2">
+                        <div class="col-4 inputTit">曝光平台</div>
+                        <div class="col-8 text-end"><b>Instagram</b></div>
+                      </div>
+                      <div class="d-flex my-2">
+                        <div class="col-4 inputTit">業務屬性1</div>
+                        <div class="col-8 text-end"><b>販售商品</b></div>
+                      </div>
+                      <div class="d-flex my-2">
+                        <div class="col-4 inputTit">業務屬性2</div>
+                        <div class="col-8 text-end"><b>交通用品</b></div>
+                      </div>
+                      <div class="d-flex my-2">
+                        <div class="col-6 inputTit">貼文上線開始日期</div>
+                        <div class="col-6 text-end"><b>2021-06-03</b></div>
+                      </div>
+                      <div class="d-flex my-2">
+                        <div class="col-6 inputTit">貼文上線結束日期</div>
+                        <div class="col-6 text-end"><b>2021-06-30</b></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container mt-3">
+                    <div class="inputTit mb-2 d-flex justify-content-between align-items-center">
+                      <span class="">2.產品/服務資料</span><a href="./step2.html"><button class="btn-edit">修改</button></a>
+                    </div>
+                    <div class="card px-2">
+                      <div class="d-flex my-2">
+                        <div class="col-4 inputTit">宣傳品項數量</div>
+                        <div class="col-8 text-end"><b>3</b></div>
+                      </div>
+                      <div class="d-flex my-2">
+                        <div class="col-4 inputTit">品項1</div>
+                        <div class="col-8 text-end">
+                          <b>地獄激火山爆發辣味韓式泡麵</b>
+                          <div><small><i class="far fa-check-circle"></i>可讓網紅自由發揮</small></div>
+                        </div>
+                      </div>
+                      <div class="d-flex my-2">
+                        <div class="col-4 inputTit">品項2</div>
+                        <div class="col-8 text-end"><b>醬油蔥花蛋捲冰淇淋</b>
+                          <div><small><i class="far fa-check-circle"></i>可讓網紅自由發揮</small></div>
+                        </div>
+                      </div>
+                      <div class="d-flex my-2">
+                        <div class="col-4 inputTit">品項3</div>
+                        <div class="col-8 text-end"><b>日式和風咖哩飯</b>
+                          <div><small><i class="far fa-check-circle"></i>可讓網紅自由發揮</small></div>
+                        </div>
+                      </div>
+                      <div class="d-flex my-2">
+                        <div class="col-8 inputTit">網紅如何取得</div>
+                        <div class="col-4 text-end"><b>到店購買</b></div>
+                      </div>
+                      <div class="d-flex my-2">
+                        <div class="col-8 inputTit">是否指定店點</div>
+                        <div class="col-4 text-end"><b>否</b></div>
+                      </div>
+                      <div class="d-flex my-2">
+                        <div class="col-4 inputTit">哪些縣市有店點</div>
+                        <div class="col-8 text-end"><b> 基隆,桃園,新竹,台中,彰化,台東,高雄</b></div>
+                      </div>
+                      <div class="d-flex my-2">
+                        <div class="col-8 inputTit">網紅是否需自費購買</div>
+                        <div class="col-4 text-end"><b>否</b></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12 mt-sm-3">
+                  <div class="container">
+                    <div class="inputTit mb-2 d-flex justify-content-between align-items-center">
+                      <span class="">3.設定呈現方式</span><a href="./step1.html"><button class="btn-edit">修改</button></a>
+                    </div>
+                    <div class="card px-2 mb-4 d-flex flex-row">
+                      <div class="col-3 my-2 d-flex flex-column align-items-center">
+                        <div class="inputTit">照片1</div>
+                        <img src="./img/001_KOL與品牌合影.png" width="70">
+                      </div>
+                      <div class="col-9 my-2">
+                        <div class="d-flex justify-content-between">
+                          <div class="col-4 inputTit">呈現方式</div>
+                          <div class="col-8 text-end"><b>網紅自行發揮</b></div>
+                        </div>
+                        <div class=" d-flex justify-content-between">
+                          <div class="col-4 inputTit">拍攝品項</div>
+                          <div class="col-8 text-end"><b>單拍品項1-地獄激火山爆發辣味韓式泡麵</b></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card px-2 my-4 d-flex flex-row">
+                      <div class="col-3 my-2 d-flex flex-column align-items-center">
+                        <div class="inputTit">照片2</div>
+                        <img src="./img/001_KOL與品牌合影.png" width="70">
+                      </div>
+                      <div class="col-9 my-2">
+                        <div class="d-flex justify-content-between">
+                          <div class="col-4 inputTit">呈現方式</div>
+                          <div class="col-8 text-end"><b>網紅自行發揮</b></div>
+                        </div>
+                        <div class=" d-flex justify-content-between">
+                          <div class="col-4 inputTit">拍攝品項</div>
+                          <div class="col-8 text-end"><b>單拍品項1-地獄激火山爆發辣味韓式泡麵</b></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card px-2 my-4 d-flex flex-row">
+                      <div class="col-3 my-2 d-flex flex-column align-items-center">
+                        <div class="inputTit">照片3</div>
+                        <img src="./img/001_KOL與品牌合影.png" width="70">
+                      </div>
+                      <div class="col-9 my-2">
+                        <div class="d-flex justify-content-between">
+                          <div class="col-4 inputTit">呈現方式</div>
+                          <div class="col-8 text-end"><b>網紅自行發揮</b></div>
+                        </div>
+                        <div class=" d-flex justify-content-between">
+                          <div class="col-4 inputTit">拍攝品項</div>
+                          <div class="col-8 text-end"><b>單拍品項1-地獄激火山爆發辣味韓式泡麵</b></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card px-2 my-4 d-flex flex-row">
+                      <div class="col-3 my-2 d-flex flex-column align-items-center">
+                        <div class="inputTit">照片4</div>
+                        <img src="./img/001_KOL與品牌合影.png" width="70">
+                      </div>
+                      <div class="col-9 my-2">
+                        <div class="d-flex justify-content-between">
+                          <div class="col-4 inputTit">呈現方式</div>
+                          <div class="col-8 text-end"><b>網紅自行發揮</b></div>
+                        </div>
+                        <div class=" d-flex justify-content-between">
+                          <div class="col-4 inputTit">拍攝品項</div>
+                          <div class="col-8 text-end"><b>單拍品項1-地獄激火山爆發辣味韓式泡麵</b></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card px-2 my-4 d-flex flex-row">
+                      <div class="col-3 my-2 d-flex flex-column align-items-center">
+                        <div class="inputTit">照片5</div>
+                        <img src="./img/001_KOL與品牌合影.png" width="70">
+                      </div>
+                      <div class="col-9 my-2">
+                        <div class="d-flex justify-content-between">
+                          <div class="col-4 inputTit">呈現方式</div>
+                          <div class="col-8 text-end"><b>網紅自行發揮</b></div>
+                        </div>
+                        <div class=" d-flex justify-content-between">
+                          <div class="col-4 inputTit">拍攝品項</div>
+                          <div class="col-8 text-end"><b>單拍品項1-地獄激火山爆發辣味韓式泡麵</b></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <div id="preBtn" class="m-2 inputTit"><a href="./step5.html"><button class="btn-outline-pre">上一步</button></a></div>
+        <div id="nextBtn" class="m-2 inputTit"><a href="./confirm.html"><button class="btn-next">下一步</button></a></div>
+      </div>
+
+  </section>
+
+  <div id="msgBtn"></div>
+  <div class="msg">
+    <!-- 彈出視窗背景 -->
+    <div class="msgOutter"></div>
+    <div class="msgInner">
+      <div class="msgHead">
+        <div class="mx-3 text-light">留言板</div>
+        <div class="mx-3"><img id="close" src="./img/close_24dp.svg" width="25"></div>
+      </div>
+      <div class="content d-flex flex-column">
+        <div id="scrollBottom"></div>
+      </div>
+      <div class="send p-2 d-flex justify-content-around align-items-center">
+        <input type="text" class="form-control border-0" placeholder="寫留言..">
+        <div><img src="./img/return_24dp.svg" width="30"></div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-dark text-center p-2">
+    <div class="container">
+      <div class="d-flex justify-content-md-center justify-content-sm-start m-2 flex-wrap">
+        <div class="m-1"><small><a href="tel:02-2311-1698"><img src="./img/phone_24dp.svg">02-2311-1698</a></small>
+        </div>
+        <div class="m-1"><small><a href="mailto:justad.ad@just-adtech.com"><img
+                src="./img/mail_24dp.svg">justad.ad@just-adtech.com</a></small></div>
+        <div class="m-1"><small>服務時間 週一至週五 9:30-18:00</small></div>
+        <div class="m-1"><small><img src="./img/location_24dp.svg">台北市中正區忠孝西路一段66號34樓</small></div>
+      </div>
+      <small>Copyright 2021 © Just Advertising All rights reserved.</small>
+    </div>
+  </footer>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+
+  <script>
+    $("#msgBtn").on("click", function () {
+      $(".content").animate({
+        scrollTop: $(document).height() + 5000
+      }, "slow");
+      $(".msg").fadeIn();
+      $("#msgBtn").fadeOut();
+    });
+
+    $("#close,.msgOutter").on("click", function () {
+      $("#msgBtn").fadeIn();
+      $(".msg").fadeOut();
+    });
+    var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+    var toastList = toastElList.map(function (toastEl) {
+      return new bootstrap.Toast(toastEl)
+    })
+    $("#peopleinfoBtn").click(() => {
+      $('.toast').toast('show');
+    })
+    $('.slider').slick({
+      centerMode: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      dots: true,
+      arrows: true,
+      variableWidth: true
+    });
+    $(".card-body img").click(function () {
+      let thisSrc = $(this).attr("src");
+      $("#modalImg").attr("src", thisSrc);
+    })
+    $("#kollist input[type='checkbox']").click(function(){
+      if($("#kollist input[type='checkbox']").is(":checked")){
+        $(this).parents(".card").css("border", "2px solid #415A80")
+
+      }else{
+        $(this).parents(".card").css("border", "1px solid rgba(0,0,0,.125)")
+      }
+    })
+  </script>
+</body>
+
+</html>

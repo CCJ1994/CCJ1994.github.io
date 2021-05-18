@@ -213,14 +213,14 @@ outline: none !important;
 }
 .btn-next{
   padding: 10px;
-  border-radius: 17px;
-  border:0;
+  border-radius: 15px;
+  border:1px solid #f26419;
   background-color: #f26419;
   color: #fff;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25),
   0 1px 1px rgba(0, 0, 0, 0.22);
 }
-.btn-outline-next{
+.btn-outline-pre{
   padding: 10px;
   border-radius: 15px;
   border:1px solid #f26419;
@@ -228,6 +228,31 @@ outline: none !important;
   color: #f26419;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25),
   0 1px 1px rgba(0, 0, 0, 0.22);
+}
+.btn-edit{
+  padding:3px 25px 3px 8px;
+  border-radius: 10px;
+  border:1px solid #86BBD8;
+  background-color: #86BBD8;
+  background-image: url("../img/edit_24dp.svg");
+  background-repeat: no-repeat;
+  background-position:40px;
+  background-size: 18px;
+  color: #fff;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25),
+  0 1px 1px rgba(0, 0, 0, 0.22);
+}
+#preBtn{
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
+  z-index: 2;
+}
+#nextBtn{
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 2;
 }
 
 /* msessage board */
@@ -355,7 +380,7 @@ p {
 }
 
 
-.btn:active,.btn-next:active,#peopleinfoBtn:active{
+.btn:active,.btn-next:active,.btn-outline-pre:active,#peopleinfoBtn:active{
   transform: scale(0.95);
 }
 .btn:focus {
@@ -556,12 +581,7 @@ z-index: -1;
 .dropdown-toggle::after{
   border-top:.3em solid #F26419 ;
 }
-/* #nextBtn{
-  position: fixed;
-  bottom: 90px;
-  right: 20px;
-  z-index: 2;
-} */
+
 
 /* step3 page */
 .accordion-button{
@@ -576,7 +596,7 @@ z-index: -1;
   color: #2F4858;
   background-color: transparent;
 }
-#descexample .accordion-body {
+#descexample .accordion-body,#projectContent .accordion-body {
   box-shadow:inset  1px 1px 2px #c7d2d6,inset  -1px -1px 2px #e6e6e6;
   border-radius: 0px 0px 10px 10px;
 
