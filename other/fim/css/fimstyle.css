@@ -109,10 +109,10 @@ outline: none !important;
   box-shadow:1px 1px 4px rgb(0 0 0 / 25%), 1px 1px 4px rgb(0 0 0 / 22%);
 }
 
-.adcheck input[type="checkbox"] {
+.adcheck input[type="checkbox"],.adradio input[type="radio"] {
   display: none;
 }
-.adcheck label{
+.adcheck label,.adradio label{
   font-size: 16px;
   cursor:pointer;
   color: #ccc;
@@ -129,7 +129,6 @@ outline: none !important;
     cursor:pointer;
 }
 
-
 .adcheck input[type="checkbox"]:checked+label {
   color: #33658A;
 }
@@ -138,6 +137,15 @@ outline: none !important;
   background-repeat: no-repeat;
 
 }
+.adradio input[type="radio"]:checked+label {
+  color: #33658A;
+}
+.adradio input[type="radio"]:checked+label .checkBtn{
+  background:url("../img/checkbox.svg");
+  background-repeat: no-repeat;
+
+}
+
 
 .decidemulti div input[type="checkbox"] {
   display: none;
@@ -597,7 +605,7 @@ z-index: -1;
   box-shadow:  1px 1px 2px #c7d2d6,  -1px -1px 2px #e6e6e6;
 }
 .accordion-flush .accordion-item .accordion-button {
-  border-radius: 10px 10px 0 0;
+  /* border-radius: 10px 10px 0 0; */
   box-shadow:  1px 1px 2px #c7d2d6,  -1px -1px 2px #e6e6e6;
 
 }
@@ -605,13 +613,16 @@ z-index: -1;
   color: #2F4858;
   background-color: transparent;
 }
-#descexample .accordion-body,#projectContent .accordion-body,#projectContract .accordion-body {
+.accordion-body{
   box-shadow:inset  1px 1px 2px #c7d2d6,inset  -1px -1px 2px #e6e6e6;
-  border-radius: 0px 0px 10px 10px;
+  /* border-radius: 0px 0px 10px 10px; */
 
 }
-#descexample img,#postitem img{
+#descexample img{
   width: 100px;
+}
+#postitem img{
+  width: 150px;
 }
 #descexample .card{
   display: flex;
@@ -729,9 +740,7 @@ position: relative;
    border-radius: 50%;
    object-fit: cover;
  }
- .accordion-item{
-   border-radius: 10px !important;
- }
+
 /* footer */
 footer{
   width: 100vw;
