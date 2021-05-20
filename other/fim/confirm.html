@@ -343,14 +343,13 @@
         </div>
       </div>
     </div>
-    <div class="my-3 adcheck text-center">
+    <div class="my-4 adcheck text-center">
       <input id="confirmBtn" class="" type="checkbox">
       <label for="confirmBtn"><span class="checkBtn"></span>我同意合約內容</label>
     </div>
     <div class="d-flex justify-content-center">
-
-      <div id="cancel" style="display:none;" class="my-5 mx-1 inputTit"><a href=""><button class="btn-cancel">暫時離開</button></a></div>
-      <div id="confirmPay" style="display:none;" class="my-5 mx-1 inputTit"><a href="https://payment-stage.ecpay.com.tw/Cashier/AioCheckOut/V5"><button class="btn-next">我要發案了，前往付款！</button></a></div>
+      <div id="cancel" style="display:none;" class="mx-1 inputTit"><a href="./myproject.html"><button class="btn-cancel">暫時離開</button></a></div>
+      <div id="confirmPay" style="display:none;" class="mx-1 inputTit"><a href="https://payment-stage.ecpay.com.tw/Cashier/AioCheckOut/V5"><button class="btn-next">我要發案了，前往付款！</button></a></div>
     </div>
   </section>
 
@@ -410,21 +409,7 @@
     var toastList = toastElList.map(function (toastEl) {
       return new bootstrap.Toast(toastEl)
     })
-    $("#peopleinfoBtn").click(() => {
-      $('.toast').toast('show');
-    })
-    $('.slider').slick({
-      centerMode: true,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      dots: true,
-      arrows: true,
-      variableWidth: true
-    });
-    $(".card-body img").click(function () {
-      let thisSrc = $(this).attr("src");
-      $("#modalImg").attr("src", thisSrc);
-    })
+    
     $("#confirmBtn").click(()=>{
       console.log(1)
       if($("#confirmBtn").is(":checked")){

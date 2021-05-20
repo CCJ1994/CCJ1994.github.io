@@ -225,7 +225,7 @@ outline: none !important;
   border:1px solid #f26419;
   background-color: #f26419;
   color: #fff;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25),
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25),
   0 1px 1px rgba(0, 0, 0, 0.22);
 }
 .btn-outline-pre{
@@ -234,8 +234,11 @@ outline: none !important;
   border:1px solid #f26419;
   background-color: #fff;
   color: #f26419;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25),
-  0 1px 1px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2),
+  0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.orange{
+  color: #f26419;
 }
 .btn-cancel{
   padding: 10px;
@@ -243,10 +246,11 @@ outline: none !important;
   border:1px solid #ccc;
   background-color: #fff;
   color: #ccc;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25),
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25),
   0 1px 1px rgba(0, 0, 0, 0.22);
 }
 .btn-edit{
+  min-width:67px;
   padding:3px 25px 3px 8px;
   border-radius: 10px;
   border:1px solid #86BBD8;
@@ -256,8 +260,8 @@ outline: none !important;
   background-position:40px;
   background-size: 18px;
   color: #fff;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25),
-  0 1px 1px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15),
+  0 1px 1px rgba(0, 0, 0, 0.1);
 }
 #preBtn{
   position: fixed;
@@ -271,7 +275,12 @@ outline: none !important;
   right: 20px;
   z-index: 2;
 }
-
+.badge-yellow{
+  position: absolute;
+  background-color: #F6AE2D;
+  top: -5px;
+  right: -30px;
+}
 /* msessage board */
 #msgBtn{
   position: fixed;
@@ -287,6 +296,7 @@ outline: none !important;
   background-repeat: no-repeat;
   background-size: 40px;
   background-position: center;
+  cursor: pointer;
 }
 .msg {
   display: none;
@@ -598,8 +608,13 @@ z-index: -1;
 .dropdown-toggle::after{
   border-top:.3em solid #F26419 ;
 }
-
-
+/* unsubmit page */
+#unsubmit .list-group-item{
+  background-image: url("../img/more_horiz_black_24dp.svg");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: top right 10px;
+}
 /* step3 page */
 .accordion-button{
   box-shadow:  1px 1px 2px #c7d2d6,  -1px -1px 2px #e6e6e6;

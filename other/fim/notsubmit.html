@@ -66,80 +66,70 @@
     </nav>
   </header>
   <section id="main" class="container">
-    <div id="myproject">
-      <div class="text-center py-4">
-        <h2>所有專案</h2>
+    <div><a href="./myproject.html"><button class="btn-outline-pre"><i class="orange me-1 fas fa-chevron-left"></i>返回我的專案</button></a></div>
+    <div id="unsubmit">
+      <div class="d-flex justify-content-center align-items-center mb-5 mt-3">
+        <img class="me-3" src="./img/notsubmit.svg" width="35">
+        <h2 class="m-0">未提交專案</h2>
       </div>
-      <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-5">
-        <a href="./addproject.html" class="col">
-          <div class="card h-100">
-            <div class="card-body d-flex align-items-center">
-              <div><img src="./img/addproject.svg" width="70"></div>
-              <div class="ms-3">
-                <h5 class="card-title">新增專案</h5>
-                <span>建立一個專案吧！</span>
+      <div class="col-10 container my-5">
+        <div class="list-group overflow-hidden">
+          <a href="#" class="list-group-item list-group-item-action p-3">
+            <div class=" d-flex justify-content-between align-items-center">
+              <div class="position-relative"><h5>家樂福啤酒</h5>
+                <span class="badge badge-yellow rounded-pill">IG</span>
               </div>
             </div>
-          </div>
-        </a>
-        <a href="./notsubmit.html" class="col">
-          <div class="card h-100">
-            <div class="card-body d-flex align-items-center">
-              <div><img src="./img/notsubmit.svg" width="70"></div>
-              <div class="ms-3">
-                <h5 class="card-title">未提交專案<span class="ms-2 amount">(6)</span></h5>
-                <span>您還沒有填完資訊哦！</span>
+            <div class="text-muted"><small>建立時間 2021-05-05 16:00:23</small></div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action p-3">
+            <div class=" d-flex justify-content-between align-items-center">
+              <div class="position-relative"><h5>Kotex太空棉新品禮盒</h5>
+                <span class="badge badge-yellow rounded-pill">IG</span>
               </div>
             </div>
-          </div>
-        </a>
-        <a href="./notpay.html" class="col">
-          <div class="card h-100">
-            <div class="card-body d-flex align-items-center">
-              <div><img src="./img/notpay.svg" width="70"></div>
-              <div class="ms-3">
-                <h5 class="card-title">待付款專案<span class="ms-2 amount">(0)</span></h5>
-                <span>付款完成就能進行專案囉！</span>
+            <div class="text-muted"><small>建立時間 2021-05-05 16:00:23</small></div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action p-3">
+            <div class=" d-flex justify-content-between align-items-center">
+              <div class="position-relative"><h5>Kotex太空棉新品禮盒</h5>
+                <span class="badge badge-yellow rounded-pill">IG</span>
               </div>
             </div>
-          </div>
-        </a>
-        <a href="./runproject.html" class="col">
-          <div class="card h-100">
-            <div class="card-body d-flex align-items-center">
-              <div><img src="./img/run.svg" width="70"></div>
-              <div class="ms-3">
-                <h5 class="card-title">進行中專案<span class="ms-2 amount">(1)</span></h5>
-                <span>專案正在執行中！</span>
+            <div class="text-muted"><small>建立時間 2021-05-05 16:00:23</small></div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action p-3">
+            <div class=" d-flex justify-content-between align-items-center">
+              <div class="position-relative"><h5>Kotex太空棉新品禮盒</h4>
+                <span class="badge badge-yellow rounded-pill">IG</span>
               </div>
             </div>
-          </div>
-        </a>
-        <a href="./stopproject.html" class="col">
-          <div class="card h-100">
-            <div class="card-body d-flex align-items-center">
-              <div><img src="./img/stop.svg" width="70"></div>
-              <div class="ms-3">
-                <h5 class="card-title">暫停中專案<span class="ms-2 amount">(1)</span></h5>
-                <span>專案目前暫停中！</span>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="./finishproject.html" class="col">
-          <div class="card h-100">
-            <div class="card-body d-flex align-items-center">
-              <div><img src="./img/finish.svg" width="70"></div>
-              <div class="ms-3">
-                <h5 class="card-title">已結案專案<span class="ms-2 amount">(0)</span></h5>
-                <span>專案已經完成囉！</span>
-              </div>
-            </div>
-          </div>
-        </a>
+            <div class="text-muted"><small>建立時間 2021-05-05 16:00:23</small></div>
+          </a>
+
+          
+        </div>
       </div>
     </div>
   </section>
+  <div id="msgBtn"></div>
+  <div class="msg">
+    <!-- 彈出視窗背景 -->
+    <div class="msgOutter"></div>
+    <div class="msgInner">
+      <div class="msgHead">
+        <div class="mx-3 text-light">留言板</div>
+        <div class="mx-3"><img id="close" src="./img/close_24dp.svg" width="25"></div>
+      </div>
+      <div class="content d-flex flex-column">
+        <div id="scrollBottom"></div>
+      </div>
+      <div class="send p-2 d-flex justify-content-around align-items-center">
+        <input type="text" class="form-control border-0" placeholder="寫留言..">
+        <div><img src="./img/return_24dp.svg" width="30"></div>
+      </div>
+    </div>
+  </div>
   <footer class="bg-dark text-center p-2">
     <div class="container">
       <div class="d-flex justify-content-md-center justify-content-sm-start m-2 flex-wrap">
@@ -160,7 +150,18 @@
   <script src="./js/bootstrap.bundle.min.js"></script>
 
   <script>
+ $("#msgBtn").on("click", function () {
+      $(".content").animate({
+        scrollTop: $(document).height() + 5000
+      }, "slow");
+      $(".msg").fadeIn();
+      $("#msgBtn").fadeOut();
+    });
 
+    $("#close,.msgOutter").on("click", function () {
+      $("#msgBtn").fadeIn();
+      $(".msg").fadeOut();
+    });
   </script>
 </body>
 
