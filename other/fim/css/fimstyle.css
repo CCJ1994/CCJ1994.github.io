@@ -638,21 +638,16 @@ p {
   background-position: top right 10px;
 }
 /* step3 page */
-.accordion-button{
-  box-shadow:  1px 1px 2px #c7d2d6,  -1px -1px 2px #e6e6e6;
-}
-.accordion-flush .accordion-item .accordion-button {
-  /* border-radius: 10px 10px 0 0; */
-  box-shadow:  1px 1px 2px #c7d2d6,  -1px -1px 2px #e6e6e6;
 
-}
+/* .accordion-flush .accordion-item .accordion-button {
+  box-shadow:  1px 1px 2px #c7d2d6,  -1px -1px 2px #e6e6e6;
+} */
 .accordion-button:not(.collapsed) {
   color: #2F4858;
   background-color: transparent;
 }
-.accordion-body{
+#descexample .accordion-body,#pj_briefBox .accordion-body{
   box-shadow:inset  1px 1px 2px #c7d2d6,inset  -1px -1px 2px #e6e6e6;
-  /* border-radius: 0px 0px 10px 10px; */
 
 }
 #descexample img{
@@ -797,70 +792,130 @@ footer img{
 
 /* runningPj page */
 #orderbrief.card{
-  background-color: #ecf0f1;
+background-color: #ecf0f1;
 border: 0;
 }
 .step{
+  position: relative;
   width:20px;
   height: 20px;
   background-color: #F6AE2D;
   border-radius: 50%;
   flex-shrink: 0;
-  position: relative;
 }
-.stepBorder{
-  /* content: ""; */
+.stepActive{
+  color:#33658A !important;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.stepActive::after{
+  border-radius: 50%;
+  content: "";
   width:28px;
   height: 28px;
-  background-color: #fff;
-  border: 1px solid #f6ae2d;
-  border-radius: 50%;
+ background-color: #fff;
+  border: 1px solid #f26419;
   flex-shrink: 0;
-  position: absolute;
-  z-index: -1;
+  z-index:-1;
   top: -4px;
   left: -4px;
+  position: absolute;
 }
-#stepWizard>div:nth-child(1)::before{
+
+#stepWizard .step:nth-child(1)::before{
   content:"訂單成立";
-  width:100px;
-  transform:translate(-20px,35px) ;
+  width:65px;
+  transform:translate(-20px,30px) ;
   position: absolute;
 }
-#stepWizard>div:nth-child(3)::before{
+#stepWizard .step:nth-child(3)::before{
   content:"執行中";
-  width:100px;
-  transform:translate(-15px,35px) ;
+  width:50px;
+  transform:translate(-15px,30px) ;
   position: absolute;
 }
-#stepWizard>div:nth-child(5)::before{
+#stepWizard .step:nth-child(5)::before{
   content:"已上線";
-  width:100px;
-  transform:translate(-15px,35px) ;
+  width:50px;
+  transform:translate(-15px,30px) ;
   position: absolute;
 }
-#stepWizard>div:nth-child(7)::before{
+#stepWizard .step:nth-child(7)::before{
   content:"結案";
-  width:100px;
-  transform:translate(-5px,35px) ;
+  width:40px;
+  transform:translate(-5px,30px) ;
   position: absolute;
 }
 
 .line{
-  /* margin: 0 0 0 4px; */
   z-index: -2;
-  width: 28%;
+  width: 25%;
   height: 3px;
   background-color: #F6AE2D;
-
 }
 
-.stepcontent{
-  width: 100px;
-  position: absolute;
-  top: 50px;
-  /* left: 50px; */
+#descexample .accordion-flush .accordion-item .accordion-button,#pj_briefBox .accordion-flush .accordion-item .accordion-button {
+  box-shadow:  1px 1px 2px #c7d2d6,  -1px -1px 2px #e6e6e6;
 }
+#customer img,#Ai img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+#customer .progress-bar,#Ai .progress-bar{
+  background-color: #33658A;
+}
+#customer .progress,#Ai .progress{
+  background-color: #E5F1F6;
+  height: 3px;
+}
+#pj_briefBox img{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 10px;
+}
+/* @media (max-width: 450px) {
+  #stepWizard{
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .line{
+    z-index: -2;
+    width: 3px;
+    height: 50px;
+    background-color: #F6AE2D;
+    transform: translateX(8px);
+  }
+  #stepWizard>div:nth-child(1)::before{
+    content:"訂單成立";
+    width:100px;
+    transform:translate(30px,0px) ;
+    position: absolute;
+  }
+  #stepWizard>div:nth-child(3)::before{
+    content:"執行中";
+    width:100px;
+    transform:translate(30px,0px) ;
+    position: absolute;
+  }
+  #stepWizard>div:nth-child(5)::before{
+    content:"已上線";
+    width:100px;
+    transform:translate(30px,0px) ;
+    position: absolute;
+  }
+  #stepWizard>div:nth-child(7)::before{
+    content:"結案";
+    width:100px;
+    transform:translate(30px,0px) ;
+    position: absolute;
+  }
+
+} */
 /* defined color */
 .primaryClr,.nav-tabs .nav-link.active{
 	color: #2F4858 !important;
