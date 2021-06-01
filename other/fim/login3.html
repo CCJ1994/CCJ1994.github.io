@@ -11,6 +11,72 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/7f45dfd3e1.js" crossorigin="anonymous"></script>
+  <style>
+    .bgimg{
+      width: 400px;
+      
+      z-index: -1;
+    }
+
+    input {
+      background-color: transparent;
+      border-radius: 8px;
+      border: 1px solid #415A80;
+      padding: 5px 10px;
+      width: 220px;
+    }
+    .inputbg{
+      position: relative;
+    }
+    .inputbg::after {
+      content: "";
+      position: absolute;
+      background-color: #F2F2F2;
+      width: 220px;
+      height: 35px;
+      border-radius: 8px;
+      top: 10px;
+      left: 10px;
+      z-index: -1;
+    }
+
+    input:focus {
+      outline: none;
+    }
+    .titleicon{
+      background-image: url("./img/titleicon.svg");
+      background-repeat: no-repeat;
+      background-size: 40px;
+      background-position: bottom right 5px;
+      padding-right: 30px;
+      font-size: 40px;
+      font-weight: 700;
+      color: #2F4858;
+    }
+    .btn-reg{
+      background-color: #f26419;
+      border: 1px solid #f26419;
+      color: #fff;
+      padding: 5px 50px;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: 1s;
+    }
+    .btn-login{
+      background-color: transparent;
+      border: 1px solid #f26419;
+      color: #f26419;
+      padding: 5px 50px;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: 1s;
+    }
+
+    .btn-login:hover{
+      box-shadow:inset 0px 0px 0 25px #f26419;
+      color: #fff;
+    }
+  </style>
 </head>
 
 <body>
@@ -81,37 +147,32 @@
       </div>
       <div class="formPart loginPart">
         <form action="#">
-          <div class="logo"><img src="./img/justAD_logo_長方.png" height="40" alt=""></div>
-          <div class="title position-relative">
-            就是發網紅
-            <img id="titleicon" src="./img/titleicon.svg">
+          <div class="text-start"><img src="./img/justAD_logo_長方.png" width="60"></div>
+          <div class="titleicon">就是發網紅</div>
+          <div class="my-5">
+            <div class="inputbg"></div>
+            <input class="logininput" type="text" placeholder="帳號">
           </div>
-          <div class="form-floating my-4">
-            <input type="text" class="form-control" id="floatingacc" placeholder="請輸入您的帳號">
-            <label for="floatingacc"><i class="fas fa-user-circle"></i>帳號</label>
+          <div class="mb-4">
+            <div class="inputbg"></div>
+            <input class="logininput" type="text" placeholder="密碼">
           </div>
-          <div class="form-floating my-4">
-            <input type="password" class="form-control" id="floatingpw" placeholder="請輸入您的密碼">
-            <label for="floatingpw"><i class="fas fa-lock"></i> 密碼</label>
-          </div>
-          <div class="mb-4 text-center"><a href="index.html" class="btn btn-outline-orange">立即登入</a></div>
-          <div class="text-center">
-            <a id="goreg">還沒註冊 ｜</a>
-            <a href="./forgetpw.html">忘記密碼？</a>
-          </div>
+          <div class="mb-5"><a href="register.html">還沒註冊</a>｜<a href="">忘記密碼？</a></div>
+          <div><button class="btn-login">登入</button></div>
         </form>
       </div>
       <div class="overlayPart">
         <div class="overlay">
           <div class="overlay-panel leftPart">
-            <div class="title3">歡迎回來</div>
+            <div class="title2">歡迎回來</div>
             <p class="text-light"><small>立即登入，建立或進行專案吧！</small></p>
-            <button id="loginBtn" class="btn btn-orange">登入</button>
+            <button id="loginBtn" class="btn btn-orange">登 入</button>
           </div>
           <div class="overlay-panel rightPart">
-            <div class="title3">歡迎加入</div>
-            <p class="text-light"><small>立即註冊，讓我們為您的專案發聲吧！</small></p>
-            <button id="regBtn" class="btn btn-orange">註冊</button>
+            <img src="./img/login.svg" class="bgimg">
+            <div class="title2 mb-2">歡迎加入</div>
+            <!-- <p class="text-light"><small>立即註冊，讓我們為您的專案發聲吧！</small></p> -->
+            <button id="regBtn" class="btn-reg">註 冊</button>
           </div>
         </div>
       </div>

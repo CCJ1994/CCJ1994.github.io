@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/fimstyle.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f45dfd3e1.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background-color: #CDDCDC;
+      background-image: radial-gradient(#dfe9f3, white);
+    }
+
+    .outside {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loginbg {
+      /* overflow: hidden; */
+      width: 800px;
+      height: 550px;
+      border-radius: 10px;
+      display: flex;
+      background-color: #fff;
+      box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15),
+        0 1px 15px rgba(0, 0, 0, 0.12);
+        z-index: 0;
+        justify-content: center;
+        margin: 50px;
+    }
+    .loginbg2{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      background-color: #fff;
+      z-index: 0;
+      justify-content: center;
+    }
+
+    .left {
+      width: 400px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      /* background-color: #fff; */
+      /* background-color: rgba(255, 255, 255, 0.9); */
+    }
+
+    .right {
+      width: 400px;
+      position: relative;
+    }
+    .bgimg{
+      width: 600px;
+      position: absolute;
+      right: -120px;
+      bottom: -10px;
+    }
+
+    .logininput {
+      background-color: transparent;
+      border-radius: 8px;
+      border: 1px solid #415A80;
+      padding: 5px 10px;
+      width: 220px;
+    }
+    .inputbg{
+      position: relative;
+    }
+    .inputbg::after {
+      content: "";
+      position: absolute;
+      background-color: #F2F2F2;
+      width: 220px;
+      height: 35px;
+      border-radius: 8px;
+      top: 10px;
+      left: 10px;
+      z-index: -1;
+    }
+
+    input:focus {
+      outline: none;
+    }
+    .titleicon{
+      background-image: url("./img/titleicon.svg");
+      background-repeat: no-repeat;
+      background-size: 40px;
+      background-position: bottom right 5px;
+      padding-right: 30px;
+      font-size: 40px;
+      font-weight: 700;
+      color: #2F4858;
+    }
+    .btn-login{
+      background-color: transparent;
+      border: 1px solid #f26419;
+      color: #f26419;
+      padding: 5px 50px;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: 1s;
+    }
+
+    .btn-login:hover{
+      box-shadow:inset 0px 0px 0 25px #f26419;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="outside">
+    <div id="loginbg" class="loginbg">
+      <div id="left" class="left">
+        <form action="">
+          <div class="text-start"><img src="./img/justAD_logo_長方.png" width="60"></div>
+          <div class="titleicon">就是發網紅</div>
+          <div class="my-5">
+            <div class="inputbg"></div>
+            <input class="logininput" type="text" placeholder="帳號">
+          </div>
+          <div class="mb-4">
+            <div class="inputbg"></div>
+            <input class="logininput" type="password" placeholder="密碼">
+          </div>
+          <div class="mb-5"><a href="register.html">還沒註冊</a>｜<a href="">忘記密碼？</a></div>
+          <div><button class="btn-login">登入</button></div>
+        </form>
+      </div>
+      <div id="right" class="right"><img src="./img/login.svg" class="bgimg"></div>
+    </div>
+  </div>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script>
+    $("#regNext").click(() => {
+      $(".formPart").css("overflow-y", "auto");
+      $("#companyInfo").show();
+      let val = $("#companyInfo").offset().top - $("#regtitle").innerHeight();
+      $("#regNext").hide();
+      $(".formPart").animate(
+        { scrollTop: val }, 800, "swing"
+      );
+
+    })
+    $("#regBtn").click(() => {
+      $(".outter").addClass("right-panel-active");
+    });
+
+    $("#loginBtn").click(() => {
+      $(".outter").removeClass("right-panel-active");
+      $(".formPart").css("overflow", "auto");
+      $("#companyInfo").hide();
+      $("#regNext").show();
+    });
+    loginresize()
+    function loginresize(){
+      if (window.innerWidth < 670 ) {
+  
+        console.log(1);
+        $("#loginbg").addClass("loginbg2").removeClass("loginbg");
+        $(".right").hide();
+       
+      }else{
+        $("#loginbg").addClass("loginbg").removeClass("loginbg2");
+        $(".right").show();
+        $("#right>img").removeClass("bgimg2").addClass("bgimg");
+
+      }
+    }
+    // function loginresize() {
+    //   if (window.innerWidth < 700) {
+    //     console.log(1);
+    //     $(".outter").css("width", "350px");
+    //     $(".overlayPart").hide();
+    //     $("#goreg,#backBtn").show();
+    //   } else {
+    //     $(".outter").css("width", "700px");
+    //     $(".overlayPart").show();
+    //     $("#goreg,#backBtn").hide();
+    //   }
+    //   $("#goreg").click(() => {
+    //     console.log(2);
+    //     $(".loginPart").css("z-index", "0");
+    //     $(".regPart").css("opacity", "1");
+    //   })
+    //   $("#backBtn").click(() => {
+    //     $(".loginPart").css("z-index", "2");
+    //     $(".regPart").css("opacity", "0");
+    //   })
+    // }
+
+    // loginresize();
+    $(window).resize(function () {
+      loginresize();
+
+    })
+
+  </script>
+</body>
+
+</html>
