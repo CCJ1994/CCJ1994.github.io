@@ -835,13 +835,13 @@ border: 0;
   transform:translate(-15px,30px) ;
   position: absolute;
 }
-#stepWizard .step:nth-child(5)::before{
+/* #stepWizard .step:nth-child(5)::before{
   content:"已上線";
   width:50px;
   transform:translate(-15px,30px) ;
   position: absolute;
-}
-#stepWizard .step:nth-child(7)::before{
+} */
+#stepWizard .step:nth-child(5)::before{
   content:"結案";
   width:40px;
   transform:translate(-5px,30px) ;
