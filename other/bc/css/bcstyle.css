@@ -14,6 +14,9 @@ a{
 a:hover,.nav-tabs .nav-link.active{
   color: #0070be;
 }
+a:active{
+  transform: scale(0.95);
+}
 .primaryClr,h1,h2,h3,h4,h5,h6{
 	color: #00427c !important;
 }
@@ -33,11 +36,20 @@ a:hover,.nav-tabs .nav-link.active{
   color: #E55039 !important;
 }
 .btnBC{
-  border: 1px solid #ccc;
-  color:#ccc;
+  border: 1px solid #00427c;
   background-color: transparent;
   display: inline-block;
+  color: #00427c;
 }
+.btnBC:active{
+  transform: scale(0.99);
+}
+.btnBC:hover{
+  /* border: 1px solid #00427c; */
+  background-color: #00427c;
+  color: #ffffff !important;
+}
+
 .activeBC{
   color:#00427c;
   border: 1px solid #00427c;
@@ -55,6 +67,65 @@ box-shadow: 0 0 0 transparent !important;
 }
 
 /* mainMenu */
-nav{
+#mainMenu{
   background-color: #fff;
+}
+#searchBar .form-control{
+  background-color:#f8f7fa ;
+  padding-right: 32px;
+}
+.shadowBC{
+  box-shadow: -1px -1px 7px #ffffff73, 1px 1px 5px rgb(94 104 121 / 29%);
+}
+
+#adBanner .carousel-item img{
+  filter: opacity(80%);
+}
+
+#sort{
+  position: sticky;
+  top: 56px;
+  left: 0;
+  background-color: #fff;
+  z-index: 3;
+}
+#sort a{
+  font-size: 20px;
+}
+.sortActive{
+  border-bottom:2px solid ;
+}
+#pjSample>h1{
+  border-bottom: 2px solid;
+}
+.type{
+  background-color: #0086d2;
+  position: absolute;
+  padding: 5px 20px;
+  color: #fff;
+  top: -33px;
+  right: 0;
+}
+.brandName{
+  background-color: #eff4f5;
+  position: absolute;
+  padding: 5px 15px;
+  color: #00427c;
+  bottom:0px;
+  left: 0;
+}
+#pjSample .card{
+  /* min-width: 312px; */
+}
+#pjSample .card .card-img-top{
+  height: 200px;
+}
+#pjSample .card img{
+  object-fit: cover;
+}
+/* footer */
+footer{
+  /* background-color: #eff4f5; */
+  background-color: #00427c;
+  color: #fff;
 }
