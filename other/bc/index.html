@@ -395,7 +395,6 @@
         height2 = $("#adBanner").innerHeight(),
         offset = $("#sort").innerHeight(),
         screenW = $(document).innerWidth();
-      if (screenW >= 992) {
         if (nowat < height1 + height2 - offset + 15) {
           $("#sort").removeClass("shadowBC");
           // $("#mainMenu,#sort").css("background", "#fff");
@@ -407,9 +406,7 @@
           <img src="./img/27268-bubbles.gif" alt="" width="30" class="d-inline-block align-text-top">
       就是有看點`);
         }
-      } else {
-        $("#sort").addClass("shadowBC");
-      }
+      
     }
     function fadeintxt() {
       let title = document.querySelector("#sortTitle1");
