@@ -25,7 +25,7 @@
               <span class="navbar-toggler-icon"></span>
             </button>
           </div>
-          <div id="brand" class="col-4 d-flex">
+          <div id="brandicon" class="col-4 d-flex">
             <a class="navbar-brand primaryClr fw-bolder" href="./index.html">就是有看點</a>
           </div>
           <div id="searchBar" class="col-4 d-flex justify-content-end position-relative">
@@ -92,17 +92,34 @@
       </div>
     </div>
   </section>
-  <div id="sort" class="my-4">
-    <div class="nav-scroller mb-2 container">
-      <nav class="nav d-flex">
-        <a class="sortActive" href="#">熱 門</a>
-        <a class="text-muted" href="#">食 品</a>
-        <a class="text-muted" href="#">美 容</a>
-        <a class="text-muted" href="#">居 家</a>
+  <div id="sort" class="mb-4">
+    <div class="nav-scroller container-fluid">
+      <nav class="nav d-flex flex-nowrap border-bottom border-top">
+        <a style="cursor: default;"><img src="./img/category_black_24dp.svg" width="20"></a>
+        <a class="flex-shrink-0" href="">熱 門</a>
+        <a class="text-muted flex-shrink-0" href="">精 選</a>
+        <a class="text-muted flex-shrink-0" onclick="collapseSort('market')">產 業<i class="ms-2 fas fa-sort-down"></i></a>
+        <a class="text-muted flex-shrink-0" onclick="collapseSort('brand')">品 牌<i class="ms-2 fas fa-sort-down"></i></a>
+        <a class="text-muted flex-shrink-0" href="">走 期</a>
       </nav>
     </div>
+    <div class="collapse " id="collapsemarket">
+      <div class="border-bottom card-body">
+        <div class="text-end closeBtn"><i class="fas fa-times"></i></div>
+        <a class="sortTag">保 養</a>
+        <a class="sortTag">餐 飲</a>
+        <a class="sortTag">美 妝</a>
+      </div>
+    </div>
+    <div class="collapse " id="collapsebrand">
+      <div class="border-bottom card-body">
+        <div class="text-end closeBtn"><i class="fas fa-times"></i></div>
+        <a class="sortTag">麥當勞</a>
+        <a class="sortTag">肯德基</a>
+        <a class="sortTag">漢堡王</a>
+      </div>
+    </div>
   </div>
-
   <section id="pjSample" class="container my-4">
     <h1 id="sortTitle1" class="mb-3 txtTitle">熱門推薦</h1>
     <div class="container">
@@ -362,6 +379,14 @@
   <script src="./js/popper.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
   <script>
+    $(".closeBtn").click(function () {
+      $(this).parents(".collapse").hide();
+    });
+    function collapseSort(id) {
+      let thisid="#collapse"+id;
+      $(".collapse").hide();
+      $(thisid).show();
+    }
     $("#pjSample .card").hover(function () {
       $(this).css({ "transform": "scale(1.02)", "transition-duration": "300ms" });
     }, function () {
@@ -372,10 +397,10 @@
     function menuBtnshow() {
       if (window.innerWidth < 768) {
         $("#menuBtn").show();
-        $("#brand").addClass("justify-content-center");
+        $("#brandicon").addClass("justify-content-center");
       } else {
         $("#menuBtn").hide();
-        $("#brand").removeClass("justify-content-center");
+        $("#brandicon").removeClass("justify-content-center");
       }
     }
 
@@ -396,18 +421,18 @@
         height2 = $("#adBanner").innerHeight(),
         offset = $("#sort").innerHeight(),
         screenW = $(document).innerWidth();
-        if (nowat < height1 + height2 - offset + 15) {
-          $("#sort").removeClass("shadowBC");
-          // $("#mainMenu,#sort").css("background", "#fff");
-          $("#brand a").html("就是有看點");
-        } else {
-          $("#sort").addClass("shadowBC");
-          // $("#mainMenu,#sort").css("background", "#f8f9fa");
-          $("#brand a").html(`
+      if (nowat < height1 + height2 - offset + 15) {
+        $("#sort").removeClass("shadowBC");
+        // $("#mainMenu,#sort").css("background", "#fff");
+        $("#brandicon a").html("就是有看點");
+      } else {
+        $("#sort").addClass("shadowBC");
+        // $("#mainMenu,#sort").css("background", "#f8f9fa");
+        $("#brandicon a").html(`
           <img src="./img/27268-bubbles.gif" alt="" width="30" class="d-inline-block align-text-top">
       就是有看點`);
-        }
-      
+      }
+
     }
     function fadeintxt() {
       let title = document.querySelector("#sortTitle1");
