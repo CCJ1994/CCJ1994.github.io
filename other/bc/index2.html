@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body class="bg-light">
   <header class="fixed-top ">
     <nav id="mainMenu" class="navbar navbar-expand-md navbar-light">
       <div class="container">
@@ -60,21 +60,21 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img src="./img/deanna-alys-6LBBOwkPzyQ-unsplash.jpg" class="d-block w-100">
+            <img src="https://picsum.photos/1920/1080/?random=1" class="d-block w-100">
             <div class="carousel-caption d-flex flex-column align-items-start">
               <h1 class="text-light">廣告標題</h1>
               <p class="d-none d-md-block">Nulla vita, a pharetra augue mollis interdum.</p>
             </div>
           </div>
           <div class="carousel-item" data-bs-interval="2000">
-            <img src="./img/devin-avery-BRVqq2uak4E-unsplash.jpg" class="d-block w-100">
+            <img src="https://picsum.photos/1920/1080/?random=2" class="d-block w-100">
             <div class="carousel-caption d-flex flex-column align-items-start">
               <h1 class="text-light">廣告標題</h1>
               <p class="d-none d-md-block">Nulla vita, a pharetra augue mollis interdum.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="./img/jakob-owens-BmH09wAkJa8-unsplash.jpg" class="d-block w-100">
+            <img src="https://picsum.photos/1920/1080/?random=3" class="d-block w-100">
             <div class="carousel-caption d-flex flex-column align-items-start">
               <h1 class="text-light">廣告標題</h1>
               <p class="d-none d-md-block">Nulla vita, a pharetra augue mollis interdum.</p>
@@ -92,15 +92,20 @@
       </div>
     </div>
   </section>
-  <div id="sort" class="mb-4">
+  <div id="sort" class="mb-4 ">
     <div class="nav-scroller container-fluid">
       <nav class="nav d-flex flex-nowrap border-bottom border-top">
-        <a style="cursor: default;"><img src="./img/category_black_24dp.svg" width="20"></a>
+        <a id="first" style="cursor: default;"><img src="./img/category_black_24dp.svg" width="20"></a>
         <a class="flex-shrink-0" href="">熱 門</a>
         <a class="text-muted flex-shrink-0" href="">精 選</a>
-        <a class="text-muted flex-shrink-0" onclick="collapseSort('market')">產 業<i class="ms-2 fas fa-sort-down"></i></a>
-        <a class="text-muted flex-shrink-0" onclick="collapseSort('brand')">品 牌<i class="ms-2 fas fa-sort-down"></i></a>
-        <a class="text-muted flex-shrink-0" href="">走 期</a>
+        <a id="market" class="text-muted flex-shrink-0" onclick="collapseSort('market')">產 業<i
+            class="ms-2 fas fa-sort-down"></i></a>
+        <a id="brand" class="text-muted flex-shrink-0" onclick="collapseSort('brand')">品 牌<i
+            class="ms-2 fas fa-sort-down"></i></a>
+        <a id="date" class="text-muted flex-shrink-0" onclick="collapseSort('date')">走 期<i
+          class="ms-2 fas fa-sort-down"></i></a>
+        <a id="hot" class="text-muted flex-shrink-0 d-lg-none d-md-block" onclick="collapseSort('hot')">熱 搜<i
+          class="ms-2 fas fa-sort-down"></i></a>
       </nav>
     </div>
     <div class="collapse " id="collapsemarket">
@@ -119,244 +124,266 @@
         <a class="sortTag">漢堡王</a>
       </div>
     </div>
-  </div>
-  <section id="pjSample" class="container my-4">
-    <h1 id="sortTitle1" class="mb-3 txtTitle">熱門推薦</h1>
-    <div class="container">
-      <div class="my-5 row row-cols-1 row-cols-md-3 g-5">
-        <div class="col mb-5">
-          <a href="./showcase1.html">
-            <div class="card h-100 shadow-sm border-0">
-              <div class=" position-relative">
-                <span class="type">保養</span>
-                <img src="./img/get_pic64.jpeg" class="card-img-top">
-                <span class="brandName">倩碧</span>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title text-dark">倩碧新品上市-極光小白瓶</h5>
-                <h6><span class="me-2"><img src="./img/date.svg" width="25"></span>2020-10-10~2020-11-01</h6>
-                <p class="card-text text-muted">#極光小白瓶 #仙女光圈</p>
-                <hr class="successClr">
-                <div class="d-flex justify-content-around">
-                  <div class="col-6 d-flex flex-column align-items-center">
-                    <div class="ms-4 mb-2 align-self-start">合作</div>
-                    <div class="d-flex justify-content-around">
-                      <div class="me-2 text-center">
-                        <div class="primaryClr">貼文</div>
-                        <div class="secondaryClr fw-bold">40+</div>
-                      </div>
-                      <div class="ms-2 text-center">
-                        <div class="primaryClr">KOL</div>
-                        <div class="secondaryClr fw-bold">40+</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="successClr" style="height:80px;border-right:1px solid;opacity:.3;"></div>
-                  <div class="col-6 d-flex flex-column align-items-center">
-                    <div class="ms-4 mb-2 align-self-start">獲得</div>
-                    <div class="d-flex justify-content-around">
-                      <div class="me-2 text-center">
-                        <div class="primaryClr">愛心</div>
-                        <div class="secondaryClr fw-bold">40+</div>
-                      </div>
-                      <div class="ms-2 text-center">
-                        <div class="primaryClr">留言</div>
-                        <div class="secondaryClr fw-bold">40+</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col mb-5">
-          <a href="./showcase1.html">
-            <div class="card h-100 shadow-sm border-0">
-              <div class=" position-relative">
-                <span class="type">保養</span>
-                <img src="./img/get_pic64.jpeg" class="card-img-top">
-                <span class="brandName">倩碧</span>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title text-dark">倩碧新品上市-極光小白瓶</h5>
-                <h6><span class="me-2"><img src="./img/date.svg" width="25"></span>2020-10-10~2020-11-01</h6>
-                <p class="card-text text-muted">#極光小白瓶 #仙女光圈</p>
-                <hr class="successClr">
-                <div class="d-flex justify-content-around">
-                  <div class="col-6 d-flex flex-column align-items-center">
-                    <div class="ms-4 mb-2 align-self-start">合作</div>
-                    <div class="d-flex justify-content-around">
-                      <div class="me-2 text-center">
-                        <div class="primaryClr">貼文</div>
-                        <div class="secondaryClr fw-bold">40+</div>
-                      </div>
-                      <div class="ms-2 text-center">
-                        <div class="primaryClr">KOL</div>
-                        <div class="secondaryClr fw-bold">40+</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="successClr" style="height:80px;border-right:1px solid;opacity:.3;"></div>
-                  <div class="col-6 d-flex flex-column align-items-center">
-                    <div class="ms-4 mb-2 align-self-start">獲得</div>
-                    <div class="d-flex justify-content-around">
-                      <div class="me-2 text-center">
-                        <div class="primaryClr">愛心</div>
-                        <div class="secondaryClr fw-bold">40+</div>
-                      </div>
-                      <div class="ms-2 text-center">
-                        <div class="primaryClr">留言</div>
-                        <div class="secondaryClr fw-bold">40+</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col mb-5">
-          <a href="./showcase1.html">
-            <div class="card h-100 shadow-sm border-0">
-              <div class=" position-relative">
-                <span class="type">保養</span>
-                <img src="./img/get_pic64.jpeg" class="card-img-top">
-                <span class="brandName">倩碧</span>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title text-dark">倩碧新品上市-極光小白瓶</h5>
-                <h6><span class="me-2"><img src="./img/date.svg" width="25"></span>2020-10-10~2020-11-01</h6>
-                <p class="card-text text-muted">#極光小白瓶 #仙女光圈</p>
-                <hr class="successClr">
-                <div class="d-flex justify-content-around">
-                  <div class="col-6 d-flex flex-column align-items-center">
-                    <div class="ms-4 mb-2 align-self-start">合作</div>
-                    <div class="d-flex justify-content-around">
-                      <div class="me-2 text-center">
-                        <div class="primaryClr">貼文</div>
-                        <div class="secondaryClr fw-bold">40+</div>
-                      </div>
-                      <div class="ms-2 text-center">
-                        <div class="primaryClr">KOL</div>
-                        <div class="secondaryClr fw-bold">40+</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="successClr" style="height:80px;border-right:1px solid;opacity:.3;"></div>
-                  <div class="col-6 d-flex flex-column align-items-center">
-                    <div class="ms-4 mb-2 align-self-start">獲得</div>
-                    <div class="d-flex justify-content-around">
-                      <div class="me-2 text-center">
-                        <div class="primaryClr">愛心</div>
-                        <div class="secondaryClr fw-bold">40+</div>
-                      </div>
-                      <div class="ms-2 text-center">
-                        <div class="primaryClr">留言</div>
-                        <div class="secondaryClr fw-bold">40+</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col mb-5">
-          <a href="./showcase1.html">
-            <div class="card h-100 shadow-sm border-0">
-              <div class=" position-relative">
-                <span class="type">保養</span>
-                <img src="./img/get_pic64.jpeg" class="card-img-top">
-                <span class="brandName">倩碧</span>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title text-dark">倩碧新品上市-極光小白瓶</h5>
-                <h6><span class="me-2"><img src="./img/date.svg" width="25"></span>2020-10-10~2020-11-01</h6>
-                <p class="card-text text-muted">#極光小白瓶 #仙女光圈</p>
-                <hr class="successClr">
-                <div class="d-flex justify-content-around">
-                  <div class="col-6 d-flex flex-column align-items-center">
-                    <div class="ms-4 mb-2 align-self-start">合作</div>
-                    <div class="d-flex justify-content-around">
-                      <div class="me-2 text-center">
-                        <div class="primaryClr">貼文</div>
-                        <div class="secondaryClr fw-bold">40+</div>
-                      </div>
-                      <div class="ms-2 text-center">
-                        <div class="primaryClr">KOL</div>
-                        <div class="secondaryClr fw-bold">40+</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="successClr" style="height:80px;border-right:1px solid;opacity:.3;"></div>
-                  <div class="col-6 d-flex flex-column align-items-center">
-                    <div class="ms-4 mb-2 align-self-start">獲得</div>
-                    <div class="d-flex justify-content-around">
-                      <div class="me-2 text-center">
-                        <div class="primaryClr">愛心</div>
-                        <div class="secondaryClr fw-bold">40+</div>
-                      </div>
-                      <div class="ms-2 text-center">
-                        <div class="primaryClr">留言</div>
-                        <div class="secondaryClr fw-bold">40+</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col mb-5">
-          <a href="./showcase1.html">
-            <div class="card h-100 shadow-sm border-0">
-              <div class=" position-relative">
-                <span class="type">保養</span>
-                <img src="./img/get_pic64.jpeg" class="card-img-top">
-                <span class="brandName">倩碧</span>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title text-dark">倩碧新品上市-極光小白瓶</h5>
-                <h6><span class="me-2"><img src="./img/date.svg" width="25"></span>2020-10-10~2020-11-01</h6>
-                <p class="card-text text-muted">#極光小白瓶 #仙女光圈</p>
-                <hr class="successClr">
-                <div class="d-flex justify-content-around">
-                  <div class="col-6 d-flex flex-column align-items-center">
-                    <div class="ms-4 mb-2 align-self-start">合作</div>
-                    <div class="d-flex justify-content-around">
-                      <div class="me-2 text-center">
-                        <div class="primaryClr">貼文</div>
-                        <div class="secondaryClr fw-bold">40+</div>
-                      </div>
-                      <div class="ms-2 text-center">
-                        <div class="primaryClr">KOL</div>
-                        <div class="secondaryClr fw-bold">40+</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="successClr" style="height:80px;border-right:1px solid;opacity:.3;"></div>
-                  <div class="col-6 d-flex flex-column align-items-center">
-                    <div class="ms-4 mb-2 align-self-start">獲得</div>
-                    <div class="d-flex justify-content-around">
-                      <div class="me-2 text-center">
-                        <div class="primaryClr">愛心</div>
-                        <div class="secondaryClr fw-bold">40+</div>
-                      </div>
-                      <div class="ms-2 text-center">
-                        <div class="primaryClr">留言</div>
-                        <div class="secondaryClr fw-bold">40+</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
+    <div class="collapse " id="collapsedate">
+      <div class="border-bottom card-body">
+        <div class="text-end closeBtn"><i class="fas fa-times"></i></div>
+        
       </div>
-      <div class="text-center"><button class="btn btnBC">看更多..</button></div>
+    </div>
+    <div class="collapse " id="collapsehot">
+      <div class="border-bottom card-body">
+        <div class="text-end closeBtn"><i class="fas fa-times"></i></div>
+          <h5>關鍵字</h5>
+      </div>
+    </div>
+  </div>
+  <section id="pjSample" class="container my-4 d-flex flex-wrap">
+    <div class="col-lg-9  col-md-12">
+      <h1 id="" class="my-3">熱門推薦</h1>
+        <div class="mb-5 row row-cols-1 row-cols-md-2 g-4">
+          <div class="col mb-5">
+            <a href="./showcase1.html">
+              <div class="card h-100 shadow-sm border-0">
+                <img src="./img/get_pic64.jpeg" class="bcbigpic1">
+                <div class="card-body" style="z-index: 1;">
+                  <div class="p-2 cardContent">
+                    <div class="my-2">
+                      <span class="mgtag1">保養</span>
+                      <span class="brandtag1">倩碧</span>
+                    </div>
+                    <h6 class="mt-3 card-title text-dark">倩碧新品上市-極光小白瓶</h6>
+                    <p class="card-text hashtag1">#極光小白瓶 #仙女光圈</p>
+                    <div class="mb-3 d-flex justify-content-around">
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fab fa-instagram"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fas fa-users"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fas fa-heart"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fas fa-comment-dots"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                    </div>
+                    <h6 class="text-center"><span class="me-2"><img src="./img/date.svg"
+                          width="20"></span>2020-10-10~2020-11-01</h6>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col mb-5">
+            <a href="./showcase1.html">
+              <div class="card h-100 shadow-sm border-0">
+                <img src="./img/get_pic64.jpeg" class="bcbigpic1">
+                <div class="card-body" style="z-index: 1;">
+                  <div class="p-2 cardContent">
+                    <div class="my-2">
+                      <span class="mgtag1">保養</span>
+                      <span class="brandtag1">倩碧</span>
+                    </div>
+                    <h6 class="mt-3 card-title text-dark">倩碧新品上市-極光小白瓶</h6>
+                    <p class="card-text hashtag1">#極光小白瓶 #仙女光圈</p>
+                    <div class="mb-3 d-flex justify-content-around">
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fab fa-instagram"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fas fa-users"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fas fa-heart"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fas fa-comment-dots"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                    </div>
+                    <h6 class="text-center"><span class="me-2"><img src="./img/date.svg"
+                          width="20"></span>2020-10-10~2020-11-01</h6>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col mb-5">
+            <a href="./showcase1.html">
+              <div class="card h-100 shadow-sm border-0">
+                <img src="./img/get_pic64.jpeg" class="bcbigpic1">
+                <div class="card-body" style="z-index: 1;">
+                  <div class="p-2 cardContent">
+                    <div class="my-2">
+                      <span class="mgtag1">保養</span>
+                      <span class="brandtag1">倩碧</span>
+                    </div>
+                    <h6 class="mt-3 card-title text-dark">倩碧新品上市-極光小白瓶</h6>
+                    <p class="card-text hashtag1">#極光小白瓶 #仙女光圈</p>
+                    <div class="mb-3 d-flex justify-content-around">
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fab fa-instagram"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fas fa-users"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fas fa-heart"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fas fa-comment-dots"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                    </div>
+                    <h6 class="text-center"><span class="me-2"><img src="./img/date.svg"
+                          width="20"></span>2020-10-10~2020-11-01</h6>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+    </div>
+    <div id="hotBoard" class="py-3 ps-4 my-3 col-md-3 col-sm-12 rounded-1 d-lg-block d-md-none" >
+      <div class="card border-0 h-100" >
+      <h5 class="mt-3 text-center secondaryClr"><i class="me-2 fab fa-hotjar"></i>熱搜關鍵字</h5>
+        <div class="card-body">
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item border-0"><a href="">Cras justo odio</a></li>
+            <li class="list-group-item border-0"><a href="">Cras justo odio</a></li>
+            <li class="list-group-item border-0"><a href="">Cras justo odio</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container">
+    <div class="">
+      <h1 id="" class="my-3">精選案例</h1>
+        <div class="mb-5 mt-3 row row-cols-1 row-cols-md-2 row-cols-md-3 g-4">
+          <div class="col mb-5">
+            <a href="./showcase1.html">
+              <div class="card h-100 shadow-sm border-0">
+                <img src="./img/get_pic64.jpeg" class="bcbigpic1">
+                <div class="card-body" style="z-index: 1;">
+                  <div class="p-2 cardContent">
+                    <div class="my-2">
+                      <span class="mgtag1">保養</span>
+                      <span class="brandtag1">倩碧</span>
+                    </div>
+                    <h6 class="mt-3 card-title text-dark">倩碧新品上市-極光小白瓶</h6>
+                    <p class="card-text hashtag1">#極光小白瓶 #仙女光圈</p>
+                    <div class="mb-3 d-flex justify-content-around">
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fab fa-instagram"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fas fa-users"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fas fa-heart"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fas fa-comment-dots"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                    </div>
+                    <h6 class="text-center"><span class="me-2"><img src="./img/date.svg"
+                          width="20"></span>2020-10-10~2020-11-01</h6>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col mb-5">
+            <a href="./showcase1.html">
+              <div class="card h-100 shadow-sm border-0">
+                <img src="./img/get_pic64.jpeg" class="bcbigpic1">
+                <div class="card-body" style="z-index: 1;">
+                  <div class="p-2 cardContent">
+                    <div class="my-2">
+                      <span class="mgtag1">保養</span>
+                      <span class="brandtag1">倩碧</span>
+                    </div>
+                    <h6 class="mt-3 card-title text-dark">倩碧新品上市-極光小白瓶</h6>
+                    <p class="card-text hashtag1">#極光小白瓶 #仙女光圈</p>
+                    <div class="mb-3 d-flex justify-content-around">
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fab fa-instagram"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fas fa-users"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fas fa-heart"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fas fa-comment-dots"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                    </div>
+                    <h6 class="text-center"><span class="me-2"><img src="./img/date.svg"
+                          width="20"></span>2020-10-10~2020-11-01</h6>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col mb-5">
+            <a href="./showcase1.html">
+              <div class="card h-100 shadow-sm border-0">
+                <img src="./img/get_pic64.jpeg" class="bcbigpic1">
+                <div class="card-body" style="z-index: 1;">
+                  <div class="p-2 cardContent">
+                    <div class="my-2">
+                      <span class="mgtag1">保養</span>
+                      <span class="brandtag1">倩碧</span>
+                    </div>
+                    <h6 class="mt-3 card-title text-dark">倩碧新品上市-極光小白瓶</h6>
+                    <p class="card-text hashtag1">#極光小白瓶 #仙女光圈</p>
+                    <div class="mb-3 d-flex justify-content-around">
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fab fa-instagram"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fas fa-users"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fas fa-heart"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                      <div class="text-center">
+                        <div class="primaryClr"><i class="fas fa-comment-dots"></i></div>
+                        <div class="secondaryClr fw-bold">40+</div>
+                      </div>
+                    </div>
+                    <h6 class="text-center"><span class="me-2"><img src="./img/date.svg"
+                          width="20"></span>2020-10-10~2020-11-01</h6>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="text-center"><button class=" btnBC">看更多..</button></div>
     </div>
   </section>
   <footer class="mt-3">
@@ -379,22 +406,46 @@
   <script src="./js/popper.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
   <script>
-    $(".closeBtn").click(function () {
-      $(this).parents(".collapse").hide();
+
+    $(document).ready(function () {
+      menuBtnshow();
+      // hotshow();
     });
-    function collapseSort(id) {
-      let thisid="#collapse"+id;
+
+    $(window).resize(function () {
+      menuBtnshow();
+      bgmenu();
+      // hotshow();
+    });
+
+    $(document).scroll(function () {
+      bgmenu();
+    });
+
+    $("#sort a").click(function () { //分類選單點擊效果
+      $("#sort a").removeClass("sortActive");
+      if ($(this).attr("id") != "first") {
+        $(this).addClass("sortActive");
+      }
+    });
+    function collapseSort(id) { //產業、品牌下拉選單
+      let thisid = "#collapse" + id;
       $(".collapse").hide();
       $(thisid).show();
     }
-    $("#pjSample .card").hover(function () {
+    $(".closeBtn").click(function () { //下拉選單關閉
+      $(this).parents(".collapse").hide();
+      let alink = $(this).parents(".collapse").attr("id").substr(8);
+      $("#" + alink).removeClass("sortActive");
+    });
+
+    $("#pjSample .card").hover(function () { //卡片hover效果
       $(this).css({ "transform": "scale(1.02)", "transition-duration": "300ms" });
     }, function () {
       $(this).css({ "transform": "scale(1)", "transition-duration": "300ms" });
+    });
 
-    })
-    menuBtnshow()
-    function menuBtnshow() {
+    function menuBtnshow() { //顯示主選單收和按鈕
       if (window.innerWidth < 768) {
         $("#menuBtn").show();
         $("#brandicon").addClass("justify-content-center");
@@ -404,16 +455,7 @@
       }
     }
 
-    $(window).resize(function () {
-      menuBtnshow();
-      bgmenu();
-    });
 
-    $(document).scroll(function () {
-      bgmenu();
-      fadeintxt();
-
-    });
     function bgmenu() { //mainMenu加陰影
       const
         nowat = $(document).scrollTop(),
@@ -423,17 +465,15 @@
         screenW = $(document).innerWidth();
       if (nowat < height1 + height2 - offset + 15) {
         $("#sort").removeClass("shadowBC");
-        // $("#mainMenu,#sort").css("background", "#fff");
         $("#brandicon a").html("就是有看點");
       } else {
         $("#sort").addClass("shadowBC");
-        // $("#mainMenu,#sort").css("background", "#f8f9fa");
         $("#brandicon a").html(`
           <img src="./img/27268-bubbles.gif" alt="" width="30" class="d-inline-block align-text-top">
       就是有看點`);
       }
-
     }
+
     function fadeintxt() {
       let title = document.querySelector("#sortTitle1");
       let position = title.getBoundingClientRect().top;
