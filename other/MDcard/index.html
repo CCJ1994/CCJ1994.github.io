@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MDcard</title>
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <style>
+    * {
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    /* icon */
+    .feather {
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      color: #222f3e;
+    }
+    .mdcard{
+      min-height: 768px;
+    }
+    .kolpicBox {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+
+    }
+
+    .kolpic2Box {
+      width: 400px;
+      height: 500px;
+      overflow: hidden;
+    }
+
+    .kolpicBox img,
+    .kolpic2Box img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .data {
+      font-size: 20px;
+    }
+    h1,h2,h3,h4,h5,h6{
+      color: #222f3e;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="d-flex mdcard">
+      <div class="col-8 p-3">
+        <div class="d-flex flex-wrap mb-3">
+          <div class="me-2">
+            <span data-feather="hash"></span>
+            <span>Youtuber</span>
+          </div>
+          <div class="me-2">
+            <span data-feather="hash"></span>
+            <span>圖文作家</span>
+          </div>
+          <div class="me-2">
+            <span data-feather="hash"></span>
+            <span>Instagramer</span>
+          </div>
+          <div class="me-2">
+            <span data-feather="hash"></span>
+            <span>開箱</span>
+          </div>
+          <div class="me-2">
+            <span data-feather="hash"></span>
+            <span>美妝</span>
+          </div>
+          <div class="me-2">
+            <span data-feather="hash"></span>
+            <span>生活</span>
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="kolpicBox me-3"><img src="./img/e3a726230d06f7c6778dc3d3cbda2f6b.jpg"></div>
+          <div class="col">
+            <h1>劉芒</h1>
+            <hr>
+            <p>劉芒從模特兒轉戰YouTuber，她爽朗又幽默的個性造就影片的浮誇風格，也因為那些浮誇感，讓影片充滿了「笑果」，讓人印象深刻。</p>
+            <div class="d-flex flex-wrap justify-content-end">
+              <div class="ms-3 d-flex mb-1">
+                <i class="me-2 fa-2x fab fa-facebook-square" style="color:#0873F6;"></i>
+                <div>
+                  <div class="data"><b>220K</b></div>
+                  <div class="data"><b>-%</b></div>
+                </div>
+              </div>
+              <div class="ms-3 d-flex mb-1">
+                <i class="me-2 fa-2x fab fa-youtube" style="color:#FF0000;"></i>
+                <div>
+                  <div class="data"><b>384K</b></div>
+                  <div class="data"><b>-%</b></div>
+                </div>
+              </div>
+              
+              <div class="ms-3 d-flex mb-1">
+                <i class="me-2 fa-2x fab fa-instagram" style="color:#ED1E79;"></i>
+                <div>
+                  <div class="data"><b>384K</b></div>
+                  <div class="data"><b>-%</b></div>
+                </div>
+              </div>
+              <!-- twitc -->
+              <!-- <div class="ms-3 d-flex mb-1">
+                <i class="me-2 fa-2x fab fa-twitch" style="color:#923AFF;"></i>
+                <div>
+                  <div class="data"><b>384K</b></div>
+                  <div class="data"><b>-%</b></div>
+                </div>
+              </div> -->
+              <!-- 部落格 -->
+              <!-- <div class="ms-3 d-flex mb-1">
+                <i class="me-2 fa-2x fab fa-blogger-b"></i>
+                <div>
+                  <div class="data"><b>384K</b></div>
+                  <div class="data"><b>-%</b></div>
+                </div>
+              </div> -->
+              <!-- 抖音 -->
+              <!-- <div class="ms-3 d-flex mb-1"> 
+                <i class="me-2 fa-2x fab fa-tiktok"></i>
+                <div>
+                  <div class="data"><b>384K</b></div>
+                  <div class="data"><b>-%</b></div>
+                </div>
+              </div> -->
+            </div>
+            <div class="my-1">
+              <h5>適合商案類型：</h5>
+              <p>影音、圖文</p>
+            </div>
+            <div class="my-5">
+              <h5>推薦原因：</h5>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-4 bg-light d-flex justify-content-center align-items-center">
+        <div class="kolpic2Box p-4">
+          <img src="./img/60826cf1bfb60.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./bootstrap/js/bootstrap.min.js"></script>
+  <script src="./bootstrap/js/popper.min.js"></script>
+  <script src="./jquery/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+    integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous">
+    </script>
+  <script>
+    feather.replace({
+      'aria-hidden': 'true'
+    });
+  </script>
+</body>
+
+</html>
