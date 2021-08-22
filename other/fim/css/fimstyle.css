@@ -275,6 +275,35 @@ transition: .3s;
 .btn-edit:hover::before{
   box-shadow: 0 0 0 8px rgba(134, 187, 216, 0.15)
 }
+.btn-confirm{
+  border: 1px solid #f26419;
+  background-color: #f26419;
+  color: #fff;
+  position: relative;
+}
+.btn-head{
+  border: 1px solid #33658A !important;
+  background-color: transparent;
+  color: #33658A;
+  position: relative;
+}
+.btn-outline-confirm{
+  background-color: #fff;
+  border: 1px solid #f26419;
+  color: #f26419;
+  position: relative;
+}
+.btn-confirm:hover::before,.btn-outline-confirm:hover::before,.btn-next:hover::before,
+.btn-outline-pre:hover::before{
+  box-shadow: 0 0 0 5px rgba(242, 100, 25, 0.1);
+}
+.btnFim{
+  border: 0;
+  padding:6px 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15),
+  0 1px 1px rgba(0, 0, 0, 0.1);
+}
 #preBtn{
   position: fixed;
   bottom: 150px;
@@ -858,9 +887,9 @@ border: 0;
 #descexample .accordion-flush .accordion-item .accordion-button,#pj_briefBox .accordion-flush .accordion-item .accordion-button {
   box-shadow:  1px 1px 2px #c7d2d6,  -1px -1px 2px #e6e6e6;
 }
-#customer img,#Ai img{
-  width: 80px;
-  height: 80px;
+.infopic{
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -869,7 +898,7 @@ border: 0;
 }
 #customer .progress,#Ai .progress{
   background-color: #E5F1F6;
-  height: 3px;
+  height: 20px;
 }
 #pj_briefBox img{
   width: 50px;
@@ -916,6 +945,15 @@ border: 0;
   }
 
 } */
+/* infomation page*/
+.infobg{
+  background-color: #f8f9fa;
+}
+.btn-edit{
+  background-color: #86BBD8;
+  color: #fff;
+  position: relative;
+}
 /* defined color */
 .primaryClr,.nav-tabs .nav-link.active{
 	color: #2F4858 !important;
@@ -948,4 +986,32 @@ border: 0;
   background-color: #f26419;
   color: #fff;
   position: relative;
+}
+
+#igPreview .slick-dots{
+ bottom: 0px;
+}
+#igPreview .slick-next{
+ right: 10px;
+}
+#igPreview .slick-prev{
+ left: 10px;
+ z-index: 3;
+}
+#igPreview .slick-next::before,#igPreview .slick-prev::before{
+  color: #fff !important;
+}
+#igPreview .slider img{
+  object-fit: cover;
+  width:100%;
+  height: 400px;
+}
+#igPreview .card-header img,#igPreview .card-body img{
+  width: 45px;
+  height:45px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#igPreview .card-body::-webkit-scrollbar {
+  width: 0px;
 }

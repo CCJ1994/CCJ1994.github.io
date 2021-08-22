@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="./css/slick-theme.css">
   <link rel="stylesheet" href="./css/kolstyle.css">
   <script src="https://kit.fontawesome.com/7f45dfd3e1.js" crossorigin="anonymous"></script>
+  <script src="./js/masonry.pkgd.min.js"></script>
   <style>
     body {
       display: flex;
@@ -41,12 +42,102 @@
     .title {
       color: #415A80;
     }
-    .card{
+
+    .card {
       border: 0;
+      flex-shrink: 0;
     }
-    .card-text,.card-title{
+
+    .card-text,
+    .card-title {
       text-align: center;
     }
+
+    hr {
+      border-top: 2px solid #52A7CC;
+    }
+
+    .neum {
+      border-radius: 10px;
+      background: #ffffff;
+      box-shadow: inset 5px 5px 4px #f2f2f2,
+        inset -5px -5px 4px #ffffff,
+        inset -5px -5px 4px #f2f2f2,
+        inset 5px 5px 4px #ffffff;
+    }
+
+    #igPost .card {
+      box-shadow: -1px -1px 7px #ffffff73, 1px 1px 5px rgb(94 104 121 / 29%);
+
+    }
+
+    
+
+    .leaderBoard img {
+      height: 70px;
+      width: 70px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    #leaderBoard .card{
+      box-shadow: 0 0 20px -10px rgba(0, 0, 0, .4);
+    }
+    .leader-item img {
+      height: 60px;
+      width: 60px;
+      object-fit: cover;
+      border-top-left-radius:5px;
+      border-bottom-left-radius:5px;
+    }
+    .best{
+      border-radius:5px;
+      box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
+      height:200px;
+      margin:10px 5px;
+
+    }
+    
+    .best img{
+      z-index: 99;
+
+      height: 70px;
+      width: 70px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #D7E2E9;
+      box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
+      transition: transform .25s cubic-bezier(.7,.98,.86,.98), box-shadow .25s cubic-bezier(.7,.98,.86,.98);
+
+    }
+    .leader-item{
+      border-radius:5px;
+      padding:0 25px 0 0;
+      background-color: #fff;
+      margin:10px 5px;
+      box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
+      transition: transform .25s cubic-bezier(.7,.98,.86,.98), box-shadow .25s cubic-bezier(.7,.98,.86,.98);
+    }
+    .leader-item:hover,.best img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 9px 47px 11px rgba(51, 51, 51, 0.18);
+    }
+    .noTag{
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      color:#fff;
+      border-radius: 50%;
+      right: 0;
+      top:50px;
+      background-color: #52A7CC;
+    }
+    .rank{
+      position: relative;
+
+    }
+
   </style>
 </head>
 
@@ -55,7 +146,7 @@
     <i class="fas fa-arrow-circle-up fa-2x"></i>
   </a>
   <!-- 背景 -->
-  <div id="particles-js"></div>
+  <!-- <div id="particles-js"></div> -->
 
   <!-- 選單列 -->
   <nav id="navMenu" class=" navbar mx-3 mt-3 mb-2">
@@ -68,7 +159,7 @@
         <div class="homeBtn">
           <svg id="homeIcon" viewBox="0 0 60 60">
             <path
-              d="M46.51,27.73C46.51,27.73,46.51,27.73,46.51,27.73L32.27,13.49c-0.61-0.61-1.41-0.94-2.27-0.94
+              d="M46.51,25.73C46.51,27.73,46.51,27.73,46.51,27.73L32.27,13.49c-0.61-0.61-1.41-0.94-2.27-0.94
 	c-0.86,0-1.66,0.33-2.27,0.94L13.5,27.72c0,0-0.01,0.01-0.01,0.01c-1.25,1.25-1.24,3.29,0.01,4.54c0.57,0.57,1.33,0.9,2.13,0.94
 	c0.03,0,0.07,0,0.1,0h0.57v10.48c0,2.07,1.69,3.76,3.76,3.76h5.57c0.56,0,1.02-0.46,1.02-1.02v-8.21c0-0.95,0.77-1.72,1.72-1.72
 	h3.28c0.95,0,1.72,0.77,1.72,1.72v8.21c0,0.56,0.46,1.02,1.02,1.02h5.57c2.07,0,3.76-1.69,3.76-3.76V33.21h0.53
@@ -85,7 +176,7 @@
   <!-- 主內容 -->
   <section id="main" class="m-3 overflow-hidden">
     <!-- 流程選單 -->
-    <section class="container mx-auto my-3 " id="stepwizard">
+    <div class="container mx-auto my-3 " id="stepwizard">
       <div class="d-flex justify-content-center align-items-center">
         <a href="show2.html">
           <img src="./img/chooseicon2.svg" width="100">
@@ -105,124 +196,390 @@
         <div class="line"></div>
         <div>成 效</div>
       </div>
-    </section>
-
-    <section class="my-5 mx-5">
+    </div>
+    <!-- 長條圖 -->
+    <section class="my-5">
       <div class="container">
-      <canvas id="myChart" width="200" ></canvas>
+        <canvas id="myChart" width="200"></canvas>
       </div>
     </section>
-    <section class="my-5 mx-5">
+    <hr class="mx-5">
+    <section class="m-5 neum p-5">
       <div class="row row-cols-1 row-cols-md-4 g-4">
-        <div class="col">
-          <div class="card h-100">
+        <div class="col col-sm-6 col-lg-3 col-md-4 d-flex justify-content-center">
+          <div class="card h-100 flex-shrink-0">
             <div class="card-body">
-              <h5 class="card-title">愛心數</h5>
-              <div class="d-flex justify-content-center align-items-end">
-                <span class="me-1 ">平均</span><h1 class="card-text" id="demo1">0</h1>
+              <div class="card-title d-flex align-items-center">
+                <i class="fas fa-heart me-3"></i>
+                <h6 class="flex-shrink-0">愛心數</h6>
               </div>
-              <div class="d-flex justify-content-center align-items-end">
-                <span class="me-1">總共</span><h1 class="card-text" id="demo2">0</h1>
+              <div class="d-flex align-items-end">
+                <div class="flex-shrink-0"><small class="me-1 ">總共</small></div>
+                <h3 class="card-text flex-shrink-0" id="demo1">100000</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-sm-6 col-lg-3 col-md-4 d-flex justify-content-center">
+          <div class="card h-100 flex-shrink-0">
+            <div class="card-body">
+              <div class="card-title d-flex align-items-center">
+                <i class="fas fa-heart me-3"></i>
+                <h6 class="flex-shrink-0">愛心數</h6>
+              </div>
+              <div class="d-flex align-items-end">
+                <div class="flex-shrink-0"><small class="me-1 ">平均</small></div>
+                <h3 class="card-text flex-shrink-0" id="demo1">100</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-sm-6 col-lg-3 col-md-4 d-flex justify-content-center">
+          <div class="card h-100 flex-shrink-0">
+            <div class="card-body">
+              <div class="card-title d-flex align-items-center">
+                <i class="fas fa-heart me-3"></i>
+                <h6 class="flex-shrink-0">留言數</h6>
+              </div>
+              <div class="d-flex align-items-end">
+                <div class="flex-shrink-0"><small class="me-1 ">總共</small></div>
+                <h3 class="card-text flex-shrink-0" id="demo1">4300</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-sm-6 col-lg-3 col-md-4 d-flex justify-content-center">
+          <div class="card h-100 flex-shrink-0">
+            <div class="card-body">
+              <div class="card-title d-flex align-items-center">
+                <i class="fas fa-heart me-3"></i>
+                <h6 class="flex-shrink-0">留言數</h6>
+              </div>
+              <div class="d-flex align-items-end">
+                <div class="flex-shrink-0"><small class="me-1 ">平均</small></div>
+                <h3 class="card-text flex-shrink-0" id="demo1">100</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-sm-6 col-lg-3 col-md-4 d-flex justify-content-center">
+          <div class="card h-100 flex-shrink-0">
+            <div class="card-body">
+              <div class="card-title d-flex align-items-center">
+                <i class="fas fa-heart me-3"></i>
+                <h6 class="flex-shrink-0">互動數</h6>
+              </div>
+              <div class="d-flex align-items-end">
+                <div class="flex-shrink-0"><small class="me-1 ">總共</small></div>
+                <h3 class="card-text flex-shrink-0" id="demo1">1435</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-sm-6 col-lg-3 col-md-4 d-flex justify-content-center">
+          <div class="card h-100 flex-shrink-0">
+            <div class="card-body">
+              <div class="card-title d-flex align-items-center">
+                <i class="fas fa-heart me-3"></i>
+                <h6 class="flex-shrink-0">互動數</h6>
+              </div>
+              <div class="d-flex align-items-end">
+                <div class="flex-shrink-0"><small class="me-1 ">平均</small></div>
+                <h3 class="card-text flex-shrink-0" id="demo1">100</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-sm-6 col-lg-3 col-md-4 d-flex justify-content-center">
+          <div class="card h-100 flex-shrink-0">
+            <div class="card-body">
+              <div class="card-title d-flex align-items-center">
+                <i class="fas fa-heart me-3"></i>
+                <h6 class="flex-shrink-0">露出照片數</h6>
+              </div>
+              <div class="d-flex align-items-end">
+                <div class="flex-shrink-0"><small class="me-1 ">總共</small></div>
+                <h3 class="card-text flex-shrink-0" id="demo1">50</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="mx-2 my-5 d-flex justify-content-center flex-wrap">
+      <div class="col-md-6 col-sm-12 my-4 container">
+        <h4>xxxxxxx</h4>
+        <table class="table">
+          <thead class="table-dark">
+            <tr>
+              <th>KOL</th>
+              <th>帳號</th>
+              <th>粉絲數</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>xxx</td>
+              <td>xxxxx</td>
+              <td>55555</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-6 col-sm-12 my-4 container">
+        <div>
+          <h4>粉絲數最多KOL</h4>
+        </div>
+
+        <div class="d-flex justify-content-between leaderBoard">
+          <div class="d-flex ms-3 align-items-center justify-content-between" style="width:250px;height:110px;">
+            <div>
+              <img src="./img/1.jpeg">
+            </div>
+            <div class="">
+              <div class="text-end" style="font-size: 30px;">78943</div>
+              黃紫晴 Peace🐘
+            </div>
+          </div>
+          <div style="overflow:hidden;width:100px;position:relative;">
+            <b class="number">1</b>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between"
+          style="box-shadow: -1px -1px 7px #ffffff73, 1px 1px 5px rgb(94 104 121 / 29%);background-color: #D7E2E9;border-bottom:2px solid #ffffff;">
+          <div class="d-flex align-items-center justify-content-between ms-3" style="width: 250px;height:110px;">
+            <div>
+              <img src="./img/1.jpeg" style="height:70px;width:70px;object-fit: cover;border-radius: 50%;" alt="">
+            </div>
+            <div class="">
+              <div class="text-end" style="font-size: 30px;">9833</div>
+              Y a z e i 葉子
+            </div>
+          </div>
+          <div style="overflow:hidden;width: 100px;position:relative;">
+            <b style="position: absolute;right:-5px;bottom:-30px;font-size:80px;">2</b>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between"
+          style="box-shadow: -1px -1px 7px #ffffff73, 1px 1px 5px rgb(94 104 121 / 29%);background-color: #DEE0E0;border-bottom:2px solid #ffffff;">
+          <div class="d-flex align-items-center justify-content-between ms-3" style="width: 250px;height:110px;">
+            <div>
+              <img src="./img/1.jpeg" style="height:70px;width:70px;object-fit: cover;border-radius: 50%;" alt="">
+            </div>
+            <div class="">
+              <div class="text-end" style="font-size: 30px;">9833</div>
+              Flora Feng 馮蘿菈🌹
+            </div>
+          </div>
+          <div style="overflow:hidden;width: 100px;position:relative;">
+            <b style="position: absolute;right:-5px;bottom:-30px;font-size:80px;">3</b>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between"
+          style="box-shadow:-1px -1px 7px #ffffff73, 1px 1px 5px rgb(94 104 121 / 29%);background-color: #EFEEEA;border-bottom:2px solid #ffffff;">
+          <div class="d-flex align-items-center justify-content-between ms-3" style="width: 250px;height:110px;">
+            <div>
+              <img src="./img/1.jpeg" style="height:70px;width:70px;object-fit: cover;border-radius: 50%;" alt="">
+            </div>
+            <div class="">
+              <div class="text-end" style="font-size: 30px;">9833</div>
+              郭奕均 🌸 Maggie
+            </div>
+          </div>
+          <div style="overflow:hidden;width: 100px;position:relative;">
+            <b style="position: absolute;right:-5px;bottom:-30px;font-size:80px;">4</b>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between"
+          style="box-shadow: -1px -1px 7px #ffffff73, 1px 1px 5px rgb(94 104 121 / 29%);border-bottom-left-radius:5px;border-bottom-right-radius:5px">
+          <div class="d-flex align-items-center justify-content-between ms-3" style="width: 250px;height:110px;">
+            <div>
+              <img src="./img/1.jpeg" style="height:70px;width:70px;object-fit: cover;border-radius: 50%;" alt="">
+            </div>
+            <div class="">
+              <div class="text-end" style="font-size: 30px;">9833</div>
+              Miars Liutzuhan
+            </div>
+          </div>
+          <div style="overflow:hidden;width: 100px;position:relative;">
+            <b style="position: absolute;right:-5px;bottom:-30px;font-size:80px;">5</b>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="m-3" id="leaderBoard">
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card border-light mb-3 h-100">
+            <div class="card-header text-end" style="height: 50px;">TOP5按讚數</div>
+            <div class="card-body">
+              <div class="best d-flex justify-content-around">
+                <div class="mt-5 rank">
+                  <div class="noTag">2</div>
+                  <img src="./img/1.jpeg">
+                  <div class="mt-2">
+                    <div>郭奕均...</div>
+                    <div><b>368,655</b></div>
+                  </div>
+                </div>
+
+                <div class="mt-2 rank">
+                  <div class="noTag">1</div>
+                  <img  src="./img/1.jpeg">
+                </div>
+                <div class="mt-5 rank">
+                  <div class="noTag">3</div>
+                  <img src="./img/1.jpeg">
+                </div>
+              </div>
+              <div class="leader-item overflow-hidden  d-flex align-items-center justify-content-between">
+                <div class="me-2" style="width: 60px;">
+                  <img src="./img/1.jpeg">
+                </div>
+                <div>郭奕均 🌸 Maggie</div>
+                <div>368,655</div>
+              </div>
+              <div class="leader-item overflow-hidden  d-flex align-items-center justify-content-between">
+                <div class="d-flex ">
+                  <img src="./img/1.jpeg">
+                </div>
+                <div>Flora Feng 馮蘿菈🌹</div>
+                <div>3638,655</div>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card h-100">
+          <div class="card border-light mb-3 h-100">
+            <div class="card-header text-end" style="height: 50px;">TOP5按讚數</div>
             <div class="card-body">
-              <h5 class="card-title">留言數</h5>
-              <div class="d-flex justify-content-center align-items-end">
-                <span class="me-1 ">平均</span><h1 class="card-text" id="demo3">0</h1>
-              </div>
-              <div class="d-flex justify-content-center align-items-end">
-                <span class="me-1">總共</span><h1 class="card-text" id="demo4">0</h1>
+              <div class="leader-item d-flex align-items-center justify-content-between">
+                <div><img src="./img/1.jpeg"></div>
+                <div>郭奕均 🌸 Maggie</div>
+                <div>368,655</div>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card h-100">
+          <div class="card border-light mb-3 h-100">
+            <div class="card-header text-end" style="height: 50px;">TOP5按讚數</div>
             <div class="card-body">
-              <h5 class="card-title">互動數</h5>
-              <div class="d-flex justify-content-center align-items-end">
-                <span class="me-1 ">平均</span><h1 class="card-text" id="demo5">0</h1>
-              </div>
-              <div class="d-flex justify-content-center align-items-end">
-                <span class="me-1">總共</span><h1 class="card-text" id="demo6">0</h1>
+              <div class="leader-item d-flex align-items-center justify-content-between">
+                <div><img src="./img/1.jpeg"></div>
+                <div>郭奕均 🌸 Maggie</div>
+                <div>368,655</div>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card h-100">
+          <div class="card border-light mb-3 h-100">
+            <div class="card-header text-end" style="height: 50px;">TOP5按讚數</div>
             <div class="card-body">
-              <h5 class="card-title">照片數</h5>
-              <div class="d-flex justify-content-center align-items-end">
-                <span class="me-1">總共</span><h1 class="card-text" id="demo7">0</h1>
+              <div class="leader-item d-flex align-items-center justify-content-between">
+                <div><img src="./img/1.jpeg"></div>
+                <div>郭奕均 🌸 Maggie</div>
+                <div>368,655</div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
+    <!-- ig貼文 -->
+    <section id="igPost" class="m-5">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <img src="./img/3.jpeg" width="100%">
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <img src="./img/2.jpeg" width="100%">
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <img src="./img/3.jpeg" width="100%">
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <img src="./img/1.jpeg" width="100%">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/particles.min.js"></script>
-    <script src="./js/app.js"></script>
+    <!-- <script src="./js/particles.min.js"></script>
+    <script src="./js/app.js"></script> -->
     <script src="./js/slick.min.js"></script>
     <script src="./js/chart.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.8.2/countUp.min.js'></script>
     <script>
-    var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
+      var ctx = document.getElementById('myChart').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          datasets: [{
             label: '# of Votes',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)'
             ],
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
             ],
             borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
+          }]
+        },
+        options: {
+          scales: {
             y: {
-                beginAtZero: true
+              beginAtZero: true
             }
+          }
         }
-    }
-});
-let demo1 = new CountUp('demo1',0, 888,);
-  demo1.start();
-let demo2 = new CountUp('demo2',0, 2000,);
-  demo2.start();
-let demo3 = new CountUp('demo3',0, 332,);
-  demo3.start();
-let demo4 = new CountUp('demo4',0, 4445,);
-  demo4.start();
-let demo5 = new CountUp('demo5',0, 33,);
-  demo5.start();
-let demo6 = new CountUp('demo6',0, 2802,);
-  demo6.start();
-let demo7 = new CountUp('demo7',0, 234,);
-  demo7.start();
+      });
+// let demo1 = new CountUp('demo1',0, 888,);
+//   demo1.start();
+// let demo2 = new CountUp('demo2',0, 2000,);
+//   demo2.start();
+// let demo3 = new CountUp('demo3',0, 332,);
+//   demo3.start();
+// let demo4 = new CountUp('demo4',0, 4445,);
+//   demo4.start();
+// let demo5 = new CountUp('demo5',0, 33,);
+//   demo5.start();
+// let demo6 = new CountUp('demo6',0, 2802,);
+//   demo6.start();
+// let demo7 = new CountUp('demo7',0, 234,);
+//   demo7.start();
+
 
     </script>
 </body>

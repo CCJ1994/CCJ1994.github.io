@@ -406,8 +406,6 @@ transform: translate(2px,2px);
   opacity: 0.9;
   position: absolute;
   transition: 0.5s;
-  
-  
 }
 .bgShadow{
   box-shadow:-1px -1px 7px #ffffff73,

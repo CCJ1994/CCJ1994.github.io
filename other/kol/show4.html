@@ -14,7 +14,8 @@
   <link rel="stylesheet" href="./css/slick-theme.css">
   <link rel="stylesheet" href="./css/kolstyle.css">
   <script src="https://kit.fontawesome.com/7f45dfd3e1.js" crossorigin="anonymous"></script>
-
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
   <style>
     body {
       display: flex;
@@ -203,7 +204,8 @@
       <a href="show3.html">
         <div class="homeBtn text-center" style="vertical-align: middle;">
           <svg id="backIcon" viewBox="0 0 36.93 30.69" width="18">
-            <path d="M48.47,35.11c-.15.75-.23,1.5-.44,2.22a10.74,10.74,0,0,1-5.52,6.78,11.16,11.16,0,0,1-5.35,1.23H15.31a1.56,1.56,0,0,1-1.69-1.11,1.5,1.5,0,0,1,1.31-1.9H37.32a8,8,0,1,0,0-15.9H16.8l-.4,0,.45.53q2.46,2.81,4.91,5.62a1.51,1.51,0,1,1-2.25,2c-.69-.77-1.36-1.55-2.05-2.33L12,26a1.51,1.51,0,0,1,0-2.09q3.77-4.31,7.52-8.6a1.52,1.52,0,0,1,1.64-.55A1.44,1.44,0,0,1,22.19,16a1.59,1.59,0,0,1-.45,1.32l-4.34,5-1,1.18h.49q10,0,20,0a11.86,11.86,0,0,1,4.72.8,10.89,10.89,0,0,1,6.08,6.12,10,10,0,0,1,.73,3.1,2.1,2.1,0,0,0,.06.24Z"
+            <path
+              d="M48.47,35.11c-.15.75-.23,1.5-.44,2.22a10.74,10.74,0,0,1-5.52,6.78,11.16,11.16,0,0,1-5.35,1.23H15.31a1.56,1.56,0,0,1-1.69-1.11,1.5,1.5,0,0,1,1.31-1.9H37.32a8,8,0,1,0,0-15.9H16.8l-.4,0,.45.53q2.46,2.81,4.91,5.62a1.51,1.51,0,1,1-2.25,2c-.69-.77-1.36-1.55-2.05-2.33L12,26a1.51,1.51,0,0,1,0-2.09q3.77-4.31,7.52-8.6a1.52,1.52,0,0,1,1.64-.55A1.44,1.44,0,0,1,22.19,16a1.59,1.59,0,0,1-.45,1.32l-4.34,5-1,1.18h.49q10,0,20,0a11.86,11.86,0,0,1,4.72.8,10.89,10.89,0,0,1,6.08,6.12,10,10,0,0,1,.73,3.1,2.1,2.1,0,0,0,.06.24Z"
               transform="translate(-11.53 -14.66)" />
           </svg>
 
@@ -213,29 +215,7 @@
   </nav>
   <!-- 主內容 -->
   <section id="main" class="m-3 overflow-hidden">
-    <!-- 流程選單 -->
-    <section class="container mx-auto my-3 " id="stepwizard">
-      <div class="d-flex justify-content-center align-items-center">
-        <a href="show2.html">
-          <img src="./img/chooseicon2.svg" width="100">
-        </a>
-        <div class="line"></div>
-        <div>選 人</div>
-        <div class="line"></div>
-        <a href="show3.html">
-          <img src="./img/checkicon2.svg" width="100">
-        </a>
-        <div class="line"></div>
-        <div>過 稿</div>
-        <div class="line lineDash"></div>
-        <a href="show5.html">
-          <img src="./img/effecticon2.svg" width="100">
-        </a>
-        <div class="line lineDash"></div>
-        <div>成 效</div>
-      </div>
-    </section>
-    <section class="container mx-auto my-5">
+    <div class="container mx-auto my-5">
       <div class="accordion" id="writing">
         <div class="accordion-item border-0">
           <h2 class="accordion-header" id="writingBtn">
@@ -293,191 +273,191 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="my-5 mx-5">
-      <div class="container border-top border-bottom">
-        <h4 class="text-center title mt-4">預覽Instagram</h4>
-        <div class="container d-flex flex-wrap justify-content-center my-4" id="igPart">
-          <div class="photoPart flex-shrink-0">
-            <div class="slider mx-auto">
-              <div class="slide-1 mx-1"><img style="object-fit: cover;width:330px;height:400px;" src="./img/2.jpeg">
-              </div>
-              <div class="slide-2 mx-1"><img style="object-fit: cover;width:330px;height:400px;" src="./img/1.jpeg">
-              </div>
-              <div class="slide-3 mx-1"><img style="object-fit: cover;width:330px;height:400px;" src="./img/3.jpeg">
-              </div>
-              <div class="slide-4 mx-1"><img style="object-fit: cover;width:330px;height:400px;" src="./img/4.jpg">
-              </div>
+    </div>
+  </section>
+  <section class="my-5 mx-5">
+    <div class="container border-top border-bottom">
+      <h4 class="text-center title mt-4">預覽Instagram</h4>
+      <div class="container d-flex flex-wrap justify-content-center my-4" id="igPart">
+        <div class="photoPart flex-shrink-0">
+          <div class="slider mx-auto">
+            <div class="slide-1 mx-1"><img style="object-fit: cover;width:330px;height:400px;" src="./img/2.jpeg">
+            </div>
+            <div class="slide-2 mx-1"><img style="object-fit: cover;width:330px;height:400px;" src="./img/1.jpeg">
+            </div>
+            <div class="slide-3 mx-1"><img style="object-fit: cover;width:330px;height:400px;" src="./img/3.jpeg">
+            </div>
+            <div class="slide-4 mx-1"><img style="object-fit: cover;width:330px;height:400px;" src="./img/4.jpg">
             </div>
           </div>
-          <div class="textPart p-2 flex-shrink-0">
-            <div class="position-relative">
-              <img src="./img/man.jpg" class="user">
-              <b class="me-2">王大明</b>
-              <span class="mx-2" style="color: #52A7CC;">追蹤</span>
-              <span class="position-absolute" style="right:20px;top:10px;"><i class="fas fa-ellipsis-h"></i></span>
-            </div>
-            <div class="d-flex">
-              <div>
-                <img src="./img/man.jpg" class="user">
-              </div>
-              <div class="wordPart">
-                <b>王大明</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam sit iusto eaque vero fuga
-                aliquid perspiciatis voluptatibus itaque numquam sapiente veritatis fugit, nam unde repudiandae id
-                voluptatum, atque quos laborum?
-              </div>
-            </div>
+        </div>
+        <div class="textPart p-2 flex-shrink-0">
+          <div class="position-relative">
+            <img src="./img/man.jpg" class="user">
+            <b class="me-2">王大明</b>
+            <span class="mx-2" style="color: #52A7CC;">追蹤</span>
+            <span class="position-absolute" style="right:20px;top:10px;"><i class="fas fa-ellipsis-h"></i></span>
+          </div>
+          <div class="d-flex">
             <div>
-              <hr class="my-1">
-              <div class="d-flex justify-content-between">
-                <div>
-                  <img src="./img/likeicon.png" width="25">
-                  <img src="./img/commenticon.png" width="25">
-                  <img src="./img/senticon.png" width="25">
-                </div>
-                <div><img src="./img/saveicon.png" width="25"></div>
-              </div>
-              <div class="my-3"><b>999個說讚</b></div>
+              <img src="./img/man.jpg" class="user">
+            </div>
+            <div class="wordPart">
+              <b>王大明</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam sit iusto eaque vero fuga
+              aliquid perspiciatis voluptatibus itaque numquam sapiente veritatis fugit, nam unde repudiandae id
+              voluptatum, atque quos laborum?
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-    <section class="container mx-auto my-5">
-      <div class="accordion" id="photo">
-        <div class="accordion-item border-0">
-          <h2 class="accordion-header" id="photoBtn">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhoto">
-              照片(3)
-            </button>
-          </h2>
-          <div id="collapsePhoto" class="accordion-collapse collapse show" data-bs-parent="#photo">
-            <div class="accordion-body">
-              <div class="text-end"><button class="btn btn-primary">確稿</button></div>
+          <div>
+            <hr class="my-1">
+            <div class="d-flex justify-content-between">
               <div>
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#allPhoto" type="button"
-                    role="tab">全部(3)</button>
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#needPhoto" type="button"
-                    role="tab">選用(1)</button>
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#editPhoto" type="button"
-                    role="tab">需調整(1)</button>
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#noneedPhoto" type="button"
-                    role="tab">不選用(1)</button>
-                </div>
+                <img src="./img/likeicon.png" width="25">
+                <img src="./img/commenticon.png" width="25">
+                <img src="./img/senticon.png" width="25">
               </div>
-              <div class="tab-content" id="">
-                <div class="tab-pane fade show active" id="allPhoto" role="tabpanel">
-                  <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4 my-3">
-                    <div class="col">
-                      <div class="card h-100">
-                        <div class="card-header d-flex justify-content-between">
-                          <div>B0001</div>
-                          <div></div>
-                        </div>
-                        <div class="card-body">
-                          <img src="./img/1.jpeg" data-bs-toggle="modal" data-bs-target="#exampleModal" width="100%">
-                          <div class="d-flex justify-content-between my-3">
-                            <button class="btn btn-outline-secondary">選用</button>
-                            <button class="btn btn-outline-secondary">需調整</button>
-                            <button class="btn btn-outline-secondary">不選用</button>
-                          </div>
+              <div><img src="./img/saveicon.png" width="25"></div>
+            </div>
+            <div class="my-3"><b>999個說讚</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container mx-auto my-5">
+    <div class="accordion" id="photo">
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="photoBtn">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhoto">
+            照片(3)
+          </button>
+        </h2>
+        <div id="collapsePhoto" class="accordion-collapse collapse show" data-bs-parent="#photo">
+          <div class="accordion-body">
+            <div class="text-end"><button class="btn btn-primary">確稿</button></div>
+            <div>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#allPhoto" type="button"
+                  role="tab">全部(3)</button>
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#needPhoto" type="button"
+                  role="tab">選用(1)</button>
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#editPhoto" type="button"
+                  role="tab">需調整(1)</button>
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#noneedPhoto" type="button"
+                  role="tab">不選用(1)</button>
+              </div>
+            </div>
+            <div class="tab-content" id="">
+              <div class="tab-pane fade show active" id="allPhoto" role="tabpanel">
+                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4 my-3">
+                  <div class="col">
+                    <div class="card h-100">
+                      <div class="card-header d-flex justify-content-between">
+                        <div>B0001</div>
+                        <div></div>
+                      </div>
+                      <div class="card-body">
+                        <img src="./img/1.jpeg" data-bs-toggle="modal" data-bs-target="#exampleModal" width="100%">
+                        <div class="d-flex justify-content-between my-3">
+                          <button class="btn btn-outline-secondary">選用</button>
+                          <button class="btn btn-outline-secondary">需調整</button>
+                          <button class="btn btn-outline-secondary">不選用</button>
                         </div>
                       </div>
                     </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <div class="card-header d-flex justify-content-between">
-                          <div>B0001</div>
-                          <div></div>
-                        </div>
-                        <div class="card-body">
-                          <img src="./img/2.jpeg" data-bs-toggle="modal" data-bs-target="#exampleModal" width="100%">
-                          <div class="d-flex justify-content-between my-3">
-                            <button class="btn btn-outline-secondary">選用</button>
-                            <button class="btn btn-outline-secondary">需調整</button>
-                            <button class="btn btn-outline-secondary">不選用</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <div class="card-header d-flex justify-content-between">
-                          <div>B0001</div>
-                          <div></div>
-                        </div>
-                        <div class="card-body">
-                          <img src="./img/4.jpg" data-bs-toggle="modal" data-bs-target="#exampleModal" width="100%">
-                          <div class="d-flex justify-content-between my-3">
-                            <button class="btn btn-outline-secondary">選用</button>
-                            <button class="btn btn-outline-secondary">需調整</button>
-                            <button class="btn btn-outline-secondary">不選用</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
                   </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <div class="card-header d-flex justify-content-between">
+                        <div>B0001</div>
+                        <div></div>
+                      </div>
+                      <div class="card-body">
+                        <img src="./img/2.jpeg" data-bs-toggle="modal" data-bs-target="#exampleModal" width="100%">
+                        <div class="d-flex justify-content-between my-3">
+                          <button class="btn btn-outline-secondary">選用</button>
+                          <button class="btn btn-outline-secondary">需調整</button>
+                          <button class="btn btn-outline-secondary">不選用</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <div class="card-header d-flex justify-content-between">
+                        <div>B0001</div>
+                        <div></div>
+                      </div>
+                      <div class="card-body">
+                        <img src="./img/4.jpg" data-bs-toggle="modal" data-bs-target="#exampleModal" width="100%">
+                        <div class="d-flex justify-content-between my-3">
+                          <button class="btn btn-outline-secondary">選用</button>
+                          <button class="btn btn-outline-secondary">需調整</button>
+                          <button class="btn btn-outline-secondary">不選用</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
-                <div class="tab-pane fade" id="needPhoto" role="tabpanel">...</div>
-                <div class="tab-pane fade" id="editPhoto" role="tabpanel">...</div>
-                <div class="tab-pane fade" id="noneedPhoto" role="tabpanel">...</div>
               </div>
+              <div class="tab-pane fade" id="needPhoto" role="tabpanel">...</div>
+              <div class="tab-pane fade" id="editPhoto" role="tabpanel">...</div>
+              <div class="tab-pane fade" id="noneedPhoto" role="tabpanel">...</div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <section class="container mx-auto my-5">
-      <div class="accordion" id="message">
-        <div class="accordion-item border-0">
-          <h2 class="accordion-header" id="messageBtn">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMessage">
-              留言板
-            </button>
-          </h2>
-          <div id="collapseMessage" class="accordion-collapse collapse" aria-labelledby="messageBtn"
-            data-bs-parent="#photo">
-            <div class="accordion-body">
-              <div class="msgHead"></div>
-              <div class="content">
-                <div class="himText">請問一下</div>
-                <div class="meText">你好</div>
-              </div>
-              <div class="send p-2 d-flex justify-content-end align-items-center border-top">
-                <form action="" method="post" class="overflow-hidden">
-                  <textarea style="resize: none;width:1000px;" class="form-control me-2 border-0" type="text" name="msg"
-                    placeholder="我有話想說..."></textarea>
-                </form>
-                <button class="btn addBtn"><i class="fas fa-plus"></i></button>
-              </div>
+    </div>
+  </section>
+  <section class="container mx-auto my-5">
+    <div class="accordion" id="messageBoard">
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="messageBtn">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMessage">
+            留言板
+          </button>
+        </h2>
+        <div id="collapseMessage" class="accordion-collapse collapse" aria-labelledby="messageBtn"
+          data-bs-parent="#messageBoard">
+          <div class="accordion-body">
+            <div class="msgHead"></div>
+            <div class="content">
+              <div class="himText">請問一下</div>
+              <div class="meText">你好</div>
+            </div>
+            <div class="send p-2 d-flex justify-content-end align-items-center border-top">
+              <form action="" method="post" class="overflow-hidden">
+                <textarea style="resize: none;width:1000px;" class="form-control me-2 border-0" type="text" name="msg"
+                  placeholder="我有話想說..."></textarea>
+              </form>
+              <button class="btn addBtn"><i class="fas fa-plus"></i></button>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-    </section>
+  </section>
 
-    <script src="./js/jquery-3.6.0.min.js"></script>
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/particles.min.js"></script>
-    <script src="./js/app.js"></script>
-    <script src="./js/slick.min.js"></script>
-    <script>
-      $('.slider').slick({
-        centerMode: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: true,
-        variableWidth: true
-      });
-      $("#photo img").click(function () {
-        let thisSrc = $(this).attr("src");
-        $("#modalImg").attr("src", thisSrc);
-      })
-    </script>
+
+  <script src="./js/particles.min.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script>
+    $('.slider').slick({
+      centerMode: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      arrows: true,
+      variableWidth: true
+    });
+    $("#photo img").click(function () {
+      let thisSrc = $(this).attr("src");
+      $("#modalImg").attr("src", thisSrc);
+    })
+  </script>
 </body>
 
 </html>

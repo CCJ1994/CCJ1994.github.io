@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* # Buy process
+	================================================== */
+    .line {
+      background: #f6f8f9;
+      position: relative;
+      padding-bottom: 100px;
+    }
+
+    .line:before {
+      content: '';
+      position: absolute;
+      top: 202px;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background-color: #F6AE2D;
+      color: #fff;
+      border-radius: 10px;
+    }
+
+    .processContainer {
+      display: flex;
+      margin: auto;
+      overflow: visible;
+    }
+
+    .step {
+      flex-grow: 1;
+      flex-basis: 0;
+      position: relative;
+      text-align: center;
+      height: 456px;
+      margin: 0 6px;
+    }
+
+    .step:nth-child(odd) .stepDesc,
+    .step:nth-child(even) .stepicon {
+      position: absolute;
+      top: 52px;
+      left: 0;
+      right: 0;
+      height: 150px;
+      text-align: center;
+    }
+
+    /* .step:nth-child(even) .stepicon { top: 0; height: 202px;} */
+    .step h4 {
+      font-size: 17px;
+      color: #F6AE2D;
+      text-transform: uppercase;
+      position: absolute;
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    .step:nth-child(odd) h4 {
+      bottom: 22px;
+    }
+
+    .step:nth-child(even) h4 {
+      top: 22px;
+    }
+
+    .step p {
+      position: absolute;
+      font-size: 16px;
+      color: #2F4858;
+      margin-bottom: 0;
+      width: 100%;
+      line-height: 1.6;
+    }
+
+    .step:nth-child(odd) p {
+      bottom: 56px;
+    }
+
+    .step:nth-child(even) p {
+      top: 56px;
+    }
+
+    .step span {
+      position: absolute;
+      top: 211px;
+      left: 50%;
+      transform: translate(-50%);
+      -webkit-transform: translate(-50%);
+      font-size: 25px;
+      color: rgba(255, 255, 255, 0.65);
+      font-weight: 600;
+    }
+
+    .step.featured span {
+      color: #fff;
+    }
+
+    .step:nth-child(odd) .stepicon,
+    .step:nth-child(even) .stepDesc {
+      position: absolute;
+      bottom: 49px;
+      left: 0;
+      right: 0;
+      height: 166px;
+    }
+
+    .step.featured:nth-child(odd) .stepicon {
+      height: 215px;
+      bottom: 0;
+    }
+
+    .step .stepicon:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      border-left: 4px dotted #F6AE2D;
+      transform: translate(-50%, 0);
+      -webkit-transform: translate(-50%, 0);
+    }
+
+    .step i {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      -webkit-transform: translate(-50%, 0);
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+      color: #fff;
+      border-radius: 50%;
+      background-color: #F6AE2D;
+    }
+
+    .step.featured i {
+      background-color: #fff !important;
+      color: #F6AE2D;
+      border: 4px solid;
+    }
+
+    .step:nth-child(odd) i {
+      bottom: 0;
+    }
+
+    .step:nth-child(even) i {
+      top: 0;
+    }
+
+    .step i:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+    }
+
+    @media only screen and (min-width: 961px) and (max-width: 1280px) {
+      .processContainer {
+        width: 920px;
+      }
+
+      .step h4 {
+        font-size: 15px;
+      }
+
+      .step p {
+        font-size: 12px;
+      }
+    }
+
+    /* All Mobile Sizes (devices and browser) */
+    @media only screen and (max-width: 767px) {
+      .processContainer {
+        display: block;
+      }
+
+      .line:before,
+      #stepWizard .step .stepDesc,
+      #stepWizard .step .stepicon {
+        position: static;
+        height: auto;
+      }
+
+      #stepWizard .step span {
+        top: 50px;
+        left: 240px;
+        font-size: 100px;
+        color: #F6AE2D;
+        opacity: .12;
+      }
+
+      .step {
+        height: auto;
+        padding: 115px 50px 15px;
+        overflow: hidden;
+      }
+
+      .step .stepicon:before,
+      .step h4,
+      .step p {
+        position: static;
+        margin-bottom: 10px;
+      }
+
+      .step .stepicon:before {
+        display: none;
+      }
+
+      #stepWizard .step i {
+        top: 0;
+        height: 80px;
+        width: 80px;
+        font-size: 40px;
+      }
+
+      /* .step p { padding-left:7%; padding-right:7%;} */
+    }
+  </style>
+</head>
+
+<body>
+  <script src="https://kit.fontawesome.com/7e94f0c211.js" crossorigin="anonymous"></script>
+  <div id="stepWizard">
+    <div class="line">
+      <div class="processContainer">
+        <div class="step">
+          <div class="stepDesc">
+            <h4><strong>洽談中</strong></h4>
+            <p>專員正在與您挑選的網紅進行接洽，待網紅了解合作事項，以及確認檔期是否能夠配合。</p>
+          </div>
+          <span>1</span>
+          <div class="stepicon">
+            <i class="fas fa-comments"></i>
+          </div>
+        </div>
+        <div class="step ">
+          <div class="stepDesc">
+            <h4><strong>確定合作</strong></h4>
+            <p>此階段網紅已確認能夠合作，待專員傳達更詳細的合作事宜。</p>
+          </div>
+          <span>2</span>
+          <div class="stepicon">
+            <i class="fas fa-hands-helping"></i>
+          </div>
+        </div>
+        <div class="step">
+          <div class="stepDesc">
+            <h4><strong>過稿中</strong></h4>
+            <p>專員已傳達詳細文案與照片拍攝需求，網紅正在進行圖文編輯，待專員為您仔細審核。</p>
+          </div>
+          <span>3</span>
+          <div class="stepicon">
+            <i class="fas fa-user-edit"></i>
+          </div>
+        </div>
+        <div class="step ">
+          <div class="stepDesc">
+            <h4><strong>已確稿 </strong></h4>
+            <p>網紅的貼文已通過專員審核，準備在指定日期上線。</p>
+          </div>
+          <span>4</span>
+          <div class="stepicon">
+            <i class="fas fa-user-check"></i>
+          </div>
+        </div>
+        <div class="step">
+          <div class="stepDesc">
+            <h4><strong>已上線</strong></h4>
+            <p>貼文已上線，你可以前往查看此專案的相關成效。</p>
+          </div>
+          <span>5</span>
+          <div class="stepicon">
+            <i class="fas fa-paper-plane"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

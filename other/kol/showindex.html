@@ -15,14 +15,16 @@
 </head>
 <style>
   body {
-    margin: auto;
-    padding: 0;
-    
+    /* margin: auto;
+    padding: 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-weight: 600;
+    position: relative;
   }
-  
   .intro {
-    /* width: 100vw; */
+    width: 100vw;
     text-align: center;
     position: absolute;
     transform: translateY(30vh);
@@ -72,6 +74,7 @@
   width: 100vw;
   display: flex;
   justify-content: center;
+  position: fixed;
 }
   #iconLink{
     animation: link 2.5s ease 2s  forwards;
@@ -109,8 +112,8 @@
 </style>
 
 <body >
-  <div id="particles-js">
-  <div class="container intro">
+  <div id="particles-js"></div>
+  <div class="container intro m-5">
     <div id="title">
       <div class="title1">WELCOME</div>
       <div class="title2">AI網紅過稿系統</div>
@@ -126,7 +129,6 @@
       <a href="showMenu.html">進入系統<img class="ms-2" src="./img/arrowicon.svg" width="20"></a>
     </div>
   </div>
-  </div>
   <script src="./js/bootstrap.bundle.min.js"></script>
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script src="./js/particles.min.js"></script>
@@ -139,11 +141,11 @@
       setTimeout(function(){
         $(".descr").addClass("showon");
         $(".title4 b").addClass("showon");
-        setTimeout(()=>{
-          $("#particles-js").addClass("showoff")
-          setTimeout(()=>{location.href="showMenu.html";},700)
+        // setTimeout(()=>{
+        //   $("#particles-js").addClass("showoff")
+        //   setTimeout(()=>{location.href="showMenu.html";},700)
           
-        },3000);
+        // },3000);
       },500);
     }, 1500);
   </script>

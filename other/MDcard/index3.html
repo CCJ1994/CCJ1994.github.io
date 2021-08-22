@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MDcard</title>
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <style>
+    * {
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    /* icon */
+    .feather {
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      color: #34495e;
+    }
+    .mdcard{
+      min-height: 768px;
+    }
+    .kolpicBox{
+      width: 150px;
+      height: 150px;
+      position: relative;
+    }
+    .kolpicBox::before{
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background-color: #95a5a6;
+      border-radius: 50%;
+      z-index: -1;
+      right: -10px;
+      bottom: -10px;
+    }
+    .kolpicBox img{
+      border-radius: 50%;
+    }
+
+    .kolpic2Box {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .kolpic2Box::before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #95a5a6;
+      top: -20px;
+      left: -20px;
+    }
+
+    img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .data {
+      font-size: 20px;
+    }
+    h1,h2,h3,h4,h5,h6,a,data{
+      color: #34495e;
+    }
+    .bg-gray{
+      background-color: #95a5a6;
+      height: 10px;
+    }
+    .decoLine{
+      left: -15px;
+      top: -20px;
+      border: 3px solid #95a5a6;
+      width: 30%;
+      height: 95%;
+    }
+    .decohr{
+      margin-left: 10px;
+      height: 2px;
+      width: 100%;
+      background-color: #34495e;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="bg-gray"></div>
+  <div class="m-5">
+    <!-- 類型 -->
+    <div class="d-flex flex-wrap">
+      <div class="me-2">
+        <span data-feather="hash"></span>
+        <span>Youtuber</span>
+      </div>
+      <div class="me-2">
+        <span data-feather="hash"></span>
+        <span>圖文作家</span>
+      </div>
+      <div class="me-2">
+        <span data-feather="hash"></span>
+        <span>Instagramer</span>
+      </div>
+      <div class="me-2">
+        <span data-feather="hash"></span>
+        <span>開箱</span>
+      </div>
+      <div class="me-2">
+        <span data-feather="hash"></span>
+        <span>美妝</span>
+      </div>
+      <div class="me-2">
+        <span data-feather="hash"></span>
+        <span>生活</span>
+      </div>
+    </div>
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="col-12 d-flex flex-nowrap m-5 justify-content-center position-relative">
+        <div class="p-4 col-4">
+          <div class="kolpic2Box">
+            <img src="./img/60826cf1bfb60.jpg" alt="">
+          </div>
+        </div>
+        <div class="overflow-hidden p-4 col-4">
+          <h1>劉芒.</h1>
+          <div class="d-flex flex-nowrap align-items-center">
+            <h4>About</h4>
+            <div class="decohr"></div>
+          </div>
+          <p>劉芒從模特兒轉戰YouTuber，她爽朗又幽默的個性造就影片的浮誇風格，也因為那些浮誇感，讓影片充滿了「笑果」，讓人印象深刻。</p>
+    
+          <h4>適合商案類型</h4>
+          <p>圖文、影音</p>
+        </div>
+        <div class="p-4 col-4 d-flex flex-column justify-content-between">
+          
+          <!-- 頭貼 -->
+          <div class="kolpicBox align-self-end">
+            <img src="./img/e3a726230d06f7c6778dc3d3cbda2f6b.jpg" alt="">
+          </div>
+          <div class="d-flex flex-wrap justify-content-end">
+            <div class="ms-3 d-flex mb-1">
+              <i class="me-2 fa-2x fab fa-facebook-square" style="color:#0873F6;"></i>
+              <div>
+                <div class="data"><b>220K</b></div>
+                <div class="data"><b>-%</b></div>
+              </div>
+            </div>
+            <div class="ms-3 d-flex mb-1">
+              <i class="me-2 fa-2x fab fa-youtube" style="color:#FF0000;"></i>
+              <div>
+                <div class="data"><b>384K</b></div>
+                <div class="data"><b>-%</b></div>
+              </div>
+            </div>
+          <!-- 數據 -->
+    
+            <a href="https://www.instagram.com/lioumonn/" class="ms-3 d-flex mb-1">
+              <i class="me-2 fa-2x fab fa-instagram" style="color:#ED1E79;"></i>
+              <div>
+                <div class="data"><b>384K</b></div>
+                <div class="data"><b>-%</b></div>
+              </div>
+            </a>
+            <!-- twitc -->
+            <!-- <div class="ms-3 d-flex mb-1">
+              <i class="me-2 fa-2x fab fa-twitch" style="color:#923AFF;"></i>
+              <div>
+                <div class="data"><b>384K</b></div>
+                <div class="data"><b>-%</b></div>
+              </div>
+            </div> -->
+            <!-- 部落格 -->
+            <!-- <div class="ms-3 d-flex mb-1">
+              <i class="me-2 fa-2x fab fa-blogger-b"></i>
+              <div>
+                <div class="data"><b>384K</b></div>
+                <div class="data"><b>-%</b></div>
+              </div>
+            </div> -->
+            <!-- 抖音 -->
+            <!-- <div class="ms-3 d-flex mb-1">
+              <i class="me-2 fa-2x fab fa-tiktok"></i>
+              <div>
+                <div class="data"><b>384K</b></div>
+                <div class="data"><b>-%</b></div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="d-flex align-items-center">
+      <span data-feather="facebook"></span>
+        <a class="ms-2" href="https://www.facebook.com/ABGKitchen/?ref=page_internal">https://www.facebook.com/ABGKitchen/?ref=page_internal</a>
+    </div>
+    <div class="d-flex align-items-center">
+      <span data-feather="youtube"></span>
+        <a class="ms-2" href="https://www.facebook.com/ABGKitchen/?ref=page_internal">https://www.facebook.com/ABGKitchen/?ref=page_internal</a>
+    </div>
+    <div class="d-flex align-items-center">
+      <span data-feather="instagram"></span>
+        <a class="ms-2" href="https://www.facebook.com/ABGKitchen/?ref=page_internal">https://www.facebook.com/ABGKitchen/?ref=page_internal</a>
+    </div>
+  </div>
+  <script src="./bootstrap/js/bootstrap.min.js"></script>
+  <script src="./bootstrap/js/popper.min.js"></script>
+  <script src="./jquery/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js">
+    </script>
+  <script>
+    feather.replace({
+      'aria-hidden': 'true'
+    });
+  </script>
+</body>
+
+</html>

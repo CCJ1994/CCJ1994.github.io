@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/fimstyle.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f45dfd3e1.js" crossorigin="anonymous"></script>
+
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script> -->
+
+</head>
+
+<body>
+  <header class="">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="./img/justAD_logo_正方.png" width="30">
+          <div class="brandName ms-2 position-relative">
+            <div style="z-index: 1;">就是發網紅</div>
+            <img width="20" style="position: absolute;bottom: 5px;right: -10px; z-index: -1;" src="./img/titleicon.svg">
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 col justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">我的帳戶</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                我的專案
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./myproject.html">所有專案</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="./addproject.html">新增專案</a></li>
+                <li><a class="dropdown-item" href="./notsubmit.html">未提交專案（14）</a></li>
+                <li><a class="dropdown-item" href="./notpay.html">待付款專案（6）</a></li>
+                <li><a class="dropdown-item" href="./runninglist.html">進行中專案（0）</a></li>
+                <li><a class="dropdown-item" href="./stopproject.html">暫停中專案（1）</a></li>
+                <li><a class="dropdown-item" href="./finishproject.html">已結案專案（0）</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./message.html">系統留言板</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center" href="./login.html">登出<img src="./img/logout_24dp.svg"
+                  width="17"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section id="main" class="container">
+    <div id="orderbrief" class="card my-4">
+      <div class="card-body">
+        <div class="d-flex flex-wrap">
+
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class=" d-flex flex-wrap align-items-center">
+            <div class="me-3 my-1">
+              <span class="primaryClr me-2">專案編號</span>
+              <b class="primary2Clr">356</b>
+            </div>
+            <div class="me-3 my-1">
+              <span class="primaryClr me-2">曝光平台</span>
+              <b class="primary2Clr">Instagram</b>
+            </div>
+            <div class="me-3 my-1">
+              <span class="primaryClr me-2">總需求人數</span>
+              <b class="primary2Clr">10 人</b>
+            </div>
+            <div class="me-3 my-1">
+              <span class="primaryClr me-2">付款狀態</span>
+              <b class="primary2Clr">付款完成</b>
+            </div>
+            <div class="my-1">
+              <span class="primaryClr me-2">訂單金額</span>
+              <b class="primary2Clr">NT$13500</b>
+            </div>
+          </div>
+          <div class="flex-shrink-0"><button class="btnFim btn-confirm" data-bs-toggle="collapse"
+              data-bs-target="#pj_briefBox">發案明細</button></div>
+        </div>
+        <div class="collapse  mt-3" id="pj_briefBox">
+          <div class="card card-body border-0">
+            1.設定基本資料
+            <div class="my-2 container">
+              <div class="card px-2">
+                <div class="d-flex my-2">
+                  <div class="col-4 inputTit">專案名稱</div>
+                  <div class="col-8 text-end"><b>未命名專案</b></div>
+                </div>
+                <div class="d-flex my-2">
+                  <div class="col-4 inputTit">曝光平台</div>
+                  <div class="col-8 text-end"><b>Instagram</b></div>
+                </div>
+                <div class="d-flex my-2">
+                  <div class="col-4 inputTit">業務屬性1</div>
+                  <div class="col-8 text-end"><b>販售商品</b></div>
+                </div>
+                <div class="d-flex my-2">
+                  <div class="col-4 inputTit">業務屬性2</div>
+                  <div class="col-8 text-end"><b>交通用品</b></div>
+                </div>
+                <div class="d-flex my-2">
+                  <div class="col-6 inputTit">貼文上線開始日期</div>
+                  <div class="col-6 text-end"><b>2021-06-03</b></div>
+                </div>
+                <div class="d-flex my-2">
+                  <div class="col-6 inputTit">貼文上線結束日期</div>
+                  <div class="col-6 text-end"><b>2021-06-30</b></div>
+                </div>
+
+              </div>
+            </div>
+            2.設定推廣項目
+            <div class="container my-2">
+
+              <div class="card px-2">
+                <div class="d-flex my-2">
+                  <div class="col-4 inputTit">宣傳品項數量</div>
+                  <div class="col-8 text-end"><b>3</b></div>
+                </div>
+                <div class="d-flex my-2">
+                  <div class="col-4 inputTit">品項1</div>
+                  <div class="col-8 text-end">
+                    <b>地獄激火山爆發辣味韓式泡麵</b>
+                    <div><small><i class="far fa-check-circle"></i>可讓網紅自由發揮</small></div>
+                  </div>
+                </div>
+                <div class="d-flex my-2">
+                  <div class="col-4 inputTit">品項2</div>
+                  <div class="col-8 text-end"><b>醬油蔥花蛋捲冰淇淋</b>
+                    <div><small><i class="far fa-check-circle"></i>可讓網紅自由發揮</small></div>
+                  </div>
+                </div>
+                <div class="d-flex my-2">
+                  <div class="col-4 inputTit">品項3</div>
+                  <div class="col-8 text-end"><b>日式和風咖哩飯</b>
+                    <div><small><i class="far fa-check-circle"></i>可讓網紅自由發揮</small></div>
+                  </div>
+                </div>
+                <div class="d-flex my-2">
+                  <div class="col-8 inputTit">網紅如何取得</div>
+                  <div class="col-4 text-end"><b>到店購買</b></div>
+                </div>
+                <div class="d-flex my-2">
+                  <div class="col-8 inputTit">是否指定店點</div>
+                  <div class="col-4 text-end"><b>否</b></div>
+                </div>
+                <div class="d-flex my-2">
+                  <div class="col-4 inputTit">哪些縣市有店點</div>
+                  <div class="col-8 text-end"><b> 基隆,桃園,新竹,台中,彰化,台東,高雄</b></div>
+                </div>
+                <div class="d-flex my-2">
+                  <div class="col-8 inputTit">網紅是否需自費購買</div>
+                  <div class="col-4 text-end"><b>否</b></div>
+                </div>
+
+              </div>
+            </div>
+            3.設定照片呈現方式
+            <div class="container my-2">
+              <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                  <div class="card h-100">
+                    <div class="card-header border-0 text-center">
+                      <img src="./img/001_KOL與品牌合影.png" width="100">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title ">照片 1</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="col-3 inputTit">呈現方式</div>
+                        <div class="col-9"><b>網紅自行發揮</b></div>
+                      </div>
+                      <div class=" d-flex justify-content-between">
+                        <div class="col-3 inputTit">拍攝品項</div>
+                        <div class="col-9"><b>單拍品項1-地獄激火山爆發辣味韓式泡麵</b></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <div class="card-header border-0 text-center">
+                      <img src="./img/001_KOL與品牌合影.png" width="100">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title ">照片 2</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="col-3 inputTit">呈現方式</div>
+                        <div class="col-9"><b>網紅自行發揮</b></div>
+                      </div>
+                      <div class=" d-flex justify-content-between">
+                        <div class="col-3 inputTit">拍攝品項</div>
+                        <div class="col-9"><b>單拍品項1-地獄激火山爆發辣味韓式泡麵</b></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <div class="card-header border-0 text-center">
+                      <img src="./img/001_KOL與品牌合影.png" width="100">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title ">照片 3</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="col-3 inputTit">呈現方式</div>
+                        <div class="col-9"><b>網紅自行發揮</b></div>
+                      </div>
+                      <div class=" d-flex justify-content-between">
+                        <div class="col-3 inputTit">拍攝品項</div>
+                        <div class="col-9"><b>單拍品項1-地獄激火山爆發辣味韓式泡麵</b></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <div class="card-header border-0 text-center">
+                      <img src="./img/001_KOL與品牌合影.png" width="100">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title ">照片 4</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="col-3 inputTit">呈現方式</div>
+                        <div class="col-9"><b>網紅自行發揮</b></div>
+                      </div>
+                      <div class=" d-flex justify-content-between">
+                        <div class="col-3 inputTit">拍攝品項</div>
+                        <div class="col-9"><b>單拍品項1-地獄激火山爆發辣味韓式泡麵</b></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <div class="card-header border-0 text-center">
+                      <img src="./img/001_KOL與品牌合影.png" width="100">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title ">照片 5</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="col-3 inputTit">呈現方式</div>
+                        <div class="col-9"><b>網紅自行發揮</b></div>
+                      </div>
+                      <div class=" d-flex justify-content-between">
+                        <div class="col-3 inputTit">拍攝品項</div>
+                        <div class="col-9"><b>單拍品項1-地獄激火山爆發辣味韓式泡麵</b></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            4.設定發文文案
+            <div class="container my-2">
+
+              <div class="card px-2">
+                <div class="d-flex my-2">
+                  <div class="col-2 inputTit">禁止事項</div>
+                  <div class="col-10"><b>腥羶色,髒話髒字,不提及競品</b></div>
+                </div>
+                <div class="d-flex my-2">
+                  <div class="col-2 inputTit">其他宣傳資訊</div>
+                  <div class="col-10">
+                    <div><i class="far fa-check-circle"></i>我希望網紅宣傳部分資訊</div>
+                    <div><i class="far fa-check-circle"></i>需打卡<b class="ms-2">台北101</b></div>
+                    <div><i class="far fa-check-circle"></i>需提及地址<b class="ms-2">10018台北市中正區忠孝西路一段66號34樓</b></div>
+                    <div><i class="far fa-check-circle"></i>需提及營業時間<b class="ms-2">週一至週五 9:30-18:00</b></div>
+                    <div><i class="far fa-check-circle"></i>需提及聯絡資訊<b class="ms-2">02-2311-1698</b></div>
+                    <div><i class="far fa-check-circle"></i>需提及檔期活動優惠<b class="ms-2">週一至週五 9:30-18:00 183元</b></div>
+                    <div><i class="far fa-check-circle"></i>標記帳號
+                      <b class="mx-2">1.@rgerte</b><b class="ms-2">2.@rgerte</b><b class="mx-2">3.@rgerte</b>
+                    </div>
+                    <div><i class="far fa-check-circle"></i>標記帳號
+                      <b class="mx-2">1.#平價美食</b><b class="ms-2">2.#火山爆發</b><b class="mx-2">3.#冰淇淋</b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            5.邀請網紅
+            <div class="my-2 container">
+
+              <div class="card px-2">
+                <div class="my-2 inputTit"><i class="far fa-check-circle"></i>可讓AI挑選適合網紅人選</div>
+                <div id="kol">
+                  <div class="my-2 inputTit">合作網紅(粉絲數1萬-3萬)<b class="ms-2">2人</b></div>
+                  <div class="my-2 inputTit d-flex flex-wrap">
+                    <b class="me-2">自選網紅名單</b>
+                    <img src="./img/ex2.jpg">
+                    <img src="./img/ex3.jpg">
+                  </div>
+                  <div class="my-2 inputTit">合作網紅(粉絲數1千-5千)<b class="ms-2">6人</b></div>
+                  <div class="my-2 inputTit d-flex flex-wrap">
+                    <b class="me-2">自選網紅名單</b>
+                    <img src="./img/d4008c7f4b9c70d1cfffa36c2ebb6152.jpeg">
+                    <img src="./img/exw0.jpg">
+                    <img src="./img/exw1.jpeg">
+                    <img src="./img/exw2.jpg">
+                    <img src="./img/exw3.jpg">
+                    <img src="./img/exw4.jpg">
+                  </div>
+                </div>
+                <div class="note mb-3">
+                  <img src="./img/note.svg" width="15">
+                  <small>AI系統會透過大數據及關鍵字挑選出適合您產品的網紅，並以商案成效優秀的網紅做優先合作對象</small>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div id="stepWizard" class="container d-flex align-items-center justify-content-center">
+      <a class="step stepActive"></a>
+      <div class="line"></div>
+      <a class="step"></a>
+      <div class="line"></div>
+      <a class="step"></a>
+      <div class="line"></div>
+      <a class="step"></a>
+    </div> -->
+
+    <div class="container">
+      <div class="mt-5">
+        <ul class="nav nav-tabs" id="nav-tab" role="tablist">
+          <li class="nav-item">
+            <a class="mx-2 nav-link active" id="tabWeb" data-bs-toggle="tab" href="#listAll" role="tab">全部</a>
+          </li>
+          <li class="nav-item">
+            <a class="mx-2 nav-link" id="tabPhoto" data-bs-toggle="tab" href="#unpass" role="tab">過稿中</a>
+          </li>
+          <li class="nav-item">
+            <a class="mx-2 nav-link" id="tabPhoto" data-bs-toggle="tab" href="#pass" role="tab">已確稿</a>
+          </li>
+          <li class="nav-item">
+            <a class="mx-2 nav-link" id="tabPhoto" data-bs-toggle="tab" href="#online" role="tab">已上線</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade active show" id="listAll" role="tabpanel">
+          <div class="accordion accordion-flush my-3" id="accordionCustom">
+            <div class="accordion-item">
+              <h2 class="accordion-header border-bottom">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#customer">
+                  自選網紅名單
+                </button>
+              </h2>
+              <div id="customer" class="accordion-collapse collapse show" data-bs-parent="#accordionCustom">
+                <div class="accordion-body px-0">
+                  <div class="row row-cols-1 g-4 mx-auto">
+                    <div class="col">
+                      <div class="card bg-light shadow-sm border-0 h-100">
+                        <div class="card-body overflow-hidden text-center d-flex flex-wrap align-items-center justify-content-around">
+                          <div class="col-12 col-md-2"><img class="infopic" src="./img/exw3.jpg"></div>
+                          <div class="col-12 col-md-2  my-1">
+                            <div class=""><b class="text-muted">洗菜</b></div>
+                            <div class="primaryClr">粉絲數<b class="ms-2 text-muted">547765</b></div>
+                          </div>
+                          <div class="my-1 col-12 col-md-2">
+                            <div class="primaryClr">留言<b class="ms-2 text-muted">無</b></div>
+                            <div class="primaryClr">公告<b class="ms-2 text-muted">無</b></div>
+                          </div>
+                          <div class="my-1 col-12 col-md-2 d-flex flex-wrap justify-content-center">
+                            <div class="primaryClr me-2 me-md-0 col-sm-6 col-md-12">個人進度</div>
+                            <div class="col-sm-6 col-md-12">
+                              <b class="secondaryClr">洽談中</b><i
+                                class="primary2Clr ms-2 fas fa-info-circle" data-bs-container="body"
+                                data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right"
+                                data-bs-content="Right popover"></i>
+                            </div>
+                          </div>
+                          <div class="my-1 col-12 col-md-2 d-flex flex-wrap justify-content-center">
+                              <div class="primaryClr me-2 me-md-0 col-sm-6 col-md-12">過稿進度</div>
+                              <div class="secondaryClr col-sm-6 col-md-12"><b>未進行</b></div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card border-0 bg-light h-100">
+                        <div class="card-body overflow-hidden text-center">
+                          <div><img class="infopic" src="./img/exw3.jpg"></div>
+                          <div class="primaryClr">網紅1</div>
+                          <div class="primaryClr mt-1"><span class="me-2">備註</span><span
+                              class="text-muted">目前無任何備註。</span></div>
+                          <div class="mt-1">
+                            <div class="primaryClr"><span class="me-2">個人進度</span><b class="secondaryClr">洽談中</b><i
+                                class="primary2Clr ms-2 fas fa-info-circle" data-bs-container="body"
+                                data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right"
+                                data-bs-content="Right popover"></i></div>
+                            <div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card border-0 bg-light h-100">
+                        <div class="card-body overflow-hidden text-center">
+                          <div><img class="infopic" src="./img/exw3.jpg"></div>
+                          <div class="primaryClr">網紅1</div>
+                          <div class="primaryClr mt-1"><span class="me-2">備註</span><span
+                              class="text-muted">目前無任何備註。</span></div>
+                          <div class="mt-1">
+                            <div class="primaryClr"><span class="me-2">個人進度</span><b class="secondaryClr">洽談中</b><i
+                                class="primary2Clr ms-2 fas fa-info-circle" data-bs-container="body"
+                                data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right"
+                                data-bs-content="Right popover"></i></div>
+                            <div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card border-0 bg-light h-100">
+                        <div class="card-body overflow-hidden text-center">
+                          <div><img class="infopic" src="./img/exw3.jpg"></div>
+                          <div class="primaryClr">網紅1</div>
+                          <div class="primaryClr mt-1"><span class="me-2">備註</span><span
+                              class="text-muted">目前無任何備註。</span></div>
+                          <div class="mt-1">
+                            <div class="primaryClr"><span class="me-2">個人進度</span><b class="secondaryClr">洽談中</b><i
+                                class="primary2Clr ms-2 fas fa-info-circle" data-bs-container="body"
+                                data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right"
+                                data-bs-content="Right popover"></i></div>
+                            <div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group my-2">
+                    <div class="list-group-item list-group-item-action border-0 bg-light rounded-1 my-2">
+                      <div class="d-flex flex-wrap justify-content-between align-items-center">
+                          <div class="my-1 col-12 col-md-2 col-lg-2"><img class="infopic" src="./img/exw0.jpg"></div>
+                          <div class="my-1 col-12 col-md-2 col-lg-2">
+                            <div class="primaryClr">暱稱<b class="ms-2 text-muted">洗菜</b></div>
+                            <div class="primaryClr">紛絲數<b class="ms-2 text-muted">434657</b></div>
+                          </div>
+                          <div class="my-1 col-12 col-md-2 col-lg-2 d-flex flex-wrap">
+                            <div class="primaryClr me-2">執行進度</div>
+                            <div class="secondaryClr col-md-12"><b>過稿中</b><i class="primary2Clr ms-2 fas fa-info-circle"
+                                data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus"
+                                data-bs-placement="right" data-bs-content="Right popover"></i></div>
+                          </div>
+                          <div class="my-1 col-12 col-md-2 col-lg-2">
+                            <div class="primaryClr">過稿進度</div>
+                            <div class="secondaryClr"><b>文案未確稿</b></div>
+                            <div class="secondaryClr"><b>照片未確稿</b></div>
+                          </div>
+                          <div class="my-1 col-12 col-md-2 col-lg-2">
+                            <div class="primaryClr">留言<b class="ms-2 text-muted">無。</b></div>
+                            <div class="primaryClr">公告<b class="ms-2 text-muted">無。</b></div>
+                          </div>
+                          <div class="my-1 col-12 col-md-2 col-lg-2">
+                            <button class="btnFim btn-head">查看文案</button>
+                          </div>
+                          
+                      </div>
+                    </div>
+                    <div class="list-group-item list-group-item-action border-0 bg-light rounded-1 my-2">
+                      <div class="d-flex flex-wrap  align-items-center">
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12">
+                          <div><img class="infopic" src="./img/exw1.jpeg"></div>
+                          <div>
+                            <div class="primaryClr">KOL_4534667565</div>
+                            <div class="text-muted">暱稱<b class="ms-2">洗菜</b></div>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12 my-3">
+                          <div>
+                            <div class="primaryClr">執行進度</div>
+                            <div class="secondaryClr"><b>過稿中</b><i class="primary2Clr ms-2 fas fa-info-circle"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="primaryClr">備註</div>
+                            <div class="text-muted"><b>目前無任何備註。</b></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="list-group-item list-group-item-action border-0 bg-light rounded-1 my-2">
+                      <div class="d-flex flex-wrap  align-items-center">
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12">
+                          <div><img class="infopic" src="./img/exw2.jpg"></div>
+                          <div>
+                            <div class="primaryClr">KOL_4534667565</div>
+                            <div class="text-muted">暱稱<b class="ms-2">洗菜</b></div>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12 my-3">
+                          <div>
+                            <div class="primaryClr">執行進度</div>
+                            <div class="secondaryClr"><b>已上線</b><i class="primary2Clr ms-2 fas fa-info-circle"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="primaryClr">備註</div>
+                            <div class="text-muted"><b>目前無任何備註。</b></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion accordion-flush my-3" id="accordionAi">
+            <div class="accordion-item">
+              <h2 class="accordion-header border-bottom">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Ai">
+                  AI挑選網紅名單
+                </button>
+              </h2>
+              <div id="Ai" class="accordion-collapse collapse show" data-bs-parent="#accordionAi">
+                <div class="accordion-body px-0">
+                  <div class="list-group my-2">
+                    <div class="list-group-item list-group-item-action border-0 bg-light">
+                      <div class="d-flex flex-wrap  align-items-center mb-2 ">
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12">
+                          <div><img class="infopic" src="./img/exw0.jpg"></div>
+                          <div>
+                            <div class="primaryClr">KOL_4534667565</div>
+                            <div class="text-muted">暱稱<b class="ms-2">洗菜</b></div>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12 my-3">
+                          <div>
+                            <div class="primaryClr">執行進度</div>
+                            <div class="secondaryClr"><b>洽談中</b><i class="primary2Clr ms-2 fas fa-info-circle"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="primaryClr">備註</div>
+                            <div class="text-muted"><b>目前無任何備註。</b></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="progress col">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                          style="width: 20%;height:3px;"></div>
+                      </div>
+                    </div>
+                    <div class="list-group-item list-group-item-action border-0 bg-light">
+                      <div class="d-flex flex-wrap  align-items-center mb-2 ">
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12">
+                          <div><img class="infopic" src="./img/exw1.jpeg"></div>
+                          <div>
+                            <div class="primaryClr">KOL_4534667565</div>
+                            <div class="text-muted">暱稱<b class="ms-2">洗菜</b></div>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12 my-3">
+                          <div>
+                            <div class="primaryClr">執行進度</div>
+                            <div class="secondaryClr"><b>過稿中</b><i class="primary2Clr ms-2 fas fa-info-circle"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="primaryClr">備註</div>
+                            <div class="text-muted"><b>目前無任何備註。</b></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="progress col">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                          style="width:50%;height:3px;"></div>
+                      </div>
+                    </div>
+                    <div class="list-group-item list-group-item-action border-0 bg-light">
+                      <div class="d-flex flex-wrap  align-items-center mb-2 ">
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12">
+                          <div><img class="infopic" src="./img/exw2.jpg"></div>
+                          <div>
+                            <div class="primaryClr">KOL_4534667565</div>
+                            <div class="text-muted">暱稱<b class="ms-2">洗菜</b></div>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12 my-3">
+                          <div>
+                            <div class="primaryClr">執行進度</div>
+                            <div class="secondaryClr"><b>已上線</b><i class="primary2Clr ms-2 fas fa-info-circle"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="primaryClr">備註</div>
+                            <div class="text-muted"><b>目前無任何備註。</b></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="progress col">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                          style="width: 100%;height:3px;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="unpass" role="tabpanel">
+          <div class="accordion accordion-flush my-3" id="accordionCustom">
+            <div class="accordion-item">
+              <h2 class="accordion-header border-bottom">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#customer">
+                  自選網紅名單
+                </button>
+              </h2>
+              <div id="customer" class="accordion-collapse collapse show" data-bs-parent="#accordionCustom">
+                <div class="accordion-body px-0">
+                  <div class="list-group my-2">
+                    <div class="list-group-item list-group-item-action border-0 bg-light">
+                      <div class="d-flex flex-wrap  align-items-center mb-2 ">
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12">
+                          <div><img class="infopic" src="./img/exw0.jpg"></div>
+                          <div>
+                            <div class="primaryClr">KOL_4534667565</div>
+                            <div class="text-muted">暱稱<b class="ms-2">洗菜</b></div>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12 my-3">
+                          <div>
+                            <div class="primaryClr">執行進度</div>
+                            <div class="secondaryClr"><b>洽談中</b><i class="primary2Clr ms-2 fas fa-info-circle"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="primaryClr">備註</div>
+                            <div class="text-muted"><b>目前無任何備註。</b></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="progress col">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                          style="width: 20%;height:3px;"></div>
+                      </div>
+                    </div>
+                    <div class="list-group-item list-group-item-action border-0 bg-light">
+                      <div class="d-flex flex-wrap  align-items-center mb-2 ">
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12">
+                          <div><img class="infopic" src="./img/exw1.jpeg"></div>
+                          <div>
+                            <div class="primaryClr">KOL_4534667565</div>
+                            <div class="text-muted">暱稱<b class="ms-2">洗菜</b></div>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12 my-3">
+                          <div>
+                            <div class="primaryClr">執行進度</div>
+                            <div class="secondaryClr"><b>過稿中</b><i class="primary2Clr ms-2 fas fa-info-circle"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="primaryClr">備註</div>
+                            <div class="text-muted"><b>目前無任何備註。</b></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="progress col">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                          style="width:50%;height:3px;"></div>
+                      </div>
+                    </div>
+                    <div class="list-group-item list-group-item-action border-0 bg-light">
+                      <div class="d-flex flex-wrap  align-items-center mb-2 ">
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12">
+                          <div><img class="infopic" src="./img/exw2.jpg"></div>
+                          <div>
+                            <div class="primaryClr">KOL_4534667565</div>
+                            <div class="text-muted">暱稱<b class="ms-2">洗菜</b></div>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12 my-3">
+                          <div>
+                            <div class="primaryClr">執行進度</div>
+                            <div class="secondaryClr"><b>已上線</b><i class="primary2Clr ms-2 fas fa-info-circle"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="primaryClr">備註</div>
+                            <div class="text-muted"><b>目前無任何備註。</b></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="progress col">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                          style="width: 100%;height:3px;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion accordion-flush my-3" id="accordionAi">
+            <div class="accordion-item">
+              <h2 class="accordion-header border-bottom">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Ai">
+                  AI挑選網紅名單
+                </button>
+              </h2>
+              <div id="Ai" class="accordion-collapse collapse show" data-bs-parent="#accordionAi">
+                <div class="accordion-body px-0">
+                  <div class="list-group my-2">
+                    <div class="list-group-item list-group-item-action border-0 bg-light">
+                      <div class="d-flex flex-wrap  align-items-center mb-2 ">
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12">
+                          <div><img class="infopic" src="./img/exw0.jpg"></div>
+                          <div>
+                            <div class="primaryClr">KOL_4534667565</div>
+                            <div class="text-muted">暱稱<b class="ms-2">洗菜</b></div>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12 my-3">
+                          <div>
+                            <div class="primaryClr">執行進度</div>
+                            <div class="secondaryClr"><b>洽談中</b><i class="primary2Clr ms-2 fas fa-info-circle"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="primaryClr">備註</div>
+                            <div class="text-muted"><b>目前無任何備註。</b></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="progress col">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                          style="width: 20%;height:3px;"></div>
+                      </div>
+                    </div>
+                    <div class="list-group-item list-group-item-action border-0 bg-light">
+                      <div class="d-flex flex-wrap  align-items-center mb-2 ">
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12">
+                          <div class=""><img src="./img/exw1.jpeg"></div>
+                          <div>
+                            <div class="primaryClr">KOL_4534667565</div>
+                            <div class="text-muted">暱稱<b class="ms-2">洗菜</b></div>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12 my-3">
+                          <div class="">
+                            <div class="primaryClr">執行進度</div>
+                            <div class="secondaryClr"><b>過稿中</b><i class="primary2Clr ms-2 fas fa-info-circle"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="primaryClr">備註</div>
+                            <div class="text-muted"><b>目前無任何備註。</b></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="progress col">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                          style="width:50%;height:3px;"></div>
+                      </div>
+                    </div>
+                    <div class="list-group-item list-group-item-action border-0 bg-light">
+                      <div class="d-flex flex-wrap  align-items-center mb-2 ">
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12">
+                          <div class=""><img src="./img/exw2.jpg"></div>
+                          <div>
+                            <div class="primaryClr">KOL_4534667565</div>
+                            <div class="text-muted">暱稱<b class="ms-2">洗菜</b></div>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-around align-items-center col-md-6 col-12 my-3">
+                          <div class="">
+                            <div class="primaryClr">執行進度</div>
+                            <div class="secondaryClr"><b>已上線</b><i class="primary2Clr ms-2 fas fa-info-circle"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="primaryClr">備註</div>
+                            <div class="text-muted"><b>目前無任何備註。</b></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="progress col">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                          style="width: 100%;height:3px;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="msgBtn"></div>
+  <div class="msg">
+    <!-- 彈出視窗背景 -->
+    <div class="msgOutter"></div>
+    <div class="msgInner">
+      <div class="msgHead">
+        <div class="mx-3 text-light">留言板</div>
+        <div class="mx-3"><img id="close" src="./img/close_24dp.svg" width="25"></div>
+      </div>
+      <div class="content d-flex flex-column">
+        <div id="scrollBottom"></div>
+      </div>
+      <div class="send p-2 d-flex justify-content-around align-items-center">
+        <input type="text" class="form-control border-0" placeholder="寫留言..">
+        <div><img src="./img/return_24dp.svg" width="30"></div>
+      </div>
+    </div>
+  </div>
+  <footer class="text-center p-2">
+    <div class="container">
+      <div class="d-flex justify-content-md-center justify-content-sm-start m-2 flex-wrap">
+        <div class="m-1"><small><a href="tel:02-2311-1698"><img src="./img/phone_24dp.svg">02-2311-1698</a></small>
+        </div>
+        <div class="m-1"><small><a href="mailto:justad.ad@just-adtech.com"><img
+                src="./img/mail_24dp.svg">justad.ad@just-adtech.com</a></small></div>
+        <div class="m-1"><small>服務時間 週一至週五 9:30-18:00</small></div>
+        <div class="m-1"><small><img src="./img/location_24dp.svg">台北市中正區忠孝西路一段66號34樓</small></div>
+      </div>
+      <small>Copyright 2021 © Just Advertising All rights reserved.</small>
+    </div>
+  </footer>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+
+  <script>
+    $("#msgBtn").on("click", function () {
+      $(".content").animate({
+        scrollTop: $(document).height() + 5000
+      }, "slow");
+      $(".msg").fadeIn();
+      $("#msgBtn").fadeOut();
+    });
+
+    $("#close,.msgOutter").on("click", function () {
+      $("#msgBtn").fadeIn();
+      $(".msg").fadeOut();
+    });
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+  </script>
+</body>
+
+</html>
