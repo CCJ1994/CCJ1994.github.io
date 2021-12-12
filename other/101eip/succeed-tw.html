@@ -654,13 +654,15 @@
                             jQuery("#apply_form").hide();
                             jQuery("#apply_form").after(`
                               <div class="reg-inform">
-                                 <div class="msg-inform">
-                                   <h3>
-                                     <i class="far fa-times-circle fa-1x"></i>很抱歉，申請失敗
-                                   </h3>
-                                 </div>
-                                 <div>目前無法建置試用系統，請稍候再試或跟我們聯絡。</div>
-                               </div>
+                                <div class="msg-inform">
+                                  <h3>
+                                    <i class="far fa-check-circle fa-1x"></i>您的申請已成功!
+                                    <div><a href="https://${regURL}.101eip.net" target="_blank">https://${regURL}.101eip.net</a></div>
+                                  </h3>
+                                </div>
+                                <div>請稍候至您的電子信箱&nbsp;<u>${regEmail}</u></div>
+                                <div>查看登入資訊，如有問題請與我們聯絡</div>
+                              </div>
                             `);
                           // } else {
                           //   jQuery(".post-title").css('display', 'none');
@@ -787,18 +789,6 @@
               var spinner = new Spinner(opts).spin(target);
             </script></pre>
           </div><!-- end of .post-entry -->
-          <pre style="display: none;"><style>
-            
-          </style></pre>
-          <div class="reg-inform" style="display: none;">
-            <div class="msg-inform">
-              <h3><i class="far fa-check-circle fa-1x" style="color: #27ae60;margin-right: 10px;"></i>您的申請已成功</h3>
-            </div>
-            <div>我們會在數分鐘內將系統連線資料寄到您的電子信箱</div>
-            <div>如有問題請跟我們聯絡</div>
-          </div>
-
-
         </div><!-- end of #post-151 -->
 
 

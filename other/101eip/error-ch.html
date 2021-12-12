@@ -640,12 +640,12 @@
                 });
                 jQuery('#apply_form').submit(function () {
                   if (!jQuery('#inputSend').hasClass('disabled')) {
-                    if (jQuery('#apply_form').valid()) {
+                    // if (jQuery('#apply_form').valid()) {
                       jQuery('#inputSend').addClass('disabled');
                       jQuery('#waitSpinner').css('display', 'inline');
-                      jQuery.ajax({
-                        type: "POST", url: "/tw/register101eip.php", data: jQuery("#apply_form").serialize(), success: function (response) {
-                          if (response == "SUCCESS") {
+                      // jQuery.ajax({
+                        // type: "POST", url: "/tw/register101eip.php", data: jQuery("#apply_form").serialize(), success: function (response) {
+                          // if (response == "SUCCESS") {
                             // alert("您的申請已成功，我們會在數分鐘內把系統連線資料寄到您的電子信箱，如有問題請跟我們聯絡。");
                             // change_captcha();
                             clear_form();
@@ -654,48 +654,46 @@
                             jQuery("#apply_form").hide();
                             jQuery("#apply_form").after(`
                               <div class="reg-inform">
-                                <div class="msg-inform">
-                                  <h3>
-                                    <i class="far fa-check-circle fa-1x"></i>您的申請已成功
-                                    <div><a href="https://${regURL}.101eip.net" target="_blank">https://${regURL}.101eip.net</a></div>
-                                  </h3>
-                                </div>
-                                <div>請稍候至您的電子信箱&nbsp;${regEmail}</div>
-                                <div>查看登入資訊，如有問題請與我們聯絡</div>
-                              </div>
+                                 <div class="msg-inform">
+                                   <h3>
+                                     <i class="far fa-times-circle fa-1x"></i>很抱歉，申请失败
+                                   </h3>
+                                 </div>
+                                 <div>目前无法建置试用系统，请稍候再试或跟我们联络。</div>
+                               </div>
                             `);
-                          } else {
-                            jQuery(".post-title").css('display', 'none');
-                            jQuery("#apply_form").hide();
-                            if (response == "") {
-                              //     alert("很抱歉，目前無法建置試用系統，請稍候再試或跟我們聯絡。");
-                              jQuery("#apply_form").after(`
-                                  <div class="reg-inform">
-                                    <div class="msg-inform">
-                                      <h3>
-                                        <i class="far fa-times-circle fa-1x"></i>很抱歉，申請失敗
-                                      </h3>
-                                    </div>
-                                    <div>目前無法建置試用系統，請稍候再試或跟我們聯絡。</div>
-                                  </div>
-                                `);
-                            } else {
-                              // alert(response);
-                              jQuery("#apply_form").after(`
-                                  <div class="reg-inform">
-                                    <div class="msg-inform">
-                                      <h3>${response}</h3>
-                                    </div>
-                                  </div>
-                              `);
-                            }
-                          }
+                          // } else {
+                          //   jQuery(".post-title").css('display', 'none');
+                          //   jQuery("#apply_form").hide();
+                          //   if (response == "") {
+                          //     //     alert("很抱歉，目前無法建置試用系統，請稍候再試或跟我們聯絡。");
+                          //     jQuery("#apply_form").after(`
+                          //       <div class="reg-inform">
+                          //        <div class="msg-inform">
+                          //          <h3>
+                          //            <i class="far fa-times-circle fa-1x"></i>很抱歉，申请失败
+                          //          </h3>
+                          //        </div>
+                          //        <div>目前无法建置试用系统，请稍候再试或跟我们联络。</div>
+                          //      </div>
+                          //       `);
+                          //   } else {
+                          //     // alert(response);
+                          //     jQuery("#apply_form").after(`
+                          //         <div class="reg-inform">
+                          //           <div class="msg-inform">
+                          //             <h3>${response}</h3>
+                          //           </div>
+                          //         </div>
+                          //     `);
+                          //   }
+                          // }
                           recaptcha_refresh();
                           // jQuery('#waitSpinner').css('display', 'none');
                           // jQuery('#inputSend').removeClass('disabled');
-                        }
-                      });
-                    }
+                      //   }
+                      // });
+                    // }
                   }
                   return false;
                 });
